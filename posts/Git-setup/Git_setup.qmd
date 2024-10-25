@@ -1,5 +1,5 @@
 ---
-title: "Git and Github setup"
+title: "Git setup"
 description: "Guidance on Installing and Configuring Git & Github"
 author: "RPythonStudyGroup feat. ChatGPT"
 date: "2024-05-06"

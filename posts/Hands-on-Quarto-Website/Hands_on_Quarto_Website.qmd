@@ -1,17 +1,20 @@
 ---
-title: "Git Example Projecti"
-description: "Learn how to create a project with Git in RStudio using an example"
+title: "Hands on Quarto Website" 
+description:  "A hands-on step by step tutorial to create a website using Quarto."
 author: "RPythonStudyGroup feat. ChatGPT"
-date: "2024-10-05"
-date-modified: "2024-10-05"
+date: "2024-10-25"
+date-modified: "2024-10-25"
 categories:
-  - Git
-  - setup
+  - Quarto
+  - website
+  - hands-on
+  - tutorial
 ---
 
-1단계: Git이 시스템에 설치되어 있고 RStudio에서 사용가능한지 확인하세요.
+:::: {.content-visible when-profile="ko"}
+1단계: Git이 시스템에 설치되어 있고 RStudio에서 사용가능한지 확인
 
-:::: {.callout-note title="1단계 예시" collapse="true" appearance="minimal"}
+::: {.callout-note title="1단계 예시" collapse="true" appearance="minimal"}
 -   RStudio Terminal pane에서 아래의 git 명령어를 실행하여 version을 확인합니다.
 ```{r git_install_verfication, eval=FALSE, filename="RStdio Terminal pane"}
 git --version

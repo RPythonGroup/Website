@@ -38,8 +38,6 @@ website:
         
   sidebar:
     - title: "R"
-      style: docked
-      search: true
       contents:
         - posts/R/introduction_to_R.qmd
         - posts/R-setup/R_setup.qmd
@@ -58,6 +56,7 @@ website:
       contents:
         - posts/Quarto/introduction_to_Quarto.qmd
         - posts/Quarto-setup/Quarto_setup.qmd
+        - posts/Hands-on-Quarto-Website/Hands_on_Quarto_Website.qmd
         - posts/manuscript-example/manuscript_example.qmd
     - title: "Statistics"
       contents:
@@ -73,8 +72,10 @@ website:
     - title: "Tools"
       contents:
         - posts/tools/introduction_to_tools.qmd
-        - posts/Git-setup/Git_setup.qmd
-        - posts/Git-example-project/Git_example_project.qmd
+        - section: "Git"
+          contents:
+            - posts/Hands-on-Git/Hands_on_Git.qmd
+            - posts/Git-exercise/Git_exercise.qmd
 
 execute: 
   freeze: auto

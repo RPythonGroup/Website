@@ -74,8 +74,9 @@ website:
         - posts/tools/introduction_to_tools.qmd
         - section: "Git"
           contents:
+            - posts/Git-setup/Git_setup.qmd
             - posts/Hands-on-Git/Hands_on_Git.qmd
-            - posts/Git-exercise/Git_exercise.qmd
+            - posts/Github/Github.qmd
 
 execute: 
   freeze: auto

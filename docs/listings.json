@@ -2,9 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Hands-on-Quarto-Website/Hands_on_Quarto_Website.html",
       "/posts/Github/Github.html",
       "/posts/Hands-on-Git/Hands_on_Git.html",
-      "/posts/Hands-on-Quarto-Website/Hands_on_Quarto_Website.html",
       "/posts/Quarto-setup/Quarto_setup.html",
       "/posts/shiny/shiny_example.html",
       "/posts/Chi-square-test-in-R/Chi_square_test_in_R.html",

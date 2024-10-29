@@ -278,19 +278,38 @@ GET: /
 -   `Watching files for changes`는 혼란스러운 표현이며, 아마도 아직 파일 변경을 감지하고 있음을 나타냅니다.
 -   `Browse at http://localhost:7875/`는 렌더링된 파일을 미리보기하기 위한 주소를 나타냅니다. no-browse 옵션을 사용했으므로 브라우저가 자동으로 열리지 않습니다. 따라서 주소를 복사하여 웹브라우저에 붙여넣기하여 미리보기를 할 수 있습니다. 그러나 Output Pane의 Viewer tab에 미리보기가 보이므로 브라우저를 열어 보아야 할 경우는 별도 없습니다.
 -   `GET: /`는 미리보기를 위해 서버에 요청을 보냈음을 나타냅니다.
+-   Render에 의해 생성된 파일은 `_site` 폴더에 저장되며, 이 폴더는 `.gitignore` 파일에 포함되어 있어 git 버전관리에서 제외됩니다.
 
 :::
 
-10단계: `_quarto.yml` 파일 수정해보기
+10단계: `_quarto.yml` 출력폴더 수정하기
 
 ::: {.callout-note title="10단계 예시" collapse="true" appearance="minimal"}
--   출력폴더 변경: project 아래에 Terminal pane에서 아래의 git 명령어를 실행하여 원격저장소를 연결합니다.
+-   _quarto.yml 파일의 project section에 아래와 같이 `output-dir: docs`코드를 추가합니다.
 
-```{r git_push, eval=FALSE, filename="RStudio Terminal pane"}
-git push origin main
+```{r _quarto.yml_output, eval=FALSE, filename="_quarto.yml"}
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "R-4.4.1-Quarto_Website_Example"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
 ```
 
--   `git push` 명령어는 로컬 저장소의 변경사항을 원격 저장소로 업로드합니다.
+-   Rendering을 하면 `_site` 폴더가 아닌 `docs` 폴더에 변환된 파일이 저장됩니다. 
 -   `origin`은 원격저장소의 별칭입니다.
 -   `main`은 로컬의 원격저장소 이름입니다. 그리고 위 명령으로 로컬의 main 브랜치에서 원격저장소 main 브랜치로 push합니다. \`
 

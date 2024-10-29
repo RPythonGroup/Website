@@ -699,12 +699,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><code>Output created: _site\index.html</code>는 변환된 HTML 파일이 _site 폴더에 index.html 파일로 생성되었음을 나타냅니다.</p></li>
 <li><p><code>Terminating existing preview server....DONE</code>는 이전에 실행되었던 미리보기 서버를 중단하여 새로 렌더링된 파일이 보이도록 준비했다는 의미입니다. 이렇게 하면 이전 미리보기가 중단되고, 최신 렌더링 파일이 Viewer Pane에 표시됩니다.</p></li>
 <li><p><code>Preparing to preview</code>는 렌더링된 파일을 미리보기하기 위해 준비되었음을 나타냅니다.</p></li>
-<li><p><code>Watching files for changes</code>는 파일 변경을 감지하고 있음을 나타냅니다.</p></li>
+<li><p><code>Watching files for changes</code>는 혼란스러운 표현이며, 아마도 아직 파일 변경을 감지하고 있음을 나타냅니다.</p></li>
+<li><p><code>Browse at http://localhost:7875/</code>는 렌더링된 파일을 미리보기하기 위한 주소를 나타냅니다. no-browse 옵션을 사용했으므로 브라우저가 자동으로 열리지 않습니다. 따라서 주소를 복사하여 웹브라우저에 붙여넣기하여 미리보기를 할 수 있습니다. 그러나 Output Pane의 Viewer tab에 미리보기가 보이므로 브라우저를 열어 보아야 할 경우는 별도 없습니다.</p></li>
+<li><p><code>GET: /</code>는 미리보기를 위해 서버에 요청을 보냈음을 나타냅니다.</p></li>
+<li><p>Render에 의해 생성된 파일은 <code>_site</code> 폴더에 저장되며, 이 폴더는 <code>.gitignore</code> 파일에 포함되어 있어 git 버전관리에서 제외됩니다.</p></li>
 </ul>
 </div>
 </div>
 </div>
-<p>10단계: 로컬에 커밋된 사항들을 원격저장소로 push 하기</p>
+<p>10단계: <code>_quarto.yml</code> 출력폴더 수정하기</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="10단계 예시">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -718,18 +721,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li>Terminal pane에서 아래의 git 명령어를 실행하여 원격저장소를 연결합니다.</li>
+<li>_quarto.yml 파일의 project section에 아래와 같이 <code>output-dir: docs</code>코드를 추가합니다.</li>
 </ul>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>RStudio Terminal pane</strong></pre>
+<pre><strong>_quarto.yml</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>git push origin main</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>project<span class="sc">:</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  type<span class="sc">:</span> website</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>website<span class="sc">:</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  title<span class="sc">:</span> <span class="st">"R-4.4.1-Quarto_Website_Example"</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  navbar<span class="sc">:</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    left<span class="sc">:</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> href<span class="sc">:</span> index.qmd</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        text<span class="sc">:</span> Home</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> about.qmd</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  html<span class="sc">:</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    theme<span class="sc">:</span> cosmo</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    css<span class="sc">:</span> styles.css</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    toc<span class="sc">:</span> true</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>editor<span class="sc">:</span> visual</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <ul>
-<li><code>git push</code> 명령어는 로컬 저장소의 변경사항을 원격 저장소로 업로드합니다.</li>
+<li>Rendering을 하면 <code>_site</code> 폴더가 아닌 <code>docs</code> 폴더에 변환된 파일이 저장됩니다.</li>
 <li><code>origin</code>은 원격저장소의 별칭입니다.</li>
 <li><code>main</code>은 로컬의 원격저장소 이름입니다. 그리고 위 명령으로 로컬의 main 브랜치에서 원격저장소 main 브랜치로 push합니다. `</li>
 </ul>

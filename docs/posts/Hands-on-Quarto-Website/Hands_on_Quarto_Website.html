@@ -280,39 +280,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>1단계: <code>Quarto_Website_Example</code> R프로젝트 만들기</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="1단계 예시">
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="1단계: `Quarto_Website_Example` R프로젝트 만들기">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-1단계 예시
+1단계: <code>Quarto_Website_Example</code> R프로젝트 만들기
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li>RStudio/File 메뉴에서 <code>New Project...</code> 메뉴 선택</li>
-<li><code>New Directory</code>에 생성되도록 선택</li>
-<li>Project type은 <code>Quarto Website</code>를 선택</li>
-<li>상위폴더가 <code>C:/Projects</code>인지 확인 (=Global Options 사전 지정값)</li>
-<li>Directory name은 <code>R-4.4.1-Quarto_Website_Example</code>로 지정</li>
-</ul>
-<div class="cell">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>recommeded project name</strong></pre>
-</div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>R<span class="dv">-4</span>.<span class="fl">4.1</span><span class="sc">-</span>Quarto_Website_Example</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<ul>
-<li>[] Create a git repository: 체크 유지하여 버전관리 적용</li>
-<li>[] Use renv with this project: 체크 유지하여 패키지 독립관리 적용</li>
-<li>[] Use visual markdown editor: 체크 유지하여 wizwig 에디터 사용</li>
-<li>Quarto website 특이적 파일생성을 Output pane에서 확인할 수 있습니다.
+<li><p>RStudio/File 메뉴에서 <code>New Project...</code> 메뉴 선택</p></li>
+<li><p><code>New Directory</code>에 생성되도록 선택</p></li>
+<li><p>Project type은 <code>Quarto Website</code>를 선택</p></li>
+<li><p>상위폴더가 <code>C:/Projects</code>인지 확인 (=Global Options 사전 지정값)</p></li>
+<li><p>Directory name은 <code>R-4.4.1-Quarto_Website_Example</code>로 지정</p></li>
+<li><p>[] Create a git repository: 체크 유지하여 버전관리 적용</p></li>
+<li><p>[] Use renv with this project: 체크 유지하여 패키지 독립관리 적용</p></li>
+<li><p>[] Use visual markdown editor: 체크 유지하여 wizwig 에디터 사용</p></li>
+<li><p>Quarto website 특이적 파일생성을 Output pane에서 확인할 수 있습니다.</p>
 <ul>
 <li><code>_quarto.yml</code>: 전역옵션, 경로, 출력 등의 Quarto 전반의 설정 구성 파일</li>
 <li><code>about.qmd</code>: 컨텐츠 파일로 웹페이지 전반에 대한 소개 역할</li>
@@ -323,14 +312,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>2단계: <code>.gitignore</code> 파일 수정하기</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="2단계 예시">
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>recommeded project name</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>R<span class="dv">-4</span>.<span class="fl">4.1</span><span class="sc">-</span>Quarto_Website_Example</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="2단계: `.gitignore` 파일 수정하기">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-2단계 예시
+2단계: <code>.gitignore</code> 파일 수정하기
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -339,6 +335,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><code>.gitignore</code> 파일을 열어서 아래의 내용을 추가하여 git 버전관리에서 제외합니다.</li>
 </ul>
+</div>
+</div>
+</div>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -349,17 +348,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">/</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<p>3단계: <code>Quarto_Website_Example</code> 원격저장소 만들기</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="3단계 예시">
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="3단계: `Quarto_Website_Example` 원격저장소 만들기">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-3단계 예시
+3단계: <code>Quarto_Website_Example</code> 원격저장소 만들기
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -370,6 +365,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>로그인을 한 후 <code>Quarto_Website_Example</code>을 생성합니다.</li>
 <li>코드의 공개여부를 의미하는 private와 public 중 공개를 의미하는 public을 선택하여 진행합니다.</li>
 </ul>
+</div>
+</div>
+</div>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -378,17 +376,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Quarto_Website_Example</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<p>4단계: 원격저장소 연결하기</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="4단계 예시">
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="4단계: 원격저장소 연결하기">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-4단계 예시
+4단계: 원격저장소 연결하기
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -396,17 +390,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <ul>
 <li>Github &lt;&gt; code 메뉴에서 Quick setup 내에 있는 URL이 원격저장소 주소입니다. 이를 이용하여 Terminal pane에서 아래의 git 명령어를 실행하여 원격저장소를 연결합니다.</li>
-</ul>
-<div class="cell">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>RStudio Terminal pane</strong></pre>
-</div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>git remote add origin https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>RPythonMember<span class="sc">/</span>Quarto_Website_Example.git</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<ul>
-<li>위는 예시이며 사용자마다 Guthub username이 다르므로 자신의 원격저장소 주소를 사용하셔야 합니다.</li>
+<li>아래는 예시이며 사용자마다 Guthub username이 다르므로 자신의 원격저장소 주소를 사용하셔야 합니다.</li>
 <li><code>git remote add origin</code>에서 origin은 원격 저장소의 이름(별칭)을 나타냅니다.</li>
 <li>아래의 명령으로 원격 저장소의 연결 상태를 확인합니다.</li>
 </ul>
@@ -415,7 +399,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-with-filename-file">
 <pre><strong>RStudio Terminal pane</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>git remote <span class="sc">-</span>v</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>git remote <span class="sc">-</span>v</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <ul>
@@ -426,22 +410,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-with-filename-file">
 <pre><strong>git log output</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>C<span class="sc">:</span>\Projects\R<span class="dv">-4</span>.<span class="fl">4.1</span><span class="sc">-</span>Quarto_Website_Example<span class="sc">&gt;</span>git remote <span class="sc">-</span>v</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>origin  https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>RPythonMember<span class="sc">/</span><span class="fu">Quarto_Website_Example.git</span> (fetch)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>origin  https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>RPythonMember<span class="sc">/</span><span class="fu">Quarto_Website_Example.git</span> (push)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>C<span class="sc">:</span>\Projects\R<span class="dv">-4</span>.<span class="fl">4.1</span><span class="sc">-</span>Quarto_Website_Example<span class="sc">&gt;</span>git remote <span class="sc">-</span>v</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>origin  https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>RPythonMember<span class="sc">/</span><span class="fu">Quarto_Website_Example.git</span> (fetch)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>origin  https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>RPythonMember<span class="sc">/</span><span class="fu">Quarto_Website_Example.git</span> (push)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>5단계: <code>index.qmd</code> 파일구조 이해하기</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="5단계 예시">
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>RStudio Terminal pane</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>git remote add origin https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>RPythonMember<span class="sc">/</span>Quarto_Website_Example.git</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="5단계: `index.qmd` 파일 이해하기">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-5단계 예시
+5단계: <code>index.qmd</code> 파일 이해하기
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -471,14 +462,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>6단계: `_quarto.yml 기본설정 이해하기</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="6단계 예시">
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="6단계: `_quarto.yml` 파일 이해하기">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-6단계 예시
+6단계: <code>_quarto.yml</code> 파일 이해하기
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -531,14 +521,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>7단계: <code>style.css</code> 파일내용 확인하기</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="7단계 예시">
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="7단계: `style.css` 파일 이해하기">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-7단계 예시
+7단계: <code>style.css</code> 파일 이해하기
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -561,14 +550,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>8단계: 버전관리 첫번째 복원시점 설정하기</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="8단계 예시">
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="8단계: 버전관리 첫번째 복원시점 설정하기">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-8단계 예시
+8단계: 버전관리 첫번째 복원시점 설정하기
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -577,7 +565,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>git 버전관리 학습을 위한 단계이기도 합니다.</li>
 <li>아래의 git 명령으로 프로젝트폴더 및 그 하위의 모든 폴더 및 파일들을 stage 영역으로 올립니다.</li>
+<li>아래의 git 명령으로 stage 영역에 올라간 파일들을 로컬저장소에 커밋합니다.</li>
+<li>커밋 메시지는 해당 커밋의 내용을 요약하여 작성합니다. 여기서는 “First commit &amp; default setting &amp; before rendering”로 작성하였rh 원하시는 내용으로 작성하시면 됩니다.</li>
 </ul>
+</div>
+</div>
+</div>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -586,9 +579,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>git add .</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<ul>
-<li>아래의 git 명령으로 stage 영역에 올라간 파일들을 로컬저장소에 커밋합니다.</li>
-</ul>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -597,30 +587,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">"First commit &amp; default setting &amp; before rendering"</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<ul>
-<li>커밋 메시지는 해당 커밋의 내용을 요약하여 작성합니다. 여기서는 “First commit &amp; default setting &amp; before rendering”로 작성하였rh 원하시는 내용으로 작성하시면 됩니다.</li>
-</ul>
-</div>
-</div>
-</div>
-<p>9단계: Render 해보기</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="9단계 예시">
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="9단계: Rendering과 메세지">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-9단계 예시
+9단계: Rendering과 메세지
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li>Rendering에는 크게 2가지 방법이 있는데 아래의 그림처럼 <code>Source Pane</code>의 <code>Render button</code>을 클릭하여 진행해 봅니다.</li>
-</ul>
-<p><img src="images/RenderButton.JPG" class="img-fluid"></p>
-<ul>
+<li>Rendering에는 크게 2가지 방법이 있는데 아래의 그림처럼 <code>Source Pane</code>의 <code>Render button</code>을 실행하여 진행해 봅니다.</li>
 <li>처음으로 Render button 기능을 사용하면 Rendering Quarto Knitr Documents에는 migrittr, stringi, stringr 패키지들의 updated version이 필요하여 설치를 물어보는데 설치하면 됩니다.</li>
 <li>Rendering이 되는 동안에 Console Pane Background jobs tab에서 아래의 messeage 들이 출력됩니다.</li>
 </ul>
@@ -707,14 +687,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>10단계: <code>_quarto.yml</code> 출력폴더 수정하기</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="10단계 예시">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/RenderButton.JPG" class="img-fluid figure-img"></p>
+<figcaption>Render button in the RStudio IDE</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="10단계: 출력폴더 변경하기">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-10단계 예시
+10단계: 출력폴더 변경하기
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -750,36 +735,109 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <ul>
-<li>Rendering을 하면 <code>_site</code> 폴더가 아닌 <code>docs</code> 폴더에 변환된 파일이 저장됩니다.</li>
-<li><code>origin</code>은 원격저장소의 별칭입니다.</li>
-<li><code>main</code>은 로컬의 원격저장소 이름입니다. 그리고 위 명령으로 로컬의 main 브랜치에서 원격저장소 main 브랜치로 push합니다. `</li>
+<li>Rendering을 하면 <code>_site</code> 폴더가 아닌 <code>docs</code> 폴더에 변환된 파일이 저장됩니다. (Github page에 publish 하기 위해서는 docs 폴더가 필요합니다.)</li>
+<li>_siet는 이제 필요 없으므로 삭제 하시면 됩니다.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="11단계: `index.qmd`에  내용 추가하기">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+11단계: <code>index.qmd</code>에 내용 추가하기
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>index.qmd 파일을 열어서 아래의 코드를 추가합니다.</li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-petct</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "2023년도 FDG PET/CT 건수"</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="in">#| echo: false</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="in">library(rjson)</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="in">library(httr)</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="in">library(plyr)</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="in">download_api_data &lt;- function() {</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="in">  base_url &lt;- "http://apis.data.go.kr/B551182/mdlrtActionInfoService"</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="in">  call_url &lt;- "getMdlrtActionByClassesStats"</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="in">  method &lt;- "GET"</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="in">  My_API_Key &lt;- "DRwFWZ/jfi6551teJKgRhkKgC+XhcjobN+ccY2MQdF9yZdx8xL5Kn4IljljMCWGsl2ObEco/rm21r14CN7iG0g=="  # 실제 API 키</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="in">  params &lt;- list(</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="in">    serviceKey = My_API_Key,</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="in">    pageNo = 1,</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="in">    numOfRows = 10,</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="in">    resultType = "json",</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="in">    year = "2023",</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="in">    stdType = "1",</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="in">    st5Cd = "HK010"</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="in">  )</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="in">  # API 호출</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="in">  url &lt;- paste0(base_url, "/", call_url)</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="in">  response &lt;- GET(url, query = params)</span></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="in">  if (status_code(response) == 200) {</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="in">    json_text &lt;- content(response, as = "text")</span></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="in">    data &lt;- fromJSON(json_text)</span></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a><span class="in">    return(data)</span></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="in">  } else {</span></span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="in">    print(paste("API 호출 실패:", status_code(response)))</span></span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a><span class="in">    return(NULL)</span></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="in">  }</span></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a><span class="in">data &lt;- download_api_data()</span></span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a><span class="in">data_list&lt;-data$response$body$items$item</span></span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a><span class="in">df &lt;- rbind.fill(lapply(data_list, as.data.frame))</span></span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a><span class="in">barplot(df$totUseQty, </span></span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a><span class="in">        names.arg = df$diagCdNm)  # x축 레이블 설정</span></span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>추가한 이후에는 rjson, httr, plyr 패키지를 설치해야 합니다.</li>
 </ul>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>git log output</strong></pre>
+<pre><strong>R Console Pane</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>C<span class="sc">:</span>\Projects\R<span class="dv">-4</span>.<span class="fl">4.1</span><span class="sc">-</span>Quarto_Website_Example<span class="sc">&gt;</span>git push origin main</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>Enumerating objects<span class="sc">:</span> <span class="dv">8</span>, done.</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>Counting objects<span class="sc">:</span> <span class="dv">100</span>% (<span class="dv">8</span><span class="sc">/</span><span class="dv">8</span>), done.</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>Delta compression using up to <span class="dv">24</span> threads</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>Compressing objects<span class="sc">:</span> <span class="dv">100</span>% (<span class="dv">7</span><span class="sc">/</span><span class="dv">7</span>), done.</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>Writing objects<span class="sc">:</span> <span class="dv">100</span>% (<span class="dv">8</span><span class="sc">/</span><span class="dv">8</span>), <span class="fl">2.24</span> KiB <span class="sc">|</span> <span class="fl">763.00</span> KiB<span class="sc">/</span>s, done.</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>Total <span class="dv">8</span> (delta <span class="dv">0</span>), reused <span class="dv">0</span> (delta <span class="dv">0</span>), pack<span class="sc">-</span>reused <span class="dv">0</span> (from <span class="dv">0</span>)</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>To https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>RPythonMember<span class="sc">/</span>Quarto_Website_Example.git</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a> <span class="sc">*</span> [new branch]      main <span class="ot">-&gt;</span> main</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>C<span class="sc">:</span>\Projects\R<span class="dv">-4</span>.<span class="fl">4.1</span><span class="sc">-</span>Quarto_Website_Example<span class="sc">&gt;</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"rjson"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R Console Pane</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"httr"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R Console Pane</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"plyr"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <ul>
-<li>Enumerating objects: 객체수 계산에서 특이한 사항은 커밋된 파일은 6개 였는데 여기서는 객체수는 2개가 더 큽니다. 이는 디렉토리구조 파일과 커밋정보파일이 추가되기 때문입니다.</li>
-<li>Counting objects: Git이 객체를 전송할 준비가 되었음을 나타냅니다.</li>
-<li>Ddelta compression…: Git이 객체를 압축하는 과정입니다. 이 과정에서 24개의 CPU 스레드를 사용해 병렬로 압축을 진행합니다. Delta 압축은 이미 존재하는 데이터와 비교해 변경된 부분만 압축해 전송하는 방식입니다. Compressing objects: Git이 전송할 모든 객체를 압축하여 준비를 완료한 상태입니다.</li>
-<li>Writing objects: 압축된 데이터를 원격 저장소에 전송하는 단계입니다. 8개의 객체가 2.24 KiB의 데이터로 전송되었으며, 전송 속도는 763.00 KiB/s로 전송이 완료되었다는 의미입니다.</li>
-<li>Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0): 전송된 객체의 총 개수와 압축된 객체의 크기를 보여줍니다. 여기서는 새로운 브랜치가 생성되었으므로 delta 값이 0으로 나타납니다.</li>
-<li>전송된 데이터가 원격 저장소인 https://github.com/RPythonMember/Quarto_Website_Example.git로 전송되었음을 나타냅니다.</li>
-<li>[new branch] main -&gt; main: 새로운 브랜치가 생성되었음을 나타냅니다. main 브랜치가 원격 저장소 main branch로 전송되었음을 보여줍니다.</li>
+<li>API를 호출은 이전 hands-on을 참고하시길 바랍니다.</li>
 </ul>
 </div>
 </div>

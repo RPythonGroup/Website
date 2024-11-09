@@ -2,13 +2,13 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/DataGoKr/DataGoKr.html",
       "/posts/Hands-on-Quarto-Website/Hands_on_Quarto_Website.html",
       "/posts/Github/Github.html",
       "/posts/Hands-on-Git/Hands_on_Git.html",
       "/posts/Quarto-setup/Quarto_setup.html",
       "/posts/shiny/shiny_example.html",
       "/posts/Chi-square-test-in-R/Chi_square_test_in_R.html",
-      "/posts/DataGoKr/DataGoKr.html",
       "/posts/Chi-square-test/Chi_square_test.html",
       "/posts/VSCode-setup/VSCode_setup.html",
       "/posts/group-comparison/group_comparison.html",

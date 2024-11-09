@@ -8,9 +8,9 @@
 
 <meta name="author" content="RPythonStudyGroup feat. ChatGPT">
 <meta name="dcterms.date" content="2024-10-02">
-<meta name="description" content="How to use OGD and Examples">
+<meta name="description" content="How to use Open Goverment Data">
 
-<title>Open Goverment Data – RPythonStudy</title>
+<title>공공데이터포털 – RPythonStudy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -152,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/DataGoKr/DataGoKr.html">Open Goverment Data</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/DataGoKr/DataGoKr.html">공공데이터포털</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -162,15 +196,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Open Goverment Data</h1>
+      <h1 class="title">공공데이터포털</h1>
                   <div>
         <div class="description">
-          How to use OGD and Examples
+          How to use Open Goverment Data
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">Resource</div>
-                <div class="quarto-category">medical data</div>
+                <div class="quarto-category">Open Goverment Data</div>
               </div>
                   </div>
   </div>
@@ -195,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">October 13, 2024</p>
+        <p class="date-modified">November 19, 2024</p>
       </div>
     </div>
       
@@ -216,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../posts/DataGoKr/DataGoKr.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Open Goverment Data</span></a>
+ <span class="menu-text">공공데이터포털</span></a>
   </div>
 </li>
     </ul>
@@ -229,11 +263,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-open-government-data" id="toc-what-is-open-government-data" class="nav-link active" data-scroll-target="#what-is-open-government-data">What is Open Government Data?</a></li>
-  <li><a href="#sign-up" id="toc-sign-up" class="nav-link" data-scroll-target="#sign-up">Sign Up</a></li>
-  <li><a href="#finding-the-desired-api" id="toc-finding-the-desired-api" class="nav-link" data-scroll-target="#finding-the-desired-api">Finding the Desired API</a></li>
-  <li><a href="#application-for-utilization" id="toc-application-for-utilization" class="nav-link" data-scroll-target="#application-for-utilization">Application for Utilization</a></li>
-  <li><a href="#application-status" id="toc-application-status" class="nav-link" data-scroll-target="#application-status">Application Status</a></li>
+  <li><a href="#공공데이터open-govement-data란" id="toc-공공데이터open-govement-data란" class="nav-link active" data-scroll-target="#공공데이터open-govement-data란">공공데이터(Open Govement Data)란?</a></li>
+  <li><a href="#회원가입" id="toc-회원가입" class="nav-link" data-scroll-target="#회원가입">회원가입</a></li>
+  <li><a href="#원하는-api-찾기" id="toc-원하는-api-찾기" class="nav-link" data-scroll-target="#원하는-api-찾기">원하는 API 찾기</a></li>
+  <li><a href="#활용신청" id="toc-활용신청" class="nav-link" data-scroll-target="#활용신청">활용신청</a></li>
+  <li><a href="#인증키-확인하기" id="toc-인증키-확인하기" class="nav-link" data-scroll-target="#인증키-확인하기">인증키 확인하기</a></li>
+  <li><a href="#base-url-확인하기" id="toc-base-url-확인하기" class="nav-link" data-scroll-target="#base-url-확인하기">base URL 확인하기</a></li>
+  <li><a href="#api-목록별-url-확인하기-end-point" id="toc-api-목록별-url-확인하기-end-point" class="nav-link" data-scroll-target="#api-목록별-url-확인하기-end-point">API 목록별 url 확인하기 (=end point)</a></li>
+  <li><a href="#작동하는-인증키-확인하기" id="toc-작동하는-인증키-확인하기" class="nav-link" data-scroll-target="#작동하는-인증키-확인하기">작동하는 인증키 확인하기</a></li>
+  <li><a href="#예제-r-코드" id="toc-예제-r-코드" class="nav-link" data-scroll-target="#예제-r-코드">예제 R 코드</a></li>
   </ul>
 </nav>
     </div>
@@ -244,44 +282,199 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="what-is-open-government-data" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-open-government-data">What is Open Government Data?</h2>
-<p>The Public Data Portal (<a href="https://www.data.go.kr/index.do" class="uri">https://www.data.go.kr/index.do</a>) is a unified gateway that provides public data generated or acquired and managed by public institutions in one place. The portal provides public data in various ways, such as file data, open API, and visualization, so that citizens can easily and conveniently use public data, and anyone can quickly and accurately find the desired public data through easy and convenient search.</p>
+<section id="공공데이터open-govement-data란" class="level2">
+<h2 class="anchored" data-anchor-id="공공데이터open-govement-data란">공공데이터(Open Govement Data)란?</h2>
+<p>공공데이터포털(<a href="https://www.data.go.kr/index.do" class="uri">https://www.data.go.kr/index.do</a>)은 공공기관이 생성 또는 취득하여 관리하고 있는 공공데이터를 한 곳에서 제공하는 통합 창구입니다. 포털에서는 국민이 쉽고편리하게 공공데이터를 이용할 수 있도록 파일데이터, 오픈API, 시각화 등 다양한 방식으로 제공하고 있으며, 누구라도 쉽고 편리한 검색을통해 원하는 공공데이터를 빠르고 정확하게 찾을 수 있습니다.</p>
 </section>
-<section id="sign-up" class="level2">
-<h2 class="anchored" data-anchor-id="sign-up">Sign Up</h2>
-<p>During the registration process, personal authentication such as a smartphone is required. The Python Research Group has not signed up as a corporate member because it does not have a business registration number. Therefore, in order to use public data, researchers must sign up themselves.</p>
+<section id="회원가입" class="level2">
+<h2 class="anchored" data-anchor-id="회원가입">회원가입</h2>
+<ul>
+<li>가입 단계 중에 스마트폰 등의 본인 인증이 필요합니다.
+<ul>
+<li>알파이썬연구회는 사업자등록번호가 없으므로 기업회원으로도 가입하지 않았습니다.</li>
+<li>따라서 공공데이터를 활용하기 위해서는 연구회분들이 직접 회원가입을 하셔야 합니다.</li>
+</ul></li>
+</ul>
 </section>
-<section id="finding-the-desired-api" class="level2">
-<h2 class="anchored" data-anchor-id="finding-the-desired-api">Finding the Desired API</h2>
-<p>If you search for “국립암센터 원격전이 암발생 지표” you can easily get a list like <a href="#fig-API_list" class="quarto-xref">Figure&nbsp;1</a>. It seems that only Korean is supported for searching.</p>
-<div id="fig-API_list" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-API_list-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/API_list.JPG" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-API_list-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: API list example
-</figcaption>
-</figure>
-</div>
+<section id="원하는-api-찾기" class="level2">
+<h2 class="anchored" data-anchor-id="원하는-api-찾기">원하는 API 찾기</h2>
+<ul>
+<li><p>“국립암센터 원격전이 암발생 지표”를 검색하시면 <strong>?@fig-API_list</strong> 와 같이 목록을 쉽게 얻을 수 있습니다.</p></li>
+<li><p>검색은 한글만 지원하는 것 같습니다.</p></li>
+</ul>
+<p><img src="images/API_list.JPG" class="img-fluid"></p>
 </section>
-<section id="application-for-utilization" class="level2">
-<h2 class="anchored" data-anchor-id="application-for-utilization">Application for Utilization</h2>
-<p>State the purpose of using the API and apply.</p>
-</section>
-<section id="application-status" class="level2">
-<h2 class="anchored" data-anchor-id="application-status">Application Status</h2>
-<p>You can check the application status in the next step as shown in <a href="#fig-API_status" class="quarto-xref">Figure&nbsp;2</a>.</p>
+<section id="활용신청" class="level2">
+<h2 class="anchored" data-anchor-id="활용신청">활용신청</h2>
+<ul>
+<li><p>API를 사용하기 위한 목적을 기재하고 신청합니다.</p>
+<ul>
+<li>(이를 <code>개발계정</code>을 신청한다고도 합니다.)</li>
+</ul></li>
+<li><p>다음단계로 활용신청 현황을 <a href="#fig-API_status" class="quarto-xref">Figure&nbsp;1</a> 와 같이 확인할 수 있습니다.</p></li>
+</ul>
 <div id="fig-API_status" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-API_status-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/API_status.JPG" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-API_status-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: API status example
+Figure&nbsp;1: API status example
 </figcaption>
 </figure>
+</div>
+<ul>
+<li>저자의 경우 이전에 2건을 신청했었기 때문에 활용 3건으로 조회 됩니다. 원하는 목록을 선택하여 진행합니다.</li>
+</ul>
+</section>
+<section id="인증키-확인하기" class="level2">
+<h2 class="anchored" data-anchor-id="인증키-확인하기">인증키 확인하기</h2>
+<ul>
+<li><p>개발계정 상세보기를 통해 아래의 정보들을 확인할 수 있습니다.</p></li>
+<li><p>기본정보</p>
+<ul>
+<li>서비스유형은 대부분 REST(Representational State Transfer)로 되어 있으며,
+<ul>
+<li>지금 단계에서는 REST란 웹 자원(데이터, 서비스 등)을 클라이언트(=application)와 서버(=program) 간에 효율적으로 전송하고 관리하기 위해 HTTP 프로토콜을 사용하는 아키텍처 스타일로 간단하게 이해하시면 됩니다.</li>
+</ul></li>
+</ul></li>
+<li><p>서비스정보</p>
+<ul>
+<li><p>데이터 포멧: XML+JSON,</p>
+<ul>
+<li>우리가 얻고자 하는 REST의 웹자원에 해당하면 다양한 유형의 자료를 유연하게 전달하기 위한 자료형식을 선택하고 있다고 이해하시면 됩니다.</li>
+</ul></li>
+<li><p>End Point:</p>
+<ul>
+<li>API에서는 이 주소를 통해 데이터를 요청하고 응답을 받을 수 있습니다.</li>
+</ul></li>
+<li><p>일반 인증키:</p>
+<ul>
+<li><p>사용자 식별과 보안목적이며,</p></li>
+<li><p>Encoding과 Decoding 인증키 2개가 있는데</p></li>
+<li><p>다소 황당할 수 있지만 어떤 것이 유효할지 사용자가 테스트하여 선택해야 합니다.</p></li>
+</ul></li>
+</ul></li>
+<li><p>활용신청 상세기능정보</p>
+<ul>
+<li><p>원하는 상세기능의 미리보기를 선택하면</p></li>
+<li><p>요청변수(Request Parameters)를 볼 수 있습니다. HTTP 프로토콜에서 사용자의 요청을 퀴리로 전달하는 방식입니다.</p>
+<ul>
+<li><p>서비스 인증키: 이 항목에는 일반 인증키를 입력하면 되고 아직은 encoding 키와 decoding 키 둘 다 작동함을 알 수 있습니다.</p></li>
+<li><p>페이지 번호: XML 등에서 전달하고자 하는 자료의 양이 많을 떄 페이지를 분할하여 전달하기 때문이며, 총페이지수, 현재페이지번호 등의 정보를 이용해서 조회할 수 있습니다.</p></li>
+<li><p>한 페이지 결과 수: 한 번의 요청에서 받을 수 있는 데이터의 개수를 정의하는 설정입니다.</p></li>
+<li><p>기타의 변수들도 지정이 되어있으며 이는 API 마다 다릅니다. 여기에서는 요청데이터 타입이 xml로 지정하여 진행해 봅니다.</p></li>
+</ul></li>
+<li><p>미리보기를 실행하면 별도의 웹브라우저창이 열리면서 요청변수에 의한 결과가 XML 형태로 보여집니다.</p>
+<ul>
+<li><p>가장 상위에 <strong>Root Tag</strong>가 보여집니다. 여기에서는 <strong>&lt;api Response&gt;</strong> 형태로 작성되었으며 전체 데이터를 감싸는 역할을 합니다.</p></li>
+<li><p>다음 수준에서는 <strong>메타데이터 태그 (Metadata Tag)</strong>가 보여집니다. 요청에 대한 <strong>상태 정보, 요청 결과의 요약 정보</strong> 등을 포함되며 여기에서는 HTTP 응답 상태로써 <strong>&lt;resultCode&gt;</strong>와 <strong>&lt;resultMsg&gt;, &lt;totalCount&gt;, &lt;pageNo&gt;, &lt;numOfRows&gt;</strong>가 보입니다.</p></li>
+<li><p>보다하위에는 &lt;item&gt;이라하여 실제 데이터부분이 있으며 요청변수에 근거하여 반환되는 값들이 항목별로 포함되어 있습니다.</p></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="base-url-확인하기" class="level2">
+<h2 class="anchored" data-anchor-id="base-url-확인하기">base URL 확인하기</h2>
+<ul>
+<li><p>개발계정 상세보기에서 기본정보의 데이터명에 있는 상세설명 버튼을 클릭하여 이동할 수 있습니다.</p></li>
+<li><p>활용명세 내에서는 중단에 base URL을 제공하고 있습니다.</p></li>
+<li><p>개발계정에서의 End Point와 주소가 같습니다.</p></li>
+<li><p>굳이 해석해보자면 개발계정입장에서의 End Point가 API 목록을 연결할 때에는 base URL로 작용한다고 생각해도 무방할 듯 합니다.</p></li>
+</ul>
+</section>
+<section id="api-목록별-url-확인하기-end-point" class="level2">
+<h2 class="anchored" data-anchor-id="api-목록별-url-확인하기-end-point">API 목록별 url 확인하기 (=end point)</h2>
+<ul>
+<li><p>API 목록</p>
+<ul>
+<li>원하는 데이터를 선택하기 위한 url이 추가로 제공됩니다.</li>
+<li>해당 목록에는 복사버튼까지 제공됩니다.</li>
+</ul></li>
+</ul>
+</section>
+<section id="작동하는-인증키-확인하기" class="level2">
+<h2 class="anchored" data-anchor-id="작동하는-인증키-확인하기">작동하는 인증키 확인하기</h2>
+<pre><code>-   클릭하여 선택하면 OpenAPI 실행준비를 할 수 있습니다 (테스트를 해 볼 수 있다는 의미입니다).
+    -   OpenAPI 실행준비 버튼을 클릭해야 요청변수를 지정해 볼 수 있습니다.
+
+    -   serviceKey \* required는 필수적으로 지정해야 한다고 안내가 있으며 앞서의 Encoding과 Decoding 중 하나씩 테스트를 해 보아야 합니다.
+
+    -   여기에서는 Encoding을 선택하여 진행해서 openAPI 버튼을 클릭해서 진행해보면 아래의 그림과 같이 `SERVICE_KEY_IS_NOT_REGISTERED_ERROR` 오류메세지가 발생하고 적절한 결과를 얻을 수 없습니다. 즉 이 API 목록의 경우에서 Encoding 키는 정상작동을 하지 않는 것을 확인한 것입니다.</code></pre>
+<p><img src="images/ErrorMessage.JPG" class="img-fluid"></p>
+<ul>
+<li>이제 Decoding 키를 선택하여 진행해 보면 아래와 같이 <code>SUCCESS</code> 메세지가 포함된 결과를 얻을 수 있습니다.</li>
+</ul>
+<p><img src="images/SuccessMessage.JPG" class="img-fluid"></p>
+<ul>
+<li><p>serviceKey에 대한 테스트는 완료되었고, 항후의 R 또는 Python에서 활용하고자 할 때, 작동하는 인증키를 사용하시면 됩니다.</p></li>
+<li><pre><code>기타 parameters에 대한 테스트는 원하는 만큼 하시면 됩니다.</code></pre></li>
+</ul>
+</section>
+<section id="예제-r-코드" class="level2">
+<h2 class="anchored" data-anchor-id="예제-r-코드">예제 R 코드</h2>
+<ul>
+<li>건강보험심사평가원_진료행위정보서비스 API를 호출하여 그래프를 그려주는 예제코드입니다..</li>
+<li>HK010은 FDG PET/CT 검사를 의미합니다.</li>
+<li>response는 200이면 성공적으로 호출되었음을 의미합니다.</li>
+<li>data는 json 형식으로 받아온 데이터를 R에서 사용할 수 있도록 변환한 것입니다.</li>
+<li>data_list는 data에서 필요한 부분만 추출한 것입니다.</li>
+<li>df는 data_list를 데이터프레임으로 변환한 것입니다.</li>
+<li>barplot base 함수로 그래프를 그리도록 구현되었습니다.</li>
+<li>실행결과 그래프는 코드블록 다음의 <a href="#fig-petct" class="quarto-xref">Figure&nbsp;2</a> 입니다.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rjson)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plyr)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>download_api_data <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  base_url <span class="ot">&lt;-</span> <span class="st">"http://apis.data.go.kr/B551182/mdlrtActionInfoService"</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  call_url <span class="ot">&lt;-</span> <span class="st">"getMdlrtActionByClassesStats"</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  method <span class="ot">&lt;-</span> <span class="st">"GET"</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  My_API_Key <span class="ot">&lt;-</span> <span class="st">"DRwFWZ/jfi6551teJKgRhkKgC+XhcjobN+ccY2MQdF9yZdx8xL5Kn4IljljMCWGsl2ObEco/rm21r14CN7iG0g=="</span>  <span class="co"># 실제 API 키</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  params <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">serviceKey =</span> My_API_Key,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">pageNo =</span> <span class="dv">1</span>,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">numOfRows =</span> <span class="dv">10</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">resultType =</span> <span class="st">"json"</span>,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">year =</span> <span class="st">"2023"</span>,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">stdType =</span> <span class="st">"1"</span>,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">st5Cd =</span> <span class="st">"HK010"</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># API 호출</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(base_url, <span class="st">"/"</span>, call_url)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  response <span class="ot">&lt;-</span> <span class="fu">GET</span>(url, <span class="at">query =</span> params)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">status_code</span>(response) <span class="sc">==</span> <span class="dv">200</span>) {</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    json_text <span class="ot">&lt;-</span> <span class="fu">content</span>(response, <span class="at">as =</span> <span class="st">"text"</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    data <span class="ot">&lt;-</span> <span class="fu">fromJSON</span>(json_text)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(data)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"API 호출 실패:"</span>, <span class="fu">status_code</span>(response)))</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">download_api_data</span>()</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>data_list<span class="ot">&lt;-</span>data<span class="sc">$</span>response<span class="sc">$</span>body<span class="sc">$</span>items<span class="sc">$</span>item</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">rbind.fill</span>(<span class="fu">lapply</span>(data_list, as.data.frame))</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(df<span class="sc">$</span>totUseQty, </span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>        <span class="at">names.arg =</span> df<span class="sc">$</span>diagCdNm)  <span class="co"># x축 레이블 설정</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-petct" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-petct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="DataGoKr_files/figure-html/fig-petct-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-petct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: 2023년도 FDG PET/CT 건수
+</figcaption>
+</figure>
+</div>
+</div>
 </div>
 
 

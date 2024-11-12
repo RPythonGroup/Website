@@ -1,5 +1,5 @@
 ---
-title: "심사평가원 API로 통계그래프 그리기" 
+title: "심평원 API로 통계그래프 그리기" 
 description:  "A hands-on step by step tutorial to create a NM Statistics website using API."
 author: "RPythonStudyGroup feat. ChatGPT"
 date: "2024-11-18"
@@ -38,22 +38,32 @@ renv/
 ```
 
 
-::: {.callout-note title="3단계: API 하나의 데이터 호출" collapse="true" appearance="minimal"}
+::: {.callout-note title="3단계: API로 하나의 데이터만 호출해 보기" collapse="true" appearance="minimal"}
 
 -   index.qmd 파일을 열어서 아래의 코드를 추가합니다.
+-   Rendering  할 때, 자동으로 설치할 것으로 물어오지 않는다면 아래처럼 renv::install 함수를 사용하여 해당 패키지를 설치한 후 rendering 해야 합니다.
+
+```{r install_rjson, eval=FALSE, filename="R Console Pane"}
+renv::install("rjson")
+```
+
+```{r install_httr, eval=FALSE, filename="R Console Pane"}
+renv::install("httr")
+```
+
+-   rendering 후에는 Environment 탭에 response가 생성된 것을 확인할 수 있습니다.
+:::
 
 ```{{r}}
+#| label: API-call-one-time
+#| echo: false
 
 library(rjson)
 library(httr)
-library(plyr)
-
 
   base_url <- "http://apis.data.go.kr/B551182/mdlrtActionInfoService"
   call_url <- "getMdlrtActionByClassesStats"
-  method <- "GET"
-  My_API_Key <- "DRwFWZ/jfi6551teJKgRhkKgC+XhcjobN+ccY2MQdF9yZdx8xL5Kn4IljljMCWGsl2ObEco/rm21r14CN7iG0g=="  # 실제 API 키
-  
+  My_API_Key <- "DRwFWZ/jfi6551teJKgRhkKgC+XhcjobN+ccY2MQdF9yZdx8xL5Kn4IljljMCWGsl2ObEco/rm21r14CN7iG0g=="
   params <- list(
     serviceKey = My_API_Key,
     pageNo = 1,
@@ -71,51 +81,78 @@ library(plyr)
   if (status_code(response) == 200) {
     json_text <- content(response, as = "text")
     data <- fromJSON(json_text)
-    return(data)
   } else {
     print(paste("API 호출 실패:", status_code(response)))
-    return(NULL)
   }
+```
+
+::: {.callout-note title="4단계: 시작연도 설정하기" collapse="true" appearance="minimal"}
+-   해당 API 미리보기를 하여 시작연도를 어떻게 설정할 지 결정합니다.
+-   시작연도를 설정하는 코드를 추가하는 예시코드는 아래와 같습니다.
+:::
+
+
+```{{r}}
+#| label: API-call-while-loop
+#| echo: false
+ 
+library(rjson)
+library(httr)
+
+# 현재 연도를 설정
+my_year <- as.numeric(format(Sys.Date(), "%Y"))
+
+# API 기본 URL 및 키 설정
+base_url <- "http://apis.data.go.kr/B551182/mdlrtActionInfoService"
+call_url <- "getMdlrtActionByClassesStats"
+My_API_Key <- "DRwFWZ/jfi6551teJKgRhkKgC+XhcjobN+ccY2MQdF9yZdx8xL5Kn4IljljMCWGsl2ObEco/rm21r14CN7iG0g=="
+
+# 조건 변수 설정
+xcondition <- TRUE  
+
+while (xcondition) {
+  # API 요청 매개변수 설정
+  params <- list(
+    serviceKey = URLencode(My_API_Key),
+    pageNo = 1,
+    numOfRows = 10,
+    resultType = "json",
+    year = as.character(my_year),
+    stdType = "1",
+    st5Cd = "HK010"
+  )
+  
+  # API 호출 URL 설정
+  url <- paste0(base_url, "/", call_url)
+  response <- GET(url, query = params)
+
+  if (status_code(response) == 200) {
+    json_text <- content(response, as = "text")
+    data <- fromJSON(json_text)
+    
+    # totalCount가 존재하는지 확인 후 출력
+    if (!is.null(data$response$body$totalCount)) {
+      print(paste("연도:", my_year, "- totalCount:", data$response$body$totalCount))
+      
+      # totalCount가 5인 경우 루프 종료
+      if (data$response$body$totalCount == 5) {
+        xcondition <- FALSE
+        print("totalCount가 5에 도달하여 루프를 종료합니다.")
+      }
+    } else {
+      print("totalCount 값이 없습니다. 루프 종료.")
+      xcondition <- FALSE
+    }
+  } else {
+    print(paste("API 호출 실패:", status_code(response), "연도:", my_year))
+    xcondition <- FALSE  # 오류 발생 시 루프 종료
+  }
+  
+  # 연도를 1 감소
+  my_year <- my_year - 1
 }
-
-data <- download_api_data()
-data_list<-data$response$body$items$item
-df <- rbind.fill(lapply(data_list, as.data.frame))
 ```
 
--   index.qmd를 rendering 하기 전에 코드에 사용된 rjson, httr, plyr 패키지를 설치해야 합니다.
--   자동으로 설치할 것으로 물어오지 않는다면, 아래의 renv::install 함수를 사용하여 설치하실 것을 추천합니다.
-
-```{r install_rjson, eval=FALSE, filename="R Console Pane"}
-renv::install("rjson")
-```
-
-```{r install_httr, eval=FALSE, filename="R Console Pane"}
-renv::install("httr")
-```
-
-```{r install_plyr, eval=FALSE, filename="R Console Pane"}
-renv::install("plyr")
-```
-
--   이제 rendering을 해보면 index.html 파일에 barplot이 추가된 것을 확인할 수 있습니다.
-:::
-
-::: {.callout-note title="10단계: 최종버전 commit 해 두기" collapse="true" appearance="minimal"}
--   아래의 `git add .` 명령으로 프로젝트폴더 및 그 하위의 모든 폴더 및 파일들을 stage 영역으로 올립니다.
-
-```{r git_add2, eval=FALSE, filename="RStudio Terminal pane"}
-git add .
-```
-
--   아래의 `git commit -m "message"`명령으로 stage 영역에 올라간 파일들을 로컬저장소에 커밋합니다.
-    -   커밋 메시지는 해당 커밋의 내용을 요약하여 작성합니다.
-    -   여기서는 예시도 "Second commit & for webpage test"로 작성하였고 원하시는 내용으로 작성하시면 됩니다.
-:::
-
-```{r git_commit2, eval=FALSE, filename="RStudio Terminal pane"}
-git commit -m "Second commit & for webpage test"
-```
 
 ::: {.callout-note title="11단계: Github 원격저장소 만들기" collapse="true" appearance="minimal"}
 -   Github(<https://github.com/>) 계정이 없다면 계정 만들기

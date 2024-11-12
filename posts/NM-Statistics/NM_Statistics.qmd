@@ -1,0 +1,195 @@
+---
+title: "심사평가원 API로 통계그래프 그리기" 
+description:  "A hands-on step by step tutorial to create a NM Statistics website using API."
+author: "RPythonStudyGroup feat. ChatGPT"
+date: "2024-11-18"
+date-modified: "2024-11-18"
+categories:
+  - API
+  - website
+  - hands-on
+---
+
+사전준비: 건강보험심사평가원 해당 API 신청 및 승인은 되어 있어야 합니다.
+
+::: {.callout-note title="1단계: `Quarto Website` 프로젝트 만들기" collapse="true" appearance="minimal"}
+-   RStudio/File 메뉴에서 `New Project...` 메뉴 선택
+-   `New Directory`에 생성되도록 선택
+-   Project type은 `Quarto Website`를 선택
+-   상위폴더가 `C:/Projects`인지 확인 (=Global Options 사전 지정값)
+-   Directory name은 `R-4.4.1-NM_Statistics`로 지정
+-   \[\] Create a git repository: 체크 유지하여 버전관리 적용
+-   \[\] Use renv with this project: 체크 유지하여 패키지 독립관리 적용
+-   \[\] Use visual markdown editor: 체크 유지하여 wizwig 에디터 사용
+:::
+```{r git_example, eval=FALSE, filename="recommeded project name"}
+R-4.4.1-NM_Statistics
+```
+
+
+::: {.callout-note title="2단계: 버전관리 제외대상 추가하기" collapse="true" appearance="minimal"}
+-   `.gitignore` 파일을 열어서 아래의 내용을 추가하여 git 버전관리에서 제외합니다.
+:::
+
+```{r gitignore_add, eval=FALSE, filename=".gitignore"}
+.Rprofile
+*.Rproj
+renv/
+```
+
+
+::: {.callout-note title="3단계: API 하나의 데이터 호출" collapse="true" appearance="minimal"}
+
+-   index.qmd 파일을 열어서 아래의 코드를 추가합니다.
+
+```{{r}}
+
+library(rjson)
+library(httr)
+library(plyr)
+
+
+  base_url <- "http://apis.data.go.kr/B551182/mdlrtActionInfoService"
+  call_url <- "getMdlrtActionByClassesStats"
+  method <- "GET"
+  My_API_Key <- "DRwFWZ/jfi6551teJKgRhkKgC+XhcjobN+ccY2MQdF9yZdx8xL5Kn4IljljMCWGsl2ObEco/rm21r14CN7iG0g=="  # 실제 API 키
+  
+  params <- list(
+    serviceKey = My_API_Key,
+    pageNo = 1,
+    numOfRows = 10,
+    resultType = "json",
+    year = "2023",
+    stdType = "1",
+    st5Cd = "HK010"
+  )
+  
+  # API 호출
+  url <- paste0(base_url, "/", call_url)
+  response <- GET(url, query = params)
+
+  if (status_code(response) == 200) {
+    json_text <- content(response, as = "text")
+    data <- fromJSON(json_text)
+    return(data)
+  } else {
+    print(paste("API 호출 실패:", status_code(response)))
+    return(NULL)
+  }
+}
+
+data <- download_api_data()
+data_list<-data$response$body$items$item
+df <- rbind.fill(lapply(data_list, as.data.frame))
+```
+
+-   index.qmd를 rendering 하기 전에 코드에 사용된 rjson, httr, plyr 패키지를 설치해야 합니다.
+-   자동으로 설치할 것으로 물어오지 않는다면, 아래의 renv::install 함수를 사용하여 설치하실 것을 추천합니다.
+
+```{r install_rjson, eval=FALSE, filename="R Console Pane"}
+renv::install("rjson")
+```
+
+```{r install_httr, eval=FALSE, filename="R Console Pane"}
+renv::install("httr")
+```
+
+```{r install_plyr, eval=FALSE, filename="R Console Pane"}
+renv::install("plyr")
+```
+
+-   이제 rendering을 해보면 index.html 파일에 barplot이 추가된 것을 확인할 수 있습니다.
+:::
+
+::: {.callout-note title="10단계: 최종버전 commit 해 두기" collapse="true" appearance="minimal"}
+-   아래의 `git add .` 명령으로 프로젝트폴더 및 그 하위의 모든 폴더 및 파일들을 stage 영역으로 올립니다.
+
+```{r git_add2, eval=FALSE, filename="RStudio Terminal pane"}
+git add .
+```
+
+-   아래의 `git commit -m "message"`명령으로 stage 영역에 올라간 파일들을 로컬저장소에 커밋합니다.
+    -   커밋 메시지는 해당 커밋의 내용을 요약하여 작성합니다.
+    -   여기서는 예시도 "Second commit & for webpage test"로 작성하였고 원하시는 내용으로 작성하시면 됩니다.
+:::
+
+```{r git_commit2, eval=FALSE, filename="RStudio Terminal pane"}
+git commit -m "Second commit & for webpage test"
+```
+
+::: {.callout-note title="11단계: Github 원격저장소 만들기" collapse="true" appearance="minimal"}
+-   Github(<https://github.com/>) 계정이 없다면 계정 만들기
+    -   자신의 이메일(예시 rpythonmember\@gmail.com)과 사용자명(예시 RPythonMember)으로 등록합니다.
+        -   위의 예시는 연구회의 사용자명과 이메일이므로 이를 그대로 사용하시면 계정이 만들어지지 않습니다.
+        -   자신의 운영체제에 Git 설치 시 global로 설정했던 자신의 user.name과 email을 재사용하는 것을 추천합니다.
+        -   Sign up 과정에서 이메일로 코드를 전송받고 로그인시 입력하는 방식으로 가입을 완료하게 됩니다.
+-   원격저장소 만들기
+-   Github에 로그인을 하여 Dashboard가 나온다면 아래의 그림과 같이 Repository name에 `Quarto_Website_Example`을 default로 선택된 Private 대신 Public 라이오버튼을 선택하여 원격저장소를 생성합니다.\
+    ![](images/CreatNewRepository.PNG) - public은 코드 공개를 의미합니다.
+:::
+
+```{r github_signup, eval=FALSE, filename="recommended new repository name"}
+Quarto_Website_Example
+```
+
+::: {.callout-note title="12단계: Github 원격저장소 연결하기" collapse="true" appearance="minimal"}
+-   RStudio Terminal tab에서 아래의 git 명령으로 로컬 PC의 자신의 project와 github 원격저장소를 연결합니다
+    -   Github \<\> code 메뉴에서 Quick setup 내에 있는 URL이 원격저장소 주소입니다. ![](images/RemoteRepositoryURL.PNG)
+    -   `git remote add origin` 명령에 이어서 원격저장소 URL의 기술해주면 연결됩니다.
+    -   `git remote add origin`에서 origin은 원격 저장소의 이름(별칭)을 나타냅니다.
+    -   연결 성공시에는 메세지가 없고 실패시에는 메세지가 출력됩니다.
+    -   원격 저장소의 연결 상태를 확인하고자 한다면 아래의 git 명령을 사용하시면 됩니다.
+
+```{r git_remote_v, eval=FALSE, filename="RStudio Terminal pane"}
+git remote -v
+```
+
+-   아래와 같은 방식으로 출력이 보이면 원격저장소가 연결된 것입니다.
+-   실제로는 자신의 원격저장소의 url이 보이게 됩니다.
+
+```{r git_remote_V_output, eval=FALSE, filename="git log output"}
+C:\Projects\R-4.4.1-Quarto_Website_Example>git remote -v
+origin  https://github.com/RPythonMember/Quarto_Website_Example.git (fetch)
+origin  https://github.com/RPythonMember/Quarto_Website_Example.git (push)
+```
+:::
+
+```{r git_remote, eval=FALSE, filename="RStudio Terminal pane"}
+git remote add origin https://github.com/RPythonMember/Quarto_Website_Example.git
+```
+
+::: {.callout-note title="13단계: 원격저장소에 파일올리기" collapse="true" appearance="minimal"}
+-   Github 원격저장소에 파일을 올리는 것을 push라고 합니다.
+-   아래의 git push 명령으로 프로젝트 파일들을 올립니다.
+-   origin은 원격저장소의 별칭입니다.
+-   main은 branch의 이름입니다.
+-   완료되면 github 원격저장소 화면을 refresh하면 아래의 그림과 같이 파일들이 올라간 것을 확인할 수 있습니다.
+
+![](images/refrashed.PNG)
+:::
+
+```{r git_push, eval=FALSE, filename="RStudio Terminal pane"}
+git push origin main
+```
+
+::: {.callout-note title="14단계: Pages 설정하기" collapse="true" appearance="minimal"}
+-   Github의 Settings를 클리하면 그림과 같이 사이드메뉴 하단에 Pages 기능을 선택할 수 있습니다.
+![](images/Pages.PNG)
+-   Pages를 선택하면 아래의 그림과 같이 Branch를 None에서 우리가 upload한 brach인 main선택할 수 있습니다.
+![](images/main.PNG)
+- 폴더를 root에서 변경할 수 있는데 단지 docs로만 변경이 가능하므로 주의를 요합니다.
+  - 이것 때문에 프로젝트 output-dir을 docs로 설정하였던 것입니다.
+![](images/docs.PNG)  
+- save하여 화면을 refresh 해보면 웹페이지 url이 그림과 같이 나타납니다.
+![](images/siteURL.PNG)
+- 위의 주소가 웹페이지 주소이며 완성입니다.
+
+:::
+
+::: {.callout-note title="마지막단계: 웹페이지 접속으로 확인하기" collapse="true" appearance="minimal"}
+-  아래의 그림에서 visit site를 클릭하면 웹페이지가 보이는 것을 확인할 수 있습니다.
+![](images/siteURL.PNG)
+- 위 주소를 자신의 브라우저에 입력해서도 웹페이지가 보이게 됩니다.
+
+:::
+

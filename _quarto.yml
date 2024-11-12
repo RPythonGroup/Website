@@ -67,8 +67,11 @@ website:
         - posts/Chi-square-test/Chi_square_test.qmd
     - title: "Resources"
       contents:
-        - posts/Resources/introduction_to_resources.qmd 
-        - posts/DataGoKr/DataGoKr.qmd
+        - posts/Resources/introduction_to_resources.qmd
+        - section: "공골데이터포털"
+          contents:
+            - posts/DataGoKr/DataGoKr.qmd
+            - posts/NM-Statistics/NM_Statistics.qmd
     - title: "Tools"
       contents:
         - posts/tools/introduction_to_tools.qmd

@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/NM-Statistics/NM_Statistics.html",
       "/posts/DataGoKr/DataGoKr.html",
       "/posts/Hands-on-Quarto-Website/Hands_on_Quarto_Website.html",
       "/posts/Github/Github.html",

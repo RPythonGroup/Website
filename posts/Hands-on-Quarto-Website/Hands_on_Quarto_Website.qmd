@@ -16,9 +16,9 @@ categories:
 -   Project type은 `Quarto Website`를 선택
 -   상위폴더가 `C:/Projects`인지 확인 (=Global Options 사전 지정값)
 -   Directory name은 `R-4.4.1-Quarto_Website_Example`로 지정
--   \[\] Create a git repository: 체크 유지하여 버전관리 적용
--   \[\] Use renv with this project: 체크 유지하여 패키지 독립관리 적용
--   \[\] Use visual markdown editor: 체크 유지하여 wizwig 에디터 사용
+- [x] Create a git repository: 체크 유지하여 버전관리 적용
+- [x] Use renv with this project: 체크 유지하여 패키지 독립관리 적용
+- [x] Use visual markdown editor: 체크 유지하여 wizwig 에디터 사용
 -   Quarto website 특이적 파일생성을 Output pane에서 확인할 수 있습니다.
     -   `_quarto.yml`: 전역옵션, 경로, 출력 등의 Quarto 전반의 설정 구성 파일
     -   `about.qmd`: 컨텐츠 파일로 웹페이지 전반에 대한 소개 역할

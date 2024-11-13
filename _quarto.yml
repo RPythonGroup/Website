@@ -46,7 +46,8 @@ website:
         - posts/outlier-detection/outlier_detection.qmd   
         - posts/built-in-dataset/built_in_dataset.qmd
         - posts/Chi-square-test-in-R/Chi_square_test_in_R.qmd 
-        - posts/shiny/shiny_example.qmd 
+        - posts/shiny/shiny_example.qmd
+        - posts/shiny/Hands_on_Shiny_website.qmd
     - title: "Python"
       contents:
         - posts/Python/introduction_to_Python.qmd

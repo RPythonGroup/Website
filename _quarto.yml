@@ -69,10 +69,10 @@ website:
     - title: "Resources"
       contents:
         - posts/Resources/introduction_to_resources.qmd
-        - section: "공골데이터포털"
+        - section: "공공데이터포털"
           contents:
             - posts/DataGoKr/DataGoKr.qmd
-            - posts/NM-Statistics/NM_Statistics.qmd
+            - posts/DataGoKr/Hands_on_API_Shinyapp.qmd
     - title: "Tools"
       contents:
         - posts/tools/introduction_to_tools.qmd

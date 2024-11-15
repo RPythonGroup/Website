@@ -288,6 +288,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Shiny Application Example</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/shiny/Hands_on_Shiny_website.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hands-on Shiny API Application</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -902,7 +908,7 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>today <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>(); <span class="fu">print</span>(today); <span class="fu">class</span>(today); <span class="fu">typeof</span>(today)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-11-10"</code></pre>
+<pre><code>[1] "2024-11-15"</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Date"</code></pre>
@@ -923,7 +929,7 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>current_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(current_time); <span class="fu">class</span>(current_time); <span class="fu">typeof</span>(current_time)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-11-10 23:24:50 KST"</code></pre>
+<pre><code>[1] "2024-11-15 18:58:53 KST"</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "POSIXct" "POSIXt" </code></pre>
@@ -1095,16 +1101,16 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <span id="cb95-8"><a href="#cb95-8" aria-hidden="true" tabindex="-1"></a>df1</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   ID Name Score
-1   1  Lee    88
-2   2  Kim    77
-3   3 Park    76
-4   4 Kang    80
-5   5 Shin    68
-6   6  Lim    76
-7   7 Kwon    74
-8   8 Choi    81
-9   9  Nam    83
-10 10 Baek    96</code></pre>
+1   1  Lee    75
+2   2  Kim    76
+3   3 Park    81
+4   4 Kang    78
+5   5 Shin    70
+6   6  Lim    79
+7   7 Kwon    76
+8   8 Choi    70
+9   9  Nam    74
+10 10 Baek    80</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1112,16 +1118,16 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>merged_df</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   ID Name Score Department Age
-1   1  Lee    88         GS  39
-2   2  Kim    77         GY  44
-3   3 Park    76         GY  50
-4   4 Kang    80         GS  37
-5   5 Shin    68       &lt;NA&gt;  NA
-6   6  Lim    76         PD  45
-7   7 Kwon    74         GY  38
-8   8 Choi    81         GY  47
-9   9  Nam    83         PD  48
-10 10 Baek    96         IM  40</code></pre>
+1   1  Lee    75         GS  46
+2   2  Kim    76         IM  44
+3   3 Park    81         GS  30
+4   4 Kang    78       &lt;NA&gt;  NA
+5   5 Shin    70         GS  35
+6   6  Lim    79         GS  49
+7   7 Kwon    76         GS  35
+8   8 Choi    70         IM  34
+9   9  Nam    74         PD  28
+10 10 Baek    80         GS  44</code></pre>
 </div>
 </div>
 </section>

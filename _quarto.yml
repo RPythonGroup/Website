@@ -40,14 +40,15 @@ website:
     - title: "R"
       contents:
         - posts/R/introduction_to_R.qmd
-        - posts/R-setup/R_setup.qmd
-        - posts/RStudio-setup/RStudio_setup.qmd      
-        - posts/R-syntax/R_syntax.qmd    
-        - posts/outlier-detection/outlier_detection.qmd   
-        - posts/built-in-dataset/built_in_dataset.qmd
-        - posts/Chi-square-test-in-R/Chi_square_test_in_R.qmd 
-        - posts/shiny/shiny_example.qmd
-        - posts/shiny/Hands_on_Shiny_website.qmd
+        - posts/R/R_setup.qmd
+        - posts/R/RStudio_setup.qmd      
+        - posts/R/R_syntax.qmd
+        - posts/R/regular_expression.qmd
+        - posts/R/outlier_detection.qmd   
+        - posts/R/built_in_dataset.qmd
+        - posts/R/Chi_square_test_in_R.qmd 
+        - posts/R/shiny_example.qmd
+        - posts/R/Hands_on_Shiny_website.qmd
     - title: "Python"
       contents:
         - posts/Python/introduction_to_Python.qmd
@@ -88,7 +89,8 @@ execute:
 format:
   html:
     theme: cosmo
-    css: styles.css
+    css: styles/styles.css
+    csl: styles/nuclear-medicine-and-molecular-imaging.csl
     code-copy: true
     toc: true
     mathjax: "default"

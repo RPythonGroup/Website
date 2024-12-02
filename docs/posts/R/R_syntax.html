@@ -104,7 +104,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -185,7 +185,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/R-syntax/R_syntax.html">R syntax</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/R/R_syntax.html">R syntax</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -248,49 +248,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/R-setup/R_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/R/R_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R setup</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/RStudio-setup/RStudio_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/R/RStudio_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">RStudio setup</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/R-syntax/R_syntax.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../posts/R/R_syntax.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">R syntax</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/outlier-detection/outlier_detection.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/R/regular_expression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Regular Expression</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/R/outlier_detection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Outliers detection in continuous variables</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/built-in-dataset/built_in_dataset.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/R/built_in_dataset.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Built-in Data sets in R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/Chi-square-test-in-R/Chi_square_test_in_R.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/R/Chi_square_test_in_R.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chi-square test in R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/shiny/shiny_example.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/R/shiny_example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Shiny Application Example</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/shiny/Hands_on_Shiny_website.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/R/Hands_on_Shiny_website.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hands-on Shiny API Application</span></a>
   </div>
 </li>
@@ -908,7 +914,7 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>today <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>(); <span class="fu">print</span>(today); <span class="fu">class</span>(today); <span class="fu">typeof</span>(today)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-11-15"</code></pre>
+<pre><code>[1] "2024-12-02"</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Date"</code></pre>
@@ -929,7 +935,7 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>current_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(current_time); <span class="fu">class</span>(current_time); <span class="fu">typeof</span>(current_time)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-11-15 23:36:53 KST"</code></pre>
+<pre><code>[1] "2024-12-02 15:15:43 KST"</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "POSIXct" "POSIXt" </code></pre>
@@ -1101,16 +1107,16 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <span id="cb95-8"><a href="#cb95-8" aria-hidden="true" tabindex="-1"></a>df1</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   ID Name Score
-1   1  Lee    82
+1   1  Lee    74
 2   2  Kim    84
-3   3 Park    86
-4   4 Kang    82
-5   5 Shin    85
-6   6  Lim    91
-7   7 Kwon    77
-8   8 Choi    88
-9   9  Nam    80
-10 10 Baek    67</code></pre>
+3   3 Park    72
+4   4 Kang    84
+5   5 Shin    79
+6   6  Lim    82
+7   7 Kwon    71
+8   8 Choi    85
+9   9  Nam    85
+10 10 Baek    81</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1118,16 +1124,16 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>merged_df</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   ID Name Score Department Age
-1   1  Lee    82         PD  43
-2   2  Kim    84         IM  42
-3   3 Park    86       &lt;NA&gt;  NA
-4   4 Kang    82         PD  38
-5   5 Shin    85         GS  29
-6   6  Lim    91         PD  38
-7   7 Kwon    77         GS  47
-8   8 Choi    88         IM  38
-9   9  Nam    80         IM  39
-10 10 Baek    67         GY  38</code></pre>
+1   1  Lee    74         GS  44
+2   2  Kim    84         GS  44
+3   3 Park    72       &lt;NA&gt;  NA
+4   4 Kang    84         PD  43
+5   5 Shin    79         GY  47
+6   6  Lim    82         GY  37
+7   7 Kwon    71         IM  38
+8   8 Choi    85         GS  46
+9   9  Nam    85         IM  38
+10 10 Baek    81         PD  26</code></pre>
 </div>
 </div>
 </section>

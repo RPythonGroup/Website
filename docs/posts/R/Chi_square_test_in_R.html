@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="RPythonStudyGroup feat. ChatGPT">
-<meta name="description" content="Guidance on Installing and Configuring RStudio">
+<meta name="description" content="Brief introduction on basic statistics functions in R">
 
-<title>RStudio setup – RPythonStudy</title>
+<title>Chi-square test in R – RPythonStudy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -104,7 +70,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -185,7 +151,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/RStudio-setup/RStudio_setup.html">RStudio setup</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/R/Chi_square_test_in_R.html">Chi-square test in R</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -195,16 +161,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">RStudio setup</h1>
+      <h1 class="title">Chi-square test in R</h1>
                   <div>
         <div class="description">
-          Guidance on Installing and Configuring RStudio
+          Brief introduction on basic statistics functions in R
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">R</div>
-                <div class="quarto-category">RStudio</div>
-                <div class="quarto-category">setup</div>
+                <div class="quarto-category">Chi-square</div>
               </div>
                   </div>
   </div>
@@ -222,14 +187,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">공개</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">2024년 5월 6일</p>
+        <p class="date">2024년 7월 17일</p>
       </div>
     </div>
     
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">2024년 5월 26일</p>
+        <p class="date-modified">2024년 10월 14일</p>
       </div>
     </div>
       
@@ -249,49 +214,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/R-setup/R_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/R/R_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R setup</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/RStudio-setup/RStudio_setup.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../posts/R/RStudio_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">RStudio setup</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/R-syntax/R_syntax.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/R/R_syntax.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R syntax</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/outlier-detection/outlier_detection.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/R/regular_expression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Regular Expression</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/R/outlier_detection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Outliers detection in continuous variables</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/built-in-dataset/built_in_dataset.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/R/built_in_dataset.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Built-in Data sets in R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/Chi-square-test-in-R/Chi_square_test_in_R.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/R/Chi_square_test_in_R.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Chi-square test in R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/shiny/shiny_example.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/R/shiny_example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Shiny Application Example</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/shiny/Hands_on_Shiny_website.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/R/Hands_on_Shiny_website.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hands-on Shiny API Application</span></a>
   </div>
 </li>
@@ -305,13 +276,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#r-통합개발환경-선택" id="toc-r-통합개발환경-선택" class="nav-link active" data-scroll-target="#r-통합개발환경-선택">R 통합개발환경 선택</a></li>
-  <li><a href="#rstudio-설치안내문서" id="toc-rstudio-설치안내문서" class="nav-link" data-scroll-target="#rstudio-설치안내문서">RStudio 설치안내문서</a></li>
-  <li><a href="#rstudio-설치파일" id="toc-rstudio-설치파일" class="nav-link" data-scroll-target="#rstudio-설치파일">RStudio 설치파일</a></li>
-  <li><a href="#패키지-종속성-관리를-위한-renv" id="toc-패키지-종속성-관리를-위한-renv" class="nav-link" data-scroll-target="#패키지-종속성-관리를-위한-renv"><strong>패키지 종속성 관리를 위한</strong> <code>renv</code></a></li>
-  <li><a href="#r-rstudio-폴더관리-추천" id="toc-r-rstudio-폴더관리-추천" class="nav-link" data-scroll-target="#r-rstudio-폴더관리-추천"><strong>R &amp; RStudio 폴더관리 추천</strong></a>
+  <li><a href="#chisq.test" id="toc-chisq.test" class="nav-link active" data-scroll-target="#chisq.test">chisq.test</a>
   <ul class="collapse">
-  <li><a href="#프로젝트-폴더관리" id="toc-프로젝트-폴더관리" class="nav-link" data-scroll-target="#프로젝트-폴더관리">프로젝트 폴더관리</a></li>
+  <li><a href="#설명" id="toc-설명" class="nav-link" data-scroll-target="#설명">설명</a></li>
+  <li><a href="#사용법" id="toc-사용법" class="nav-link" data-scroll-target="#사용법">사용법</a></li>
+  <li><a href="#인자-argument" id="toc-인자-argument" class="nav-link" data-scroll-target="#인자-argument">인자 (Argument)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -323,72 +292,121 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="r-통합개발환경-선택" class="level2">
-<h2 class="anchored" data-anchor-id="r-통합개발환경-선택">R 통합개발환경 선택</h2>
-<p>RStudio와 VS Code는 모두 각자의 특징을 가진 R 프로그래밍을 위한 통합 개발 환경(IDE)입니다. RStudio는 전용화된 환경으로 R 언어와 관련된 다양한 기능을 직관적으로 제공하며, R 코드 작성, 데이터 시각화, 리포팅 등에 최적화되어 있습니다. 반면에 VS Code는 다양한 프로그래밍 언어를 지원하며, Marketplace에서 제공하는 확장 기능을 통해 개발자가 필요한 기능을 추가할 수 있는 유연성을 가지고 있습니다. VS Code는 경량화된 성능과 통합 터미널 기능을 제공하여 다양한 개발 환경에서 활용될 수 있지만, R에 특화된 기능은 상대적으로 부족할 수 있습니다.</p>
-<p>연구회에서는 RStudio를 우선 추천합니다.</p>
+<section id="chisq.test" class="level2">
+<h2 class="anchored" data-anchor-id="chisq.test">chisq.test</h2>
+<section id="설명" class="level3">
+<h3 class="anchored" data-anchor-id="설명">설명</h3>
+<ul>
+<li>Package stats version 4.4.1</li>
+<li>R에서 chisq.test는 카이제곱(chi-squared) 교차표 검정과 적합성 검정(goodness-of-fit)을 모두 수행할 수 있도록 구현되어 있습니다. 이 함수의 R에서의 사용법은 매뉴얼(= ?chisq.test)를 통해 학습할 것을 추천합니다.</li>
+<li>다만 아래는 차후 기억을 위해 기록한 것임을 참고하시길 바랍니다.</li>
+</ul>
 </section>
-<section id="rstudio-설치안내문서" class="level2">
-<h2 class="anchored" data-anchor-id="rstudio-설치안내문서">RStudio 설치안내문서</h2>
-<p>RStudio 공식사이트 (<a href="https://posit.co/" class="uri">https://posit.co/</a>)에 설치에 대한 공식문서는 없어 보입니다. 그러나 설치는 어렵지 않으며 아래의 요약을 참고하여 설치 하셔도 됩니다.</p>
+<section id="사용법" class="level3">
+<h3 class="anchored" data-anchor-id="사용법">사용법</h3>
+<ul>
+<li>chisq.test(x, y = NULL, correct = TRUE, p = rep(1/length(x), length(x)), rescale.p = FALSE, simulate.p.value = FALSE, B = 2000)</li>
+</ul>
 </section>
-<section id="rstudio-설치파일" class="level2">
-<h2 class="anchored" data-anchor-id="rstudio-설치파일">RStudio 설치파일</h2>
-<p>자신의 운영체제에 맞는 최신버전의 RStudio를 아래의 공식 다운로드 사이트(<a href="https://posit.co/downloads/" class="uri">https://posit.co/downloads/</a>)에서 다운로드 후 (2024년 9월 27일 현재 원도우데스크탑용의 최신설치파일은 RStudio-2024.09.0-375.exe입니다.)</p>
-<p>default 폴더에 설치합니다.</p>
-<p>설치 이후 RStudio을 실행한 후 상단의 탭매뉴 중 Tools 메뉴 &gt; Global Options… &gt; R General &gt; Basic 탭에서 아래의 예시와 같이 설치하신 최신버전의 R 실행경로를 선택해 주시면 됩니다. (드물게 지난 버전의 R의 만든 프로젝트를 지난 버전으로 실행하고 싶다면 이 메뉴에서 과거 버전의 R 실행파일의 경로를 지정해주시고 해당 프로젝트를 열어서 사용하시면 됩니다.)</p>
-<div class="cell">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>R version: example</strong></pre>
+<section id="인자-argument" class="level3">
+<h3 class="anchored" data-anchor-id="인자-argument">인자 (Argument)</h3>
+<ul>
+<li>x: 숫자형 벡터 또는 행렬. x와 y는 모두 factor로 지정할 수도 있습니다.</li>
+<li>y: 숫자형 벡터; x가 행렬인 경우 무시됩니다. x가 factor인 경우, y는 같은 길이의 factor이어야 합니다.</li>
+<li>correct: 논리값으로, 2x2 테이블에서 검정 통계량을 계산할 때 연속성 수정을 적용할지 여부를 나타냅니다. 연속성 수정은 모든 |O - E| 차이에서 1/2을 뺍니다. simulate.p.value = TRUE인 경우에는 수정이 적용되지 않습니다.</li>
+</ul>
+<div class="callout callout-style-simple callout-important no-icon callout-titled" title="연속성 수정의 적용기준은...">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">64</span><span class="sc">-</span>bit] C<span class="sc">:</span>\R\R<span class="dv">-4</span>.<span class="fl">4.1</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-title-container flex-fill">
+연속성 수정의 적용기준은…
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>과거에는 2x2 분할표에서 셀의 기대값이 5보다 작을 경우 Yates의 연속성 수정(Yates’ continuity correction)을 적용했습니다.</li>
+<li>하지만, 최근에는 작은 셀 빈도에 대해 Fisher의 정확 검정(Fisher’s exact test)을 주로 적용하고 있습니다.</li>
+</ul>
 </div>
 </div>
-<p>Default working directory (when not in a project)지정은 아래의 예시와 같이 프로젝트를 관리하는 상위 폴더를 추천 드립니다.</p>
-<div class="cell">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Default working directory: example</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>C<span class="sc">:</span>\Projects</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>p: x와 같은 길이의 확률 벡터입니다. p의 어떤 항목이라도 음수일 경우 오류가 발생합니다.</li>
+</ul>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="p 인자는 적합성 검정에 사용되며 ...">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+p 인자는 적합성 검정에 사용되며 …
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>p 인자는 적합성 검정(goodness-of-fit test)을 수행할 때 기대 확률을 지정하는 데 사용됩니다.</li>
+<li>기본적으로 p는 주어지지 않으면, 각 범주가 동일한 확률을 가진다고 가정합니다.</li>
+<li>즉, 기본값은 rep(1/length(x), length(x))로 설정되어, 모든 범주에 동일한 확률을 할당합니다.</li>
+<li>만약 각 범주가 서로 다른 이론적 확률을 가진다고 가정할 때, 해당 확률을 벡터로 명시해야 합니다.</li>
+<li>예를 들어, 범주 A, B, C가 각각 40%, 30%, 30%의 확률을 가진다고 가정한다면, p = c(0.4, 0.3, 0.3)로 설정할 수 있습니다.</li>
+</ul>
 </div>
 </div>
-<p>RStudio 매뉴얼은 개발사인 posit이 만든 <a href="https://docs.posit.co/ide/user/" class="uri">https://docs.posit.co/ide/user/</a>을 참고하시길 바랍니다.</p>
-<p>개발자들은 R을 command line interface로 사용하기 보다는 RStudio로 사용한다고 생각됩니다. 그러한 측면에서 R 사용법과 RStudio 사용법은 밀접하게 연계된 셈이며, 사용법에 대한 자료는 RStudio를 개발한 posit에서 만든 RSudio에 내장된 Tutorials가 있습니다. 링크를 타고들어가보면 Beginners, Intermediates, Experts 과정들이 있으므로 상황에 맞는 과정들을 선택해서 시작하면 좋습니다.</p>
-<p>(RStudio에서는 아래의 <a href="#fig-GitConfiguration" class="quarto-xref">그림&nbsp;1</a> 과 같이 git와 같은 version control interface 사용여부에 대한 설정이 있으며 이를 check 해야 새로운 프로젝트를 만들 때 git 사용여부가 옵션으로 선택이 가능해집니다. )</p>
-<div id="fig-GitConfiguration" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-GitConfiguration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/git설정.JPG" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-GitConfiguration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1: RStudio에서 git 사용여부 설정
-</figcaption>
-</figure>
+<ul>
+<li>rescale.p: 논리 스칼라; TRUE인 경우 p가 1로 합계될 수 있도록 재조정됩니다. FALSE이고 p의 합이 1이 아닌 경우 오류가 발생합니다.</li>
+</ul>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="p 인자의 합이 1이 되도록 ...">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-</section>
-<section id="패키지-종속성-관리를-위한-renv" class="level2">
-<h2 class="anchored" data-anchor-id="패키지-종속성-관리를-위한-renv"><strong>패키지 종속성 관리를 위한</strong> <code>renv</code></h2>
-<p>원래 R에서 패키지는 해당버전 R의 설치폴더 하부의 library 폴더에 설치됩니다. <code>renv</code>는 R 프로젝트에서 패키지 의존성을 관리하기 위해 설계된 도구로써, renv를 설치하고 활성화하면 해당 프로젝트 폴더 하부에 renv 폴더가 만들어지고, 그 하부에 패키지를 설치하게 됩니다. 또한 설치된 패키지들의 정보를 renv.lock 파일에 관리하게 됩니다. 이러한 방법으로 R에서는 프로젝트별로 패키지를 관리할 수 있으므로 필자를 이를 추천합니다.</p>
-<p>RStudio에서 새로운 프로젝트를 생성할 때 renv 사용여부를 check하면 자동으로 설정됩니다.</p>
-<p>사용법에 대해서는 <a href="https://rstudio.github.io/renv/articles/renv.html" class="uri">https://rstudio.github.io/renv/articles/renv.html</a> 참고하시길 바랍니다.</p>
-</section>
-<section id="r-rstudio-폴더관리-추천" class="level2">
-<h2 class="anchored" data-anchor-id="r-rstudio-폴더관리-추천"><strong>R &amp; RStudio 폴더관리 추천</strong></h2>
-<section id="프로젝트-폴더관리" class="level3">
-<h3 class="anchored" data-anchor-id="프로젝트-폴더관리">프로젝트 폴더관리</h3>
-<p>Project 폴더를 C:\Projects 하위폴더에 R 버전과 프로젝트명을 폴더명으로 하여 관리하는 것을 추천합니다.</p>
-<div id="fig-ProjectDirectory" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ProjectDirectory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<pre id="fig-ProjectDirectory"><code>C:\Projects\
-      └─ R-x.y.z-Project_Name</code></pre>
+<div class="callout-title-container flex-fill">
+p 인자의 합이 1이 되도록 …
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ProjectDirectory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2: Recommended nomenclautue for Project directory name
-</figcaption>
-</figure>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>p 확률인자는 원칙적으로 합이 1이 되어야 합니다.</li>
+<li>만약 사용자가 입력한 p 값의 합이 1이 아니고 rescale.p를 TRUE로 설정하였다면 p 값을 재조정하여 합이 1이 되도록 합니다.</li>
+</ul>
+</div>
+</div>
+</div>
+<ul>
+<li><p>simulate.p.value: 논리값으로, p-값을 몬테카를로 시뮬레이션으로 계산할지 여부를 나타냅니다.</p></li>
+<li><p>B: 몬테카를로 검정에서 사용할 복제 횟수를 지정하는 정수입니다.</p></li>
+</ul>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="몬테카를로 시뮬레이션 하는 이유는...">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+몬테카를로 시뮬레이션 하는 이유는…
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>몬테카를로 시뮬레이션을 통해 p-값을 계산할 수 있도록 하는 옵션입니다.</li>
+<li>이 옵션은 기본적으로 FALSE로 설정되어 있지만, TRUE로 설정하면 p-값을 직접적으로 계산하는 대신 랜덤 샘플링을 통해 추정하게 됩니다.</li>
+<li>몬테카를로 시뮬레이션은 무작위로 데이터를 샘플링하고, 각 샘플에 대해 카이제곱 검정 통계량을 계산하여 추정된 분포를 기반으로 p-값을 산출합니다.</li>
+<li>시뮬레이션에서 사용할 복제 수를 지정하는 정수입니다. 기본값은 2000이며, 더 높은 정확도를 원할 경우 복제 수를 증가시킬 수 있습니다.</li>
+<li>예를 들어, B = 10000으로 설정하면 더 정밀한 p-값을 얻을 수 있습니다.</li>
+<li>몬테카를로 시뮬레이션은 계산 비용이 크므로 매우 큰 데이터셋에서 사용하면 시간이 오래 걸릴 수 있습니다.</li>
+</ul>
+</div>
+</div>
 </div>
 
 

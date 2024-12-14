@@ -57,9 +57,9 @@ website:
     - title: "Quarto"
       contents:
         - posts/Quarto/introduction_to_Quarto.qmd
-        - posts/Quarto-setup/Quarto_setup.qmd
-        - posts/Hands-on-Quarto-Website/Hands_on_Quarto_Website.qmd
-        - posts/manuscript-example/manuscript_example.qmd
+        - posts/Quarto/Quarto_setup.qmd
+        - posts/Quarto/Website/Hands_on_Quarto_Website.qmd
+        - posts/Quarto/Manuscript/manuscript_example.qmd
     - title: "Statistics"
       contents:
         - posts/statistics/introduction_to_statistics.qmd
@@ -94,7 +94,8 @@ format:
     code-copy: true
     toc: true
     mathjax: "default"
-    
+    link-external-newwindow: true
+
 resource-paths:
   - resources/
   - images/

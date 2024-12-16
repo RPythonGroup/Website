@@ -228,7 +228,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">2024년 10월 24일</p>
+        <p class="date-modified">2024년 12월 14일</p>
       </div>
     </div>
       
@@ -252,18 +252,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Quarto setup</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Websites</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../posts/Quarto/Website/Hands_on_Quarto_Website.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hands-on Quarto Website</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Manuscripts</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../posts/Quarto/Manuscript/manuscript_example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Manuscript Example</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">기능구현</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/Quarto/Functions/tooltip.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tooltip</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -297,7 +336,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="설치-파일" class="level2">
 <h2 class="anchored" data-anchor-id="설치-파일">설치 파일</h2>
-<p>공식 Python 웹사이트(<a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a>)에서 운영체제에 적합한 최신 Quarto 설치파일을 다운로드하고 설치합니다. 2024년 10월 24일 기준으로 Windows 운영 체제의 경우 <code>quarto-1.5.557-win.msi</code> 설치파일(2024년 8월 30일 release)이 최신입니다.</p>
+<p>공식 Python 웹사이트(<a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a>)에서 운영체제에 적합한 최신 Quarto 설치파일을 다운로드하고 설치합니다. 이글은 <code>quarto-1.6.39-win.msi</code> 설치파일(2024년 11월 28일 release)로 작성되었습니다.</p>
 </section>
 <section id="설치옵션" class="level2">
 <h2 class="anchored" data-anchor-id="설치옵션">설치옵션</h2>
@@ -308,13 +347,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="설치-확인" class="level2">
 <h2 class="anchored" data-anchor-id="설치-확인">설치 확인</h2>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Python이 올바르게 설치되었는지 확인하려면,">
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Quarto가 올바르게 설치되었는지 확인하려면,">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Python이 올바르게 설치되었는지 확인하려면,
+Quarto가 올바르게 설치되었는지 확인하려면,
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>

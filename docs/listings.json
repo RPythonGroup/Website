@@ -2,14 +2,15 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Quarto/Functions/tooltip.html",
       "/posts/R/regular_expression.html",
+      "/posts/Quarto/Quarto_setup.html",
       "/posts/DataGoKr/Hands_on_API_Shinyapp.html",
       "/posts/R/Hands_on_Shiny_website.html",
       "/posts/DataGoKr/DataGoKr.html",
       "/posts/Quarto/Website/Hands_on_Quarto_Website.html",
       "/posts/Github/Github.html",
       "/posts/Hands-on-Git/Hands_on_Git.html",
-      "/posts/Quarto/Quarto_setup.html",
       "/posts/R/shiny_example.html",
       "/posts/R/Chi_square_test_in_R.html",
       "/posts/Chi-square-test/Chi_square_test.html",

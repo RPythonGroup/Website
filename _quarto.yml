@@ -58,8 +58,16 @@ website:
       contents:
         - posts/Quarto/introduction_to_Quarto.qmd
         - posts/Quarto/Quarto_setup.qmd
-        - posts/Quarto/Website/Hands_on_Quarto_Website.qmd
-        - posts/Quarto/Manuscript/manuscript_example.qmd
+        - section: "Websites"
+          contents:
+            - posts/Quarto/Website/Hands_on_Quarto_Website.qmd
+        - section: "Manuscripts"
+          contents:            
+            - posts/Quarto/Manuscript/manuscript_example.qmd
+        - section: "기능구현"
+          contents:            
+            - posts/Quarto/Functions/tooltip.qmd
+        
     - title: "Statistics"
       contents:
         - posts/statistics/introduction_to_statistics.qmd

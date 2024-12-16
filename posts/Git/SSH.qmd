@@ -1,0 +1,69 @@
+---
+title: "OpenSSH"
+description: "SSH 키를 생성하고 Github에 연결하기"
+author: "BenKorea"
+date: 2024-12-11
+date-modified: 2024-12-11
+categories: [Tools, SSH] 
+---
+
+## 필요성
+
+-   SSH(Secure Shell) 키 기반 인증은 ID & Password 인증에 비해 보안이 강화되고 자동인증으로 편리합니다.
+-   SSH에는 여러종류가 있지만 여기에서는 Git 설치 시에 bundle로 설치되는 OpenSSH를 사용합니다.
+
+## OpenSSH의 설치
+
+-   Git 설치 시 옵션으로 설치되어 있습니다.
+
+## 원도우에서 기존키의 제거
+
+-   키를 새로 만드는 경우에는 상관없지만 기존키를 삭제해야 한다면 아래와 같이 진행합니다.
+-   C:\Users\<YourUsername\>.ssh 디렉토리에 있는 개인키(예시 id_rsa) 및 공개키 (예시 id_rsa.pub) 파일들을 수동으로 삭제합니다.
+
+## 새로운 키의 생성
+
+-   Git 설치매뉴얼 중 다음을 참고하였습니다 <https://git-scm.com/book/ko/v2/Git-%ec%84%9c%eb%b2%84-SSH-%ea%b3%b5%ea%b0%9c%ed%82%a4-%eb%a7%8c%eb%93%a4%ea%b8%b0>
+-   C:\\Program Files\\Git\\usr\\bin\\에 위치하는 ssh-keygen.exe를 구동시켜야 하므로 git-bash를 열어서 먼저 이동하여야 합니다.
+-   bash에서 ssh-keygen 프로그램을 실행하면
+    -   설치경로는 기본값으로 진행하고
+    -   passphrase는 empty로 하면 원격접속시에 비밀번호를 묻지 않게 되므로 empty로 설정하여 진행합니다.
+-   C:\\Users\\\<YourUsername\\\>.ssh가 생성되면서 id_ed25519와 id_ed25519.pub 파일이 생성됩니다.\
+-   이 중 \*.pub가 공개키입니다.
+
+## SSH agent 확인하기
+
+-   원도우의 경우 서비스창에서 OPenSSH Authentication Agent가 시행중인지 확인합니다.
+-   bash 창에서 아래의 명령을 입력해도 됩니다. ssh-agent가 실행중인지 확인합니다.
+    -   Agent 속성을 확인하여 시작유형을 `자동`으로 설정하셔야 하고
+    -   복구탭에서 첫째, 둘째, 후속 실패시에 대한 조치를 `서비스 다시 시작`으로 설정해야 합니다.
+
+## Gitgub에 공개키 등록하기
+
+-   GitHub에 로그인한 후 오른쪽 상단의 프로필 아이콘을 클릭하고 Settings를 선택합니다.
+-   왼쪽 메뉴에서 SSH and GPG keys를 선택합니다.
+-   New SSH key 버튼을 클릭합니다.
+-   Title에는 키의 제목을 입력합니다.
+-   Key에는 id_ed25519.pub 파일의 내용을 복사하여 붙여넣습니다.
+-   Add SSH key 버튼을 클릭합니다.
+
+## Gitgub 최초연결 설정
+
+-   bash창에서 아래의 명령을 입력합니다.
+
+``` bash
+ssh -T git@github.com
+```
+
+-   처음 연결시에 "This key is not known by any other names"라는 메시지가 나오는데 yes를 입력합니다.
+-   "Hi <username>! You've successfully authenticated, but GitHub does not provide shell access."라는 메시지가 나오면 성공입니다.
+
+## SSH URL로 변경
+
+-   기존의 HTTPS URL을 SSH URL로 변경합니다.
+-   원격저장소의 HTTPS 옆에 있으므로 복사해서 git remote add origin 명령을 통하면됩니다.
+-   기존의 HTTOS URL을 변경하는 방법은 아래와 같습니다.
+
+``` bash
+git remote set-url origin git@github.com:<username>/<repository>.git
+```

@@ -41,14 +41,19 @@ website:
       contents:
         - posts/R/introduction_to_R.qmd
         - posts/R/R_setup.qmd
-        - posts/R/RStudio_setup.qmd      
-        - posts/R/R_syntax.qmd
-        - posts/R/regular_expression.qmd
+        - posts/R/RStudio_setup.qmd
+        - section: "문법"
+          contents:        
+            - posts/R/syntax/R_syntax.qmd
+            - posts/R/syntax/RegEx.qmd
+            - posts/R/syntax/regular_expression.qmd            
         - posts/R/outlier_detection.qmd   
         - posts/R/built_in_dataset.qmd
-        - posts/R/Chi_square_test_in_R.qmd 
-        - posts/R/shiny_example.qmd
-        - posts/R/Hands_on_Shiny_website.qmd
+        - posts/R/Chi_square_test_in_R.qmd
+        - section: "Shiny"
+          contents:          
+            - posts/R/shiny/shiny_example.qmd
+            - posts/R/shiny/Hands_on_Shiny_website.qmd
     - title: "Python"
       contents:
         - posts/Python/introduction_to_Python.qmd
@@ -87,9 +92,11 @@ website:
         - posts/tools/introduction_to_tools.qmd
         - section: "Git"
           contents:
-            - posts/Git-setup/Git_setup.qmd
-            - posts/Hands-on-Git/Hands_on_Git.qmd
-            - posts/Github/Github.qmd
+            - posts/Git/Git_setup.qmd
+            - posts/Git/Github.qmd
+            - posts/Git/SSH.qmd            
+            - posts/Git/Hands_on_Git.qmd
+
 
 execute: 
   freeze: auto

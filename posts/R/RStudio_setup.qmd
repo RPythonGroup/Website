@@ -3,14 +3,13 @@ title: "RStudio setup"
 description: "Guidance on Installing and Configuring RStudio"
 author: "RPythonStudyGroup feat. ChatGPT"
 date: "2024-05-06"
-date-modified: "2024-05-26"
+date-modified: "2024-12-16"
 categories:
   - R
   - RStudio
   - setup
 ---
 
-::: {.content-visible when-profile="ko"}
 ## R 통합개발환경 선택
 
 RStudio와 VS Code는 모두 각자의 특징을 가진 R 프로그래밍을 위한 통합 개발 환경(IDE)입니다. RStudio는 전용화된 환경으로 R 언어와 관련된 다양한 기능을 직관적으로 제공하며, R 코드 작성, 데이터 시각화, 리포팅 등에 최적화되어 있습니다. 반면에 VS Code는 다양한 프로그래밍 언어를 지원하며, Marketplace에서 제공하는 확장 기능을 통해 개발자가 필요한 기능을 추가할 수 있는 유연성을 가지고 있습니다. VS Code는 경량화된 성능과 통합 터미널 기능을 제공하여 다양한 개발 환경에서 활용될 수 있지만, R에 특화된 기능은 상대적으로 부족할 수 있습니다.
@@ -23,67 +22,37 @@ RStudio 공식사이트 (<https://posit.co/>)에 설치에 대한 공식문서�
 
 ## RStudio 설치파일
 
-자신의 운영체제에 맞는 최신버전의 RStudio를 아래의 공식 다운로드 사이트(<https://posit.co/downloads/>)에서 다운로드 후 (2024년 9월 27일 현재 원도우데스크탑용의 최신설치파일은 RStudio-2024.09.0-375.exe입니다.)
-:::
-
-::: {.content-visible when-profile="en"}
-## Choosing an Integrated Development Environment for R
-
-RStudio and VS Code are both integrated development environments (IDEs) for R programming, each with its own features. RStudio is a dedicated environment optimized for R language, providing various features related to R programming, data visualization, and reporting. On the other hand, VS Code supports multiple programming languages and offers flexibility for developers to add the required features through extensions available in the Marketplace. VS Code provides lightweight performance and integrated terminal functionality, making it suitable for various development environments, but it may lack specialized features for R programming. The study group recommends using RStudio for R programming.
-
-### Installing RStudio
-
-Download the latest version of RStudio for your operating system from the official download site ((<https://posit.co/downloads/>) (as of September 27, 2024, the latest installation file for Windows Desktop is RStudio-2024.09.0-375.exe).
-:::
+자신의 운영체제에 맞는 최신버전의 RStudio를 아래의 공식 다운로드 사이트(<https://posit.co/downloads/>)에서 다운로드 후 (2024년 12월 16일 release된 원도우데스크탑용의 최신설치파일은 RStudio-2024.12.0+467.exe입니다.) 설치합니다.
 
 
-::: {.content-visible when-profile="ko"}
 default 폴더에 설치합니다.
 
 설치 이후 RStudio을 실행한 후 상단의 탭매뉴 중 Tools 메뉴 \> Global Options... \> R General \> Basic 탭에서 아래의 예시와 같이 설치하신 최신버전의 R 실행경로를 선택해 주시면 됩니다. (드물게 지난 버전의 R의 만든 프로젝트를 지난 버전으로 실행하고 싶다면 이 메뉴에서 과거 버전의 R 실행파일의 경로를 지정해주시고 해당 프로젝트를 열어서 사용하시면 됩니다.)
-:::
 
-::: {.content-visible when-profile="en"}
-Install it in the default folder.
-
-After installing RStudio, run it and select the path to the latest version of R you installed in the Global Options menu under Tools \> Global Options... \> R General \> Basic tab as shown in the example below. (If you want to run a project created by an older version of R in that version, specify the path to the executable file of the older version of R in this menu and open the project to use it.)
-:::
 
 ```{r RStudio_R_version, eval=FALSE, filename="R version: example"}
 [64-bit] C:\R\R-4.4.1
 ```
 
-::: {.content-visible when-profile="ko"}
-Default working directory (when not in a project)지정은 아래의 예시와 같이 프로젝트를 관리하는 상위 폴더를 추천 드립니다.
-:::
 
-::: {.content-visible when-profile="en"}
-We recommend specifying the parent folder for managing projects as the Default working directory (when not in a project) as shown in the example below.
-:::
+Default working directory (when not in a project)지정은 아래의 예시와 같이 프로젝트를 관리하는 상위 폴더를 추천 드립니다.
+
 
 ```{r RStudio_R_wd, eval=FALSE, filename="Default working directory: example"}
 C:\Projects
 ```
 
-::: {.content-visible when-profile="ko"}
+
 RStudio 매뉴얼은 개발사인 posit이 만든 <https://docs.posit.co/ide/user/>을 참고하시길 바랍니다.
 
 개발자들은 R을 command line interface로 사용하기 보다는 RStudio로 사용한다고 생각됩니다. 그러한 측면에서 R 사용법과 RStudio 사용법은 밀접하게 연계된 셈이며, 사용법에 대한 자료는 RStudio를 개발한 posit에서 만든 RSudio에 내장된 Tutorials가 있습니다. 링크를 타고들어가보면 Beginners, Intermediates, Experts 과정들이 있으므로 상황에 맞는 과정들을 선택해서 시작하면 좋습니다.
 
 (RStudio에서는 아래의 @fig-GitConfiguration 과 같이 git와 같은 version control interface 사용여부에 대한 설정이 있으며 이를 check 해야 새로운 프로젝트를 만들 때 git 사용여부가 옵션으로 선택이 가능해집니다. )
-:::
 
-::: {.content-visible when-profile="en"}
-Refer to the manual created by the developer posit at <https://docs.posit.co/ide/user/>.
-
-Developers are likely to use RStudio rather than R as a command-line interface. In that respect, the usage of R and RStudio is closely related, and there are tutorials embedded in RStudio created by posit. If you follow the link, you will find Beginners, Intermediates, and Experts courses, so it is recommended to choose the appropriate course to start.
-
-(In RStudio, there is an option to set whether to use a version control interface like git, as shown in @fig-GitConfiguration. You should check this option so that you can choose whether to use git when creating a new project.)
-:::
 
 ![RStudio에서 git 사용여부 설정](images/git설정.JPG){#fig-GitConfiguration}
 
-::: {.content-visible when-profile="ko"}
+
 ## **패키지 종속성 관리를 위한** `renv`
 
 원래 R에서 패키지는 해당버전 R의 설치폴더 하부의 library 폴더에 설치됩니다. `renv`는 R 프로젝트에서 패키지 의존성을 관리하기 위해 설계된 도구로써, renv를 설치하고 활성화하면 해당 프로젝트 폴더 하부에 renv 폴더가 만들어지고, 그 하부에 패키지를 설치하게 됩니다. 또한 설치된 패키지들의 정보를 renv.lock 파일에 관리하게 됩니다. 이러한 방법으로 R에서는 프로젝트별로 패키지를 관리할 수 있으므로 필자를 이를 추천합니다.
@@ -97,21 +66,7 @@ RStudio에서 새로운 프로젝트를 생성할 때 renv 사용여부를 check
 ### 프로젝트 폴더관리
 
 Project 폴더를 C:\\Projects 하위폴더에 R 버전과 프로젝트명을 폴더명으로 하여 관리하는 것을 추천합니다.
-:::
 
-::: {.content-visible when-profile="en"}
-## **`renv` for Package Dependency Management**
-
-In R, packages are usually installed in the library folder under the installation folder of the respective R version. `renv` is a tool designed to manage package dependencies in R projects. When you install and activate `renv`, a renv folder is created under the project folder, and packages are installed under that folder. It also manages the information of the installed packages in the renv.lock file. This way, R can manage packages on a project-by-project basis, so the author recommends using it. When creating a new project in RStudio, the option to use `renv` is automatically set when checked.
-
-For usage instructions, refer to <https://rstudio.github.io/renv/articles/renv.html>.
-
-## **R & RStudio Folder Management Recommendations**
-
-### Project Folder Management
-
-It is recommended to manage project folders under C:\\Projects with the folder name as the R version and project name @fig-ProjectDirectory.
-:::
 
 ::: {#fig-ProjectDirectory}
 ```         

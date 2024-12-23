@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/R/RStudio_setup.html",
       "/posts/R/syntax/RegEx.html",
       "/posts/Quarto/Functions/tooltip.html",
       "/posts/Git/SSH.html",
@@ -33,7 +34,6 @@
       "/posts/R/built_in_dataset.html",
       "/posts/R/outlier_detection.html",
       "/posts/R/R_setup.html",
-      "/posts/R/RStudio_setup.html",
       "/posts/R/introduction_to_R.html",
       "/posts/about/about.html"
     ]

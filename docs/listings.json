@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/R/syntax/basic.html",
       "/posts/R/RStudio_setup.html",
       "/posts/R/syntax/RegEx.html",
       "/posts/Quarto/Functions/tooltip.html",

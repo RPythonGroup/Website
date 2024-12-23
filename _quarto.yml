@@ -46,7 +46,8 @@ website:
           contents:        
             - posts/R/syntax/R_syntax.qmd
             - posts/R/syntax/RegEx.qmd
-            - posts/R/syntax/regular_expression.qmd            
+            - posts/R/syntax/regular_expression.qmd
+            - posts/R/syntax/basic.qmd
         - posts/R/outlier_detection.qmd   
         - posts/R/built_in_dataset.qmd
         - posts/R/Chi_square_test_in_R.qmd

@@ -51,6 +51,8 @@ website:
         - posts/R/outlier_detection.qmd   
         - posts/R/built_in_dataset.qmd
         - posts/R/Chi_square_test_in_R.qmd
+        - text: "R 생존분석 연습"
+          href: "https://rpythongroup.github.io/Survival_Exercise/"        
         - section: "Shiny"
           contents:          
             - posts/R/shiny/shiny_example.qmd

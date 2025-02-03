@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Quarto/Functions/check_color.html",
+      "/posts/Quarto/Functions/color_callout.html",
       "/posts/R/syntax/basic.html",
       "/posts/R/RStudio_setup.html",
       "/posts/R/syntax/RegEx.html",

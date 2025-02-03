@@ -75,6 +75,7 @@ website:
         - section: "기능구현"
           contents:            
             - posts/Quarto/Functions/tooltip.qmd
+            - posts/Quarto/Functions/color_callout.qmd
         
     - title: "Statistics"
       contents:

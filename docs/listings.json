@@ -2,7 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/Quarto/Functions/check_color.html",
+      "/posts/Python/syntax/data_type.html",
       "/posts/Quarto/Functions/color_callout.html",
       "/posts/R/syntax/basic.html",
       "/posts/R/RStudio_setup.html",
@@ -20,7 +20,7 @@
       "/posts/R/shiny/shiny_example.html",
       "/posts/R/Chi_square_test_in_R.html",
       "/posts/Chi-square-test/Chi_square_test.html",
-      "/posts/VSCode-setup/VSCode_setup.html",
+      "/posts/Python/VSCode_setup.html",
       "/posts/group-comparison/group_comparison.html",
       "/posts/IT/introduction_to_IT.html",
       "/posts/Quarto/introduction_to_Quarto.html",
@@ -30,7 +30,7 @@
       "/posts/tools/introduction_to_tools.html",
       "/posts/Quarto/Manuscript/manuscript_example.html",
       "/posts/Git/Git_setup.html",
-      "/posts/Python-setup/Python_setup.html",
+      "/posts/Python/Python_setup.html",
       "/posts/Python/introduction_to_Python.html",
       "/posts/R/syntax/R_syntax.html",
       "/posts/basic-statistics/basic_statistics.html",

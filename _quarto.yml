@@ -60,8 +60,11 @@ website:
     - title: "Python"
       contents:
         - posts/Python/introduction_to_Python.qmd
-        - posts/Python-setup/Python_setup.qmd
-        - posts/VSCode-setup/VSCode_setup.qmd    
+        - posts/Python/Python_setup.qmd
+        - posts/Python/VSCode_setup.qmd
+        - section: "문법"
+          contents:        
+            - posts/Python/syntax/data_type.qmd        
     - title: "Quarto"
       contents:
         - posts/Quarto/introduction_to_Quarto.qmd

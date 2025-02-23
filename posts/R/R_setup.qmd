@@ -1,40 +1,29 @@
 ---
-title: "R setup"
-description: "Guidance on Installing and Configuring R and Rtools"
+title: "R 설치"
+description: "R/Rtools 설치 및 설정"
 author: "RPythonStudyGroup feat. ChatGPT"
 date: "2024-05-06"
-date-modified: "2024-06-14"
-categories:
-  - R
-  - setup
+date-modified: "2024-11-01"
+categories: [R, Rtools, setup]
 ---
-::: {.content-visible when-profile="ko"}
-## R 설치안내문서
+
+## R
+
+### R 설치안내문서
 R 공식사이트 CRAN (The Comprehensive R Archive Network, <https://cran.r-project.org/index.html>)에서 Documentation 중 `Manuals` 중 `R Installation and Administration`을 참고하는 것이 이상적이지만, 아래의 요약을 참고하여 설치 하셔도 됩니다.
 
-## R 설치 파일
-CRAN (<https://cran.r-project.org/index.html>)에서 자신의 운영체제에 맞는 최신 버전을 다운로드 받아 설치합니다. 2024년 6월 14일 현재 64 bit 원도우용 설치파일은 `R-4.4.1-win.exe` 이 최신입니다.
+### R 설치 파일
+CRAN (<https://cran.r-project.org/index.html>)에서 자신의 운영체제에 맞는 최신 버전을 다운로드 받아 설치합니다. 2024년 11월 01일 현재 64 bit 원도우용 설치파일은 `R-4.4.2-win.exe` 이 최신입니다.
 
-## R 설치경로
+### R 설치경로
 윈도우의 경우 기본 설치폴더는 R 버전이 x.y.z이면 default로 `C:\\Program Files\\R\\R-x.y.z`로 되지만 연구회에서는 아래와 같이 추천합니다.
-:::
 
-::: {.content-visible when-profile="en"}
-## R Installation Guide Document
-While the official R documentation on CRAN (The Comprehensive R Archive Network, <https://cran.r-project.org/index.html>) under `Manuals` and `R Installation and Administration` provides comprehensive guidance, the following summary can also be helpful.
 
-## R Installation File
-Download the latest version of R for your operating system from CRAN (<https://cran.r-project.org/index.html>). As of September 27, 2024, the latest 64-bit Windows installation file is `R-4.4.1-win.exe`.
-
-### Installation Path
-By default, R is installed in `C:\\Program Files\\R\\R-4.4.1` on Windows. However, the following path is recommended by the study group.
-:::
 
 ```{r R_install_path, eval=FALSE, filename="R Install Option Window"}
 C:\R\R-4.4.1
 ```
 
-:::: {.content-visible when-profile="ko"}
 ::: {.callout-note title="`C:\Program Files\\`와 `C:\\` 경로의 장단점" collapse="true" appearance="minimal"}
 - 대부분의 Windows 애플리케이션은 `program Files` 폴더에 설치되므로 시스템 소프트웨어와 애플리케이션을 관리하는 표준 위치이기 때문에 시스템의 정리가 용이합니다. 또한 `Program Files` 폴더는 특별한 시스템 권한을 요구하므로 일반 사용자가 이 폴더 내의 파일을 쉽게 변경할 수 없으므로, 악의적인 소프트웨어에 의한 변경으로부터 보호할 수 있습니다. 그러나 R 패키지를 설치하거나 업데이트할 때마다 관리자 권한이 필요하여 사용자가 R을 자유롭게 사용하고자 할 때 불편을 초래할 수 있고 \``` Program Files` ``는 경로 내에 공백을 포함하고 있어 일부 오래된 스크립트나 도구에서는 경로 내의 공백을 제대로 처리하지 못할 수 있어 문제가 발생할 수 있습니다.
 
@@ -49,40 +38,16 @@ C:\R\R-4.4.1
 -   사용자나 RStdio와 같은 프로그램에서 R을 호출할 때나 package등을 설치할 때 시스템에서 R 실행파일의 설치경로를 알아야 원할히 진행됩니다.
 
 -   Win+R로 실행창을 열고 sysdm.cpl 을 입력하는 방식이 빠르며, 시스템속성 고급탭에서 환경변수를 선택한 후 시스템변수 목록에서 path를 선택한 후 새로만들기 또는 편집으로 R 실행파일의 경로를 지정해 주시면 됩니다.
-::::
 
-:::: {.content-visible when-profile="en"}
-::: {.callout-note title="Pros and Cons of `C:\Program Files\\` and `C:\\` Paths" collapse="true" appearance="minimal"}
--   Most Windows applications are installed in the `Program Files` folder, making it a standard location for managing system software and applications, which facilitates system organization. The `Program Files` folder requires special system permissions, making it difficult for regular users to easily modify files within the folder, thus protecting against changes by malicious software. However, it can be inconvenient for users who want to use R freely as administrative privileges are required for installing or updating R packages, and the `Program Files` path contains spaces, which may cause issues with older scripts or tools that do not handle spaces in paths correctly.
-
--   Direct installation under `C:\` (e.g., `C:\R`): Installing or updating packages does not require administrative privileges, and since there are no spaces in the path, this path can be used in all scripts or programs without compatibility issues. However, programs installed with user permissions may be relatively less secure, more susceptible to changes by malicious software, and if non-standard installation locations are used, system software and applications may be distributed, making management difficult.
-
--   In conclusion, when choosing an installation location, factors such as security, user convenience, and ease of system management should be considered. A custom path like `C:\R` may be more convenient for individual users or development environments, while installing under `C:\Program Files` may be more suitable for corporate environments or situations where security is a priority.
-:::
-
-### Environment Variable Configuration
-After installation, you need to specify the R executable file path in the system environment variables.
-
--   When calling R from users or programs like RStudio, or when installing packages, the system needs to know the installation path of the R executable file to proceed smoothly.
-
--   A quick way to do this is to open the Run dialog box by pressing Win+R, type `sysdm.cpl`, select Environment Variables under the Advanced tab of System Properties, choose `Path` in the System variables list, and add or edit the path of the R executable file.
-::::
 
 ```{r run_dialog, eval=FALSE, filename="Run Dialog Box"}
 sysdm.cpl
 ```
 
-::: {.content-visible when-profile="ko"}
 ### 설치 검증
 
 -   정상적인 설치의 확인을 R을 실행시켜서 버전을 확인하시면 됩니다. 앞서에서 환경변수에 R의 실행파일의 경로를 등록해 두었기 때문에 R의 실행은 실행명령을 하는 폴더와는 무관하게 가능합니다. 구체적인 방법은, Win+R로 실행창을 열고 cmd 입력하여 커맨드창을 열고 "R" 을 입력하여 R을 실행시키고 커맨드창에 출력되는 R version이 일치하는지 확인하시면 됩니다.
-:::
 
-::: {.content-visible when-profile="en"}
-### Installation Verification
-
--   To verify a successful installation, run R and check the version. Since the path to the R executable file is registered in the environment variables, you can run R regardless of the folder where the run command is executed. To do this, open the Run dialog box by pressing Win+R, type `cmd` to open the Command Prompt, and type "R" to run R. Check if the R version displayed in the Command Prompt matches the installed version.
-:::
 
 ```{r cmd_kr, eval=FALSE, filename="Run Dialog Box"}
 cmd
@@ -92,7 +57,7 @@ cmd
 R
 ```
 
-::: {.content-visible when-profile="ko"}
+
 ## Rtools 설치
 
 ### Rtools 기능과 역할
@@ -114,32 +79,7 @@ Rtools의 설치파일도 역시 CRAN(<https://cran.r-project.org/index.html>)�
 
 ### 설치 검증
 시스템환경변수에 실행파일의 경로설정 확인은 R 콘솔에서 Sys.which("make") 실행하여 설치경로를 제대로 반환하면 성공임을 알 수 있습니다.
-:::
 
-::: {.content-visible when-profile="en"}
-## Rtools Installation
-
-### Rtools Features and Roles
-Rtools is a collection of development tools related to the R programming language, primarily used on Windows operating systems. The main roles and features of Rtools include:
-
--   **Package Compilation and Installation**: When installing or updating R packages, especially some packages provided by CRAN, are provided in source code form. In such cases, Rtools helps compile the source code for installation.
-
--   **Providing GNU Build Tools**: Rtools includes GNU build tools such as GCC (GNU Compiler Collection), make, tar, git, etc., providing a build environment similar to Linux in Windows.
-
--   **Support for R Package Development**: It provides various tools and libraries needed in the process of developing R packages. It is particularly useful when developing R packages that interact with C/C++ code.
-
--   **Command Line Tools**: It provides tools to perform R and related tasks from the command line, enabling automation of more sophisticated and complex tasks.
-
-### Installation File
-
-You can download the Rtools installation file from CRAN (<https://cran.r-project.org/index.html>). As of June 14, 2024, the latest Windows installation file is `rtools44-6104-6039.exe`.
-
-### Installation Path
-The default installation path, the root of the C: drive, is recommended (e.g., C:\\rtools44). The path to the Rtools executable file is automatically set in the system environment variables during the installation process. (If not, set it manually.)
-
-### Installation Verification
-To verify the path setting in the system environment variables, run `Sys.which("make")` in the R console. If it returns the installation path correctly, the installation is successful.
-:::
 
 
 ## R 매뉴얼

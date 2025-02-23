@@ -1,15 +1,12 @@
 ---
-title: "Introduciton to R"
-description: "Brief history of R developement and application examples in medical research"
+title: "Introduciton"
+description: "R 개발역사와 의학연구에서의 필요성"
 author: "RPythonStudyGroup feat. ChatGPT"
 date: "May 4, 2024"
 date-modified: "May 4, 2024"
-categories:
-  - R
-  - introduction
+categories: [R, introduction]
 ---
 
-::: {.content-visible when-profile="ko"}
 ### R 개발역사
 
 R은 뉴질랜드 오클랜드 대학교의 Ross Ihaka와 Robert Gentleman에 의해 개발되었으며, 1993년에 처음 출시되었습니다. 이 언어는 Bell Laboratories의 John Chambers 등 여러 개발자가 개발한 S 프로그래밍 언어의 오픈소스 대안으로 구상되었습니다. R의 설계 철학은 데이터 분석을 위한 사용자 친화적인 환경을 제공하는 데 중점을 두었으며, 확장성과 사용 용이성에 중점을 두었습니다(Ihaka & Gentleman, 1996).
@@ -25,29 +22,7 @@ R이 의학연구에서 중요한 이유 중 하나는 방대하고 복잡한 �
 의학연구의 복잡성이 증가하고 빅데이터의 부상이 가속화됨에 따라, R은 의료 연구자들에게 중요한 도구로 자리잡았습니다. 다양한 소스의 데이터를 통합하고, 복잡한 통계 분석을 수행하며, 재현 가능한 연구를 생성할 수 있는 능력은 현대 의학연구에서 R을 필수적인 도구로 만들고 있습니다. 또한, R의 오픈소스 특성은 연구자들이 협력하고 그들의 방법을 공유할 수 있도록 하여, 더 강력하고 투명한 과학적 실천을 가능하게 합니다.
 
 의학연구 분야가 계속 진화함에 따라 R의 중요성은 더욱 커질 것입니다. 환자의 유전자 프로필에 기반한 개별 맞춤 치료가 이루어지는 정밀 의학과 같은 새로운 분야는 R이 제공하는 고급 분석 기능에 크게 의존하고 있습니다. 또한, 임상 연구에 기계 학습 방법을 통합하는 작업은 R을 통해 환자 치료에서 새로운 인사이트와 혁신을 가져올 것으로 기대됩니다.
-:::
 
-::: {.content-visible when-profile="en"}
-### History of R Development
-
-R was developed by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand, and was first released in 1993. The language was conceived as an open-source alternative to the S programming language, which was developed by John Chambers and others at Bell Laboratories. The design philosophy of R was centered around providing a user-friendly environment for data analysis, with an emphasis on extensibility and ease of use (Ihaka & Gentleman, 1996).
-
-Over the years, R has undergone significant enhancements, with contributions from a global community of developers and researchers. The Comprehensive R Archive Network (CRAN) was established to host R packages, which are collections of functions and data sets developed by the community. As of 2024, there are over 18,000 packages available on CRAN, covering a wide range of statistical methods, machine learning algorithms, and specialized tools for various disciplines, including biostatistics and epidemiology (CRAN, 2024).
-
-### R & Medical Research
-
-The adoption of R in medical research has been driven by its flexibility, robust statistical capabilities, and the availability of specialized packages. For instance, the **`survival`** package, developed by Terry Therneau, provides a comprehensive suite of tools for survival analysis, a critical method in clinical trials and epidemiological studies (Therneau, 2000). Additionally, the **`caret`** package simplifies the process of building and evaluating predictive models, which are increasingly used in precision medicine to tailor treatments to individual patients (Kuhn, 2008).
-
-One of the key factors contributing to R's importance in medical research is its ability to handle large, complex datasets. As medical records become increasingly digitized, researchers face the challenge of analyzing vast amounts of heterogeneous data. R's data manipulation and visualization capabilities, particularly through packages like **`dplyr`** and **`ggplot2`**, allow researchers to explore and interpret data effectively, uncovering insights that might be missed with traditional methods (Wickham, 2016).
-
-**Genomic Research**: R has played a pivotal role in the analysis of genomic data, which is crucial for understanding the genetic basis of diseases and developing targeted therapies. The **`Bioconductor`** project, an open-source software project built on R, provides tools for the analysis of high-throughput genomic data. This has enabled researchers to conduct genome-wide association studies (GWAS) and identify genetic variants associated with diseases such as cancer and diabetes (Huber et al., 2015).
-
-**Clinical Trials**: In clinical trials, accurate and reproducible statistical analysis is essential for assessing the efficacy and safety of new treatments. R's robust statistical packages, combined with its reproducibility features, make it an ideal choice for clinical trial analysis. For example, the **`rms`** package facilitates regression modeling strategies, helping researchers to develop and validate predictive models in clinical studies (Harrell, 2015).
-
-The increasing complexity of medical research, coupled with the rise of big data, has underscored the importance of R as a tool for medical researchers. The ability to integrate data from diverse sources, perform complex statistical analyses, and generate reproducible research has made R indispensable in modern medical research. Moreover, the open-source nature of R ensures that researchers can collaborate and share their methods, leading to more robust and transparent scientific practices.
-
-As the field of medical research continues to evolve, the importance of R is likely to grow. Emerging areas such as precision medicine, where treatments are tailored to individual patients based on their genetic profiles, rely heavily on the advanced analytical capabilities provided by R. Additionally, the integration of machine learning methods into clinical research, facilitated by R, is expected to lead to new insights and innovations in patient care.
-:::
 
 ### References
 

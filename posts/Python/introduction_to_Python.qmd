@@ -1,17 +1,14 @@
 ---
-title: "Introduction to Python"
-description: "Brief history of Python development and application examples in medical research"
+title: "Introduction"
+description: "Python 역사와 의학연구에서의 필요성"
 author: "RPythonStudyGroup feat. ChatGPT"
 date: "September 7, 2024"
 date-modified: "September 7, 2024"
 bibliography: C:/Projects/R-4.4.1-RPythonStudy_Website/resources/references.bib
 csl: C:/Projects/R-4.4.1-RPythonStudy_Website/resources/nuclear-medicine-and-molecular-imaging.csl
-categories:
-  - Python
-  - introduction
+categories: [Python, introduction]
 ---
 
-::: {.content-visible when-profile="ko"}
 Python은 네덜란드 출신의 개발자 Guido van Rossum에 의해 개발되었습니다. 그는 CWI (Centrum Wiskunde & Informatica)에서 근무하며 교육용 프로그래밍 언어 ABC (A Basic Compiler)의 한계를 극복하기 위해 파이썬을 창안했습니다 [@RN1].
 
 Python 0.9.0, 첫 release는 1991년에 발표되었으며, 클래스, 예외 처리(Exception Handling), 함수(Functionality) 등 현대 프로그래밍 언어의 핵심 기능을 포함했습니다. Python은 명료한 구문(Syntax)과 간결한 코드 작성을 목표로 설계되었으며, 확장성(Extensibility)을 갖춰 다양한 확장 모듈(Extension Modules)과 라이브러리(Libraries)를 쉽게 통합할 수 있습니다. 이러한 특성 덕분에, Python은 전 세계 개발자 커뮤니티에서 널리 수용되어 데이터 과학, 웹 개발, 자동화 스크립트, 기계 학습 등 다양한 기술 분야에서 선호되는 언어로 자리잡았습니다 [@RN2].
@@ -25,21 +22,4 @@ Python 0.9.0, 첫 release는 1991년에 발표되었으며, 클래스, 예외 �
 3.  **임상 연구 데이터 관리**: Python은 대규모 임상 연구 데이터의 관리 및 분석을 지원합니다. Pandas와 NumPy는 통계적 분석을 제공합니다 [@RN7][@RN8].
 
 4.  **예측 모델링과 기계 학습**: Python은 환자 데이터를 활용한 질병 발병 예측 모델 개발에 사용됩니다. Scikit-learn 및 TensorFlow는 이러한 모델을 구축하는데 활용됩니다 [@RN3][@RN9].
-:::
 
-::: {.content-visible when-profile="en"}
-Python was developed by Guido van Rossum, a Dutch programmer. He created Python while working at CWI (Centrum Wiskunde & Informatica) to overcome the limitations of the educational programming language ABC (A Basic Compiler) [@RN1].
-
-The first release of Python, version 0.9.0, was announced in 1991 and included core features of modern programming languages such as classes, exception handling, and functionality. Python was designed with clear syntax and concise code writing in mind, allowing easy integration of various extension modules and libraries due to its extensibility. Thanks to these characteristics, Python has been widely adopted by the global developer community and has become a preferred language in various technical fields such as data science, web development, automation scripts, and machine learning [@RN2].
-
-Here are some examples of Python's applications in the medical field:
-
-1.  **Medical Image Analysis**: Python is used for MRI, CT, and X-ray image analysis. Libraries such as PyDicom, OpenCV, TensorFlow, and Keras are used for medical image analysis [@RN3][@RN4][@RN5].
-
-2.  **Genomic Data Analysis**: In bioinformatics, Python is used for gene sequence analysis and gene expression data processing. Biopython is an example of this application [@RN6].
-
-3.  **Clinical Research Data Management**: Python supports the management and analysis of large-scale clinical research data. Pandas and NumPy provide statistical analysis capabilities [@RN7][@RN8].
-
-4.  **Predictive Modeling and Machine Learning**: Python is used for developing disease onset prediction models using patient data. Scikit-learn and TensorFlow are used to build these models [@RN3][@RN9].
-
-:::

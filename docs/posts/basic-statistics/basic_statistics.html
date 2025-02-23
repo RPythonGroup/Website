@@ -22,6 +22,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+q { quotes: "“" "”" "‘" "’"; }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { line-height: 1.25; }
@@ -298,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="t-test" class="level3">
 <h3 class="anchored" data-anchor-id="t-test">t-test</h3>
 <p>R function : t.test -</p>
-<p>option arguments : alternative = c(“two.sided”, “less”, “greater”), formula (종속변수~ 독립변수)</p>
+<p>option arguments : alternative = c(<q>two.sided</q>, <q>less</q>, <q>greater</q>), formula (종속변수~ 독립변수)</p>
 <p>help files : ?t.test 를 치면 함수의 argument, values(results), detail에 대해서 설명이 나옴</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span>

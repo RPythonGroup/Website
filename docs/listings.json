@@ -2,11 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/R/install/RStudio_setup.html",
       "/posts/about/about.html",
       "/posts/Python/syntax/data_type.html",
       "/posts/Quarto/Functions/color_callout.html",
       "/posts/R/syntax/basic.html",
-      "/posts/R/install/RStudio_setup.html",
       "/posts/R/syntax/RegEx.html",
       "/posts/Quarto/Functions/tooltip.html",
       "/posts/tools/Git/SSH.html",

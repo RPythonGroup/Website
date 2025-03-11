@@ -1,13 +1,13 @@
 ---
 title: "R 설치"
-description: "R 설치 및 설정"
+description: "R/Rtools 설치 및 설정"
 author: "RPythonStudyGroup feat. ChatGPT"
 date: "2024-05-06"
-date-modified: "2025-03-01"
-categories: [R, setup]
+date-modified: "2024-11-01"
+categories: [R, Rtools, setup]
 ---
 
-## R 설치
+## R
 
 ### R 설치안내문서
 R 공식사이트 CRAN (The Comprehensive R Archive Network, <https://cran.r-project.org/index.html>)에서 Documentation 중 `Manuals` 중 `R Installation and Administration`을 참고하는 것이 이상적이지만, 아래의 요약을 참고하여 설치 하셔도 됩니다.
@@ -16,39 +16,13 @@ R 공식사이트 CRAN (The Comprehensive R Archive Network, <https://cran.r-pro
 CRAN (<https://cran.r-project.org/index.html>)에서 자신의 운영체제에 맞는 최신 버전을 다운로드 받아 설치합니다. 2025년 03월 01일 현재 64 bit 원도우용 설치파일은 `R-4.4.3-win.exe` 이 최신입니다.
 
 ### R 설치경로
+윈도우의 경우 기본 설치폴더는 R 버전이 x.y.z이면 default로 `C:\\Program Files\\R\\R-x.y.z`로 되지만 연구회에서는 아래와 같이 추천합니다.
 
-#### Window
-Window 운영체제의 경우 기본 설치폴더는 R 버전이 x.y.z이면 default로 `C:\\Program Files\\R\\R-x.y.z`로 되지만 연구회에서는 아래와 같이 추천합니다.
+
 
 ```{r R_install_path, eval=FALSE, filename="R Install Option Window"}
 C:\R\R-4.4.1
 ```
-
-#### MacOS
-MacOS의 일반적인 폴더구조는 아래의 @fig-DirectoryStructureMacOS 와 같습니다.
-
-::: {#fig-DirectoryStructureMacOS}
-```         
-/
-├── Applications     # 애플리케이션 폴더
-├── Library          # 시스템 전역 라이브러리 및 설정
-├── System           # 운영체제 핵심 파일
-├── Users            # 사용자 계정 폴더
-├── Volumes          # 마운트된 외장 디스크 및 네트워크 드라이브
-├── bin              # 기본 명령어 실행 파일 (예: ls, cp, mv)
-├── sbin             # 관리자용 명령어 실행 파일 (예: shutdown, reboot)
-├── etc              # 시스템 설정 파일
-├── dev              # 장치 파일 (예: 디스크, USB, 터미널)
-├── tmp              # 임시 파일 저장 폴더
-├── var              # 로그 및 캐시 파일
-├── usr              # 추가 명령어 및 라이브러리
-└── opt              # 서드파티 소프트웨어 패키지 (예: Homebrew 설치 파일)
-```
-
-MacOS의 디렉토리 구조
-:::
-
-MacOS 운영
 
 ::: {.callout-note title="`C:\Program Files\\`와 `C:\\` 경로의 장단점" collapse="true" appearance="minimal"}
 - 대부분의 Windows 애플리케이션은 `program Files` 폴더에 설치되므로 시스템 소프트웨어와 애플리케이션을 관리하는 표준 위치이기 때문에 시스템의 정리가 용이합니다. 또한 `Program Files` 폴더는 특별한 시스템 권한을 요구하므로 일반 사용자가 이 폴더 내의 파일을 쉽게 변경할 수 없으므로, 악의적인 소프트웨어에 의한 변경으로부터 보호할 수 있습니다. 그러나 R 패키지를 설치하거나 업데이트할 때마다 관리자 권한이 필요하여 사용자가 R을 자유롭게 사용하고자 할 때 불편을 초래할 수 있고 \``` Program Files` ``는 경로 내에 공백을 포함하고 있어 일부 오래된 스크립트나 도구에서는 경로 내의 공백을 제대로 처리하지 못할 수 있어 문제가 발생할 수 있습니다.
@@ -84,13 +58,35 @@ R
 ```
 
 
+## Rtools 설치
+
+### Rtools 기능과 역할
+Rtools는 R 프로그래밍 언어와 관련된 개발 도구 모음으로, 주로 Windows 운영 체제에서 사용됩니다. Rtools의 주요 역할과 기능은 다음과 같습니다:
+
+-   **패키지 컴파일 및 설치**: R 패키지를 설치하거나 업데이트할 때, 특히 CRAN에서 제공하는 패키지 중 일부는 소스 코드 형태로 제공됩니다. 이 경우 Rtools는 해당 소스 코드를 컴파일하여 설치할 수 있도록 도와줍니다.
+
+-   **GNU 빌드 도구 제공**: Rtools는 GCC(gnu 컴파일러 컬렉션), make, tar, git 등과 같은 GNU 빌드 도구를 포함하고 있어, Windows 환경에서도 리눅스와 유사한 빌드 환경을 제공합니다.
+
+-   **R 패키지 개발 지원**: R 패키지를 개발하는 과정에서 필요한 다양한 도구와 라이브러리를 제공합니다. 특히, C/C++ 코드와 연동되는 R 패키지를 개발할 때 유용합니다.
+
+-   **명령줄 도구**: 명령줄에서 R 및 관련 작업을 수행할 수 있는 도구들을 제공합니다. 이를 통해 보다 정교하고 복잡한 작업을 자동화할 수 있습니다.
+
+### 설치 파일
+Rtools의 설치파일도 역시 CRAN(<https://cran.r-project.org/index.html>)에서 다운로드 하시면 되고, 2024년 6월 14일 현재 원도우의 경우 rtools44-6104-6039.exe가 최신 설치파일입니다.
+
+### 설치 경로
+설치경로 디폴트경로인 C: 드라이브 루트가 권장됩니다 (예시 C:\\rtools44). 시스템환경변수에서 Rtools 실행파일의 경로설정은 설치과정에서 자동으로 됩니다. (안되면 수동으로 설정하시길 바랍니다.) 
+
+### 설치 검증
+시스템환경변수에 실행파일의 경로설정 확인은 R 콘솔에서 Sys.which("make") 실행하여 설치경로를 제대로 반환하면 성공임을 알 수 있습니다.
+
 
 
 ## R 매뉴얼
 
 R을 심도있게 공부할려면 R 개발자들이 만든 매뉴얼 중 **The R language definition과 R Internals**이 적합할 것 같습니다 (<https://cran.r-project.org/index.html>). 하지만 처음부터 어려운 매뉴얼을 공부하는 것보다 자신의 자료를 분석하는데 필요한 명령과 함수들을 Help 기능 등으로 이해하는 방법으로 진행하는 것도 필요할 것 같습니다.
 
-## R 프로젝트 관리
+## 프로젝트 관리
 
 ### 프로젝트 폴더 구조
 
@@ -98,9 +94,7 @@ R을 심도있게 공부할려면 R 개발자들이 만든 매뉴얼 중 **The R
 
 #### 실행파일 설치 폴더
 
-R 새 버전으로 업데이트하면 드물겠지만 기존 코드나 사용 중인 패키지가 예상대로 작동하지 않을 수 있으며, 새 버전에서는 패키지의 지원이 변경될 수 있어 시스템의 안정성을 유지하기 위해 이전 버전의 실행파일을 유지하는 것도 필요합니다. 따라서 윈도우 운영체제의 경우 아래의 예시와 같은 폴더구조가 추천됩니다.
-
-:::: {#}
+R 새 버전으로 업데이트하면 드물겠지만 기존 코드나 사용 중인 패키지가 예상대로 작동하지 않을 수 있으며, 새 버전에서는 패키지의 지원이 변경될 수 있어 시스템의 안정성을 유지하기 위해 이전 버전의 실행파일을 유지하는 것도 필요합니다. 따라서 아래의 예시와 같은 폴더구조가 추천됩니다.
 
 C:\\R\\\
          ├─ R-4.4.0\\\

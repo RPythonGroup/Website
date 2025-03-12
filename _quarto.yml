@@ -43,6 +43,7 @@ website:
         - section: "설치"
           contents:
             - posts/R/install/R_setup.qmd
+            - posts/R/install/Rtools_setup.qmd            
             - posts/R/install/RStudio_setup.qmd
         - section: "문법"
           contents:        

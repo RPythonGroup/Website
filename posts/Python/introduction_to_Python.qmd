@@ -4,8 +4,8 @@ description: "Python 역사와 의학연구에서의 필요성"
 author: "RPythonStudyGroup feat. ChatGPT"
 date: "September 7, 2024"
 date-modified: "September 7, 2024"
-bibliography: C:/Projects/R-4.4.1-RPythonStudy_Website/resources/references.bib
-csl: C:/Projects/R-4.4.1-RPythonStudy_Website/resources/nuclear-medicine-and-molecular-imaging.csl
+bibliography: C:/Projects/R443-RPythonStudy_Website/resources/references.bib
+csl: C:/Projects/R443-RPythonStudy_Website/resources/nuclear-medicine-and-molecular-imaging.csl
 categories: [Python, introduction]
 ---
 

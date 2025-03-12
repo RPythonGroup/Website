@@ -263,8 +263,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../../posts/R/install/Rtools_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rtools 설치</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../../posts/R/install/RStudio_setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">RStudio setup</span></a>
+ <span class="menu-text">RStudio</span></a>
   </div>
 </li>
       </ul>
@@ -998,7 +1004,7 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>today <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>(); <span class="fu">print</span>(today); <span class="fu">class</span>(today); <span class="fu">typeof</span>(today)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-02-23"</code></pre>
+<pre><code>[1] "2025-03-12"</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Date"</code></pre>
@@ -1019,7 +1025,7 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>current_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(current_time); <span class="fu">class</span>(current_time); <span class="fu">typeof</span>(current_time)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-02-23 21:16:28 KST"</code></pre>
+<pre><code>[1] "2025-03-12 02:07:19 KST"</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "POSIXct" "POSIXt" </code></pre>
@@ -1192,15 +1198,15 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>   ID Name Score
 1   1  Lee    85
-2   2  Kim    83
-3   3 Park    78
-4   4 Kang    82
-5   5 Shin    76
-6   6  Lim    72
-7   7 Kwon    76
-8   8 Choi    88
-9   9  Nam    72
-10 10 Baek    88</code></pre>
+2   2  Kim    75
+3   3 Park    81
+4   4 Kang    74
+5   5 Shin    77
+6   6  Lim    84
+7   7 Kwon    81
+8   8 Choi    82
+9   9  Nam    83
+10 10 Baek    77</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1208,16 +1214,16 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>merged_df</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   ID Name Score Department Age
-1   1  Lee    85         PD  26
-2   2  Kim    83         PD  34
-3   3 Park    78         GS  33
-4   4 Kang    82         GS  33
-5   5 Shin    76         PD  39
-6   6  Lim    72         PD  47
-7   7 Kwon    76       &lt;NA&gt;  NA
-8   8 Choi    88         GS  42
-9   9  Nam    72         GS  42
-10 10 Baek    88         IM  41</code></pre>
+1   1  Lee    85         GY  33
+2   2  Kim    75         IM  33
+3   3 Park    81         IM  32
+4   4 Kang    74         IM  47
+5   5 Shin    77         GS  39
+6   6  Lim    84         IM  38
+7   7 Kwon    81       &lt;NA&gt;  NA
+8   8 Choi    82         PD  40
+9   9  Nam    83         GS  47
+10 10 Baek    77         IM  32</code></pre>
 </div>
 </div>
 </section>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="RPythonStudyGroup feat. ChatGPT">
-<meta name="description" content="R/Rtools 설치 및 설정">
+<meta name="description" content="R 설치 및 설정">
 
 <title>R 설치 – RPythonStudy</title>
 <style>
@@ -198,12 +198,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <h1 class="title">R 설치</h1>
                   <div>
         <div class="description">
-          R/Rtools 설치 및 설정
+          R 설치 및 설정
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">R</div>
-                <div class="quarto-category">Rtools</div>
                 <div class="quarto-category">setup</div>
               </div>
                   </div>
@@ -229,7 +228,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">2024년 11월 1일</p>
+        <p class="date-modified">2025년 3월 1일</p>
       </div>
     </div>
       
@@ -264,8 +263,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../../posts/R/install/Rtools_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rtools 설치</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../../posts/R/install/RStudio_setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">RStudio setup</span></a>
+ <span class="menu-text">RStudio</span></a>
   </div>
 </li>
       </ul>
@@ -395,23 +400,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#r" id="toc-r" class="nav-link active" data-scroll-target="#r">R</a>
+  <li><a href="#r-설치" id="toc-r-설치" class="nav-link active" data-scroll-target="#r-설치">R 설치</a>
   <ul class="collapse">
   <li><a href="#r-설치안내문서" id="toc-r-설치안내문서" class="nav-link" data-scroll-target="#r-설치안내문서">R 설치안내문서</a></li>
   <li><a href="#r-설치-파일" id="toc-r-설치-파일" class="nav-link" data-scroll-target="#r-설치-파일">R 설치 파일</a></li>
   <li><a href="#r-설치경로" id="toc-r-설치경로" class="nav-link" data-scroll-target="#r-설치경로">R 설치경로</a></li>
-  <li><a href="#환경변수설정" id="toc-환경변수설정" class="nav-link" data-scroll-target="#환경변수설정">환경변수설정</a></li>
-  <li><a href="#설치-검증" id="toc-설치-검증" class="nav-link" data-scroll-target="#설치-검증">설치 검증</a></li>
-  </ul></li>
-  <li><a href="#rtools-설치" id="toc-rtools-설치" class="nav-link" data-scroll-target="#rtools-설치">Rtools 설치</a>
-  <ul class="collapse">
-  <li><a href="#rtools-기능과-역할" id="toc-rtools-기능과-역할" class="nav-link" data-scroll-target="#rtools-기능과-역할">Rtools 기능과 역할</a></li>
-  <li><a href="#설치-파일" id="toc-설치-파일" class="nav-link" data-scroll-target="#설치-파일">설치 파일</a></li>
-  <li><a href="#설치-경로" id="toc-설치-경로" class="nav-link" data-scroll-target="#설치-경로">설치 경로</a></li>
-  <li><a href="#설치-검증-1" id="toc-설치-검증-1" class="nav-link" data-scroll-target="#설치-검증-1">설치 검증</a></li>
   </ul></li>
   <li><a href="#r-매뉴얼" id="toc-r-매뉴얼" class="nav-link" data-scroll-target="#r-매뉴얼">R 매뉴얼</a></li>
-  <li><a href="#프로젝트-관리" id="toc-프로젝트-관리" class="nav-link" data-scroll-target="#프로젝트-관리">프로젝트 관리</a>
+  <li><a href="#r-프로젝트-관리" id="toc-r-프로젝트-관리" class="nav-link" data-scroll-target="#r-프로젝트-관리">R 프로젝트 관리</a>
   <ul class="collapse">
   <li><a href="#프로젝트-폴더-구조" id="toc-프로젝트-폴더-구조" class="nav-link" data-scroll-target="#프로젝트-폴더-구조">프로젝트 폴더 구조</a></li>
   </ul></li>
@@ -426,19 +422,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="r" class="level2">
-<h2 class="anchored" data-anchor-id="r">R</h2>
+<section id="r-설치" class="level2">
+<h2 class="anchored" data-anchor-id="r-설치">R 설치</h2>
 <section id="r-설치안내문서" class="level3">
 <h3 class="anchored" data-anchor-id="r-설치안내문서">R 설치안내문서</h3>
 <p>R 공식사이트 CRAN (The Comprehensive R Archive Network, <a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a>)에서 Documentation 중 <code>Manuals</code> 중 <code>R Installation and Administration</code>을 참고하는 것이 이상적이지만, 아래의 요약을 참고하여 설치 하셔도 됩니다.</p>
 </section>
 <section id="r-설치-파일" class="level3">
 <h3 class="anchored" data-anchor-id="r-설치-파일">R 설치 파일</h3>
-<p>CRAN (<a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a>)에서 자신의 운영체제에 맞는 최신 버전을 다운로드 받아 설치합니다. 2024년 11월 01일 현재 64 bit 원도우용 설치파일은 <code>R-4.4.2-win.exe</code> 이 최신입니다.</p>
+<p>CRAN (<a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a>)에서 자신의 운영체제에 맞는 최신 버전을 다운로드 받아 설치합니다. 2025년 03월 01일 기준으로 - 64 bit 원도우용 설치파일은 <code>R-4.4.3-win.exe</code> 이 최신입니다. - MacOS용 설치파일은 <code>R-4.4.3-arm64.pkg</code> 이 최신입니다. - 리눅스용 설치파일은 <code>?</code> 이 최신입니다.</p>
 </section>
 <section id="r-설치경로" class="level3">
 <h3 class="anchored" data-anchor-id="r-설치경로">R 설치경로</h3>
-<p>윈도우의 경우 기본 설치폴더는 R 버전이 x.y.z이면 default로 <code>C:\\Program Files\\R\\R-x.y.z</code>로 되지만 연구회에서는 아래와 같이 추천합니다.</p>
+<section id="window" class="level4">
+<h4 class="anchored" data-anchor-id="window">Window</h4>
+<p>Window 운영체제의 경우 기본 설치폴더는 R 버전이 x.y.z이면 default로 <code>C:\\Program Files\\R\\R-x.y.z</code>로 되지만 연구회에서는 아래와 같이 추천합니다.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -468,8 +466,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="환경변수설정" class="level3">
-<h3 class="anchored" data-anchor-id="환경변수설정">환경변수설정</h3>
+<section id="환경변수설정" class="level4">
+<h4 class="anchored" data-anchor-id="환경변수설정">환경변수설정</h4>
 <p>설치완료 후에는 시스템환경변수에 R 실행파일경로를 지정해 두어야 합니다.</p>
 <ul>
 <li><p>사용자나 RStdio와 같은 프로그램에서 R을 호출할 때나 package등을 설치할 때 시스템에서 R 실행파일의 설치경로를 알아야 원할히 진행됩니다.</p></li>
@@ -484,8 +482,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="설치-검증" class="level3">
-<h3 class="anchored" data-anchor-id="설치-검증">설치 검증</h3>
+<section id="설치-검증" class="level4">
+<h4 class="anchored" data-anchor-id="설치-검증">설치 검증</h4>
 <ul>
 <li>정상적인 설치의 확인을 R을 실행시켜서 버전을 확인하시면 됩니다. 앞서에서 환경변수에 R의 실행파일의 경로를 등록해 두었기 때문에 R의 실행은 실행명령을 하는 폴더와는 무관하게 가능합니다. 구체적인 방법은, Win+R로 실행창을 열고 cmd 입력하여 커맨드창을 열고 “R” 을 입력하여 R을 실행시키고 커맨드창에 출력되는 R version이 일치하는지 확인하시면 됩니다.</li>
 </ul>
@@ -506,46 +504,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
+<section id="macos" class="level4">
+<h4 class="anchored" data-anchor-id="macos">MacOS</h4>
+<p>MacOS의 일반적인 폴더구조는 아래의 <a href="#fig-DirectoryStructureMacOS" class="quarto-xref">그림&nbsp;1</a> 와 같습니다.</p>
+<div id="fig-DirectoryStructureMacOS" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-DirectoryStructureMacOS-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<pre id="fig-DirectoryStructureMacOS"><code>/
+├── Applications     # 애플리케이션 폴더
+├── Library          # 시스템 전역 라이브러리 및 설정
+├── System           # 운영체제 핵심 파일
+├── Users            # 사용자 계정 폴더
+├── Volumes          # 마운트된 외장 디스크 및 네트워크 드라이브
+├── bin              # 기본 명령어 실행 파일 (예: ls, cp, mv)
+├── sbin             # 관리자용 명령어 실행 파일 (예: shutdown, reboot)
+├── etc              # 시스템 설정 파일
+├── dev              # 장치 파일 (예: 디스크, USB, 터미널)
+├── tmp              # 임시 파일 저장 폴더
+├── var              # 로그 및 캐시 파일
+├── usr              # 추가 명령어 및 라이브러리
+└── opt              # 서드파티 소프트웨어 패키지 (예: Homebrew 설치 파일)</code></pre>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-DirectoryStructureMacOS-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1: MacOS의 디렉토리 구조
+</figcaption>
+</figure>
+</div>
+<p>MacOS 운영체제의 경우 기본 설치폴더는 R 버전이 x.y.z이면 default로 <code>/Library/R.framework/Versions/x.y.z/Resource/bin/R</code>로 되며, 연구회에서는 기본값을 추천합니다.</p>
 </section>
-<section id="rtools-설치" class="level2">
-<h2 class="anchored" data-anchor-id="rtools-설치">Rtools 설치</h2>
-<section id="rtools-기능과-역할" class="level3">
-<h3 class="anchored" data-anchor-id="rtools-기능과-역할">Rtools 기능과 역할</h3>
-<p>Rtools는 R 프로그래밍 언어와 관련된 개발 도구 모음으로, 주로 Windows 운영 체제에서 사용됩니다. Rtools의 주요 역할과 기능은 다음과 같습니다:</p>
-<ul>
-<li><p><strong>패키지 컴파일 및 설치</strong>: R 패키지를 설치하거나 업데이트할 때, 특히 CRAN에서 제공하는 패키지 중 일부는 소스 코드 형태로 제공됩니다. 이 경우 Rtools는 해당 소스 코드를 컴파일하여 설치할 수 있도록 도와줍니다.</p></li>
-<li><p><strong>GNU 빌드 도구 제공</strong>: Rtools는 GCC(gnu 컴파일러 컬렉션), make, tar, git 등과 같은 GNU 빌드 도구를 포함하고 있어, Windows 환경에서도 리눅스와 유사한 빌드 환경을 제공합니다.</p></li>
-<li><p><strong>R 패키지 개발 지원</strong>: R 패키지를 개발하는 과정에서 필요한 다양한 도구와 라이브러리를 제공합니다. 특히, C/C++ 코드와 연동되는 R 패키지를 개발할 때 유용합니다.</p></li>
-<li><p><strong>명령줄 도구</strong>: 명령줄에서 R 및 관련 작업을 수행할 수 있는 도구들을 제공합니다. 이를 통해 보다 정교하고 복잡한 작업을 자동화할 수 있습니다.</p></li>
-</ul>
-</section>
-<section id="설치-파일" class="level3">
-<h3 class="anchored" data-anchor-id="설치-파일">설치 파일</h3>
-<p>Rtools의 설치파일도 역시 CRAN(<a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a>)에서 다운로드 하시면 되고, 2024년 6월 14일 현재 원도우의 경우 rtools44-6104-6039.exe가 최신 설치파일입니다.</p>
-</section>
-<section id="설치-경로" class="level3">
-<h3 class="anchored" data-anchor-id="설치-경로">설치 경로</h3>
-<p>설치경로 디폴트경로인 C: 드라이브 루트가 권장됩니다 (예시 C:\rtools44). 시스템환경변수에서 Rtools 실행파일의 경로설정은 설치과정에서 자동으로 됩니다. (안되면 수동으로 설정하시길 바랍니다.)</p>
-</section>
-<section id="설치-검증-1" class="level3">
-<h3 class="anchored" data-anchor-id="설치-검증-1">설치 검증</h3>
-<p>시스템환경변수에 실행파일의 경로설정 확인은 R 콘솔에서 Sys.which(“make”) 실행하여 설치경로를 제대로 반환하면 성공임을 알 수 있습니다.</p>
 </section>
 </section>
 <section id="r-매뉴얼" class="level2">
 <h2 class="anchored" data-anchor-id="r-매뉴얼">R 매뉴얼</h2>
 <p>R을 심도있게 공부할려면 R 개발자들이 만든 매뉴얼 중 <strong>The R language definition과 R Internals</strong>이 적합할 것 같습니다 (<a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a>). 하지만 처음부터 어려운 매뉴얼을 공부하는 것보다 자신의 자료를 분석하는데 필요한 명령과 함수들을 Help 기능 등으로 이해하는 방법으로 진행하는 것도 필요할 것 같습니다.</p>
 </section>
-<section id="프로젝트-관리" class="level2">
-<h2 class="anchored" data-anchor-id="프로젝트-관리">프로젝트 관리</h2>
+<section id="r-프로젝트-관리" class="level2">
+<h2 class="anchored" data-anchor-id="r-프로젝트-관리">R 프로젝트 관리</h2>
 <section id="프로젝트-폴더-구조" class="level3">
 <h3 class="anchored" data-anchor-id="프로젝트-폴더-구조">프로젝트 폴더 구조</h3>
 <section id="실행파일-설치-폴더" class="level4">
 <h4 class="anchored" data-anchor-id="실행파일-설치-폴더">실행파일 설치 폴더</h4>
-<p>R 새 버전으로 업데이트하면 드물겠지만 기존 코드나 사용 중인 패키지가 예상대로 작동하지 않을 수 있으며, 새 버전에서는 패키지의 지원이 변경될 수 있어 시스템의 안정성을 유지하기 위해 이전 버전의 실행파일을 유지하는 것도 필요합니다. 따라서 아래의 예시와 같은 폴더구조가 추천됩니다.</p>
-<p>C:\R\<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;R-4.4.0\<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;R-4.4.1\</p>
+<p>R 새 버전으로 업데이트하면 드물겠지만 기존 코드나 사용 중인 패키지가 예상대로 작동하지 않을 수 있으며, 새 버전에서는 패키지의 지원이 변경될 수 있어 시스템의 안정성을 유지하기 위해 이전 버전의 실행파일을 유지하는 것도 필요합니다. 따라서 윈도우 운영체제의 경우 아래의 #fig-InstallDirectoryWindow 와 같은 폴더구조가 추천됩니다.</p>
+<div id="fig-InstallDirectoryWindow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-InstallDirectoryWindow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<pre id="fig-InstallDirectoryWindow"><code>C:\R\
+   ├── R-4.4.2       # 기존 설치 버전
+   └── R-4.4.3       # 새로 설치한 버전 </code></pre>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-InstallDirectoryWindow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;2: 윈도우에서 버전별 설치파일 폴더 구조
+</figcaption>
+</figure>
+</div>
 </section>
 </section>
 </section>

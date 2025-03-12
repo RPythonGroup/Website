@@ -38,8 +38,8 @@ Below @fig-AGE is an example of visualization I created. I plotted a histogram w
 
 library(readxl)
 
-source("C:/Projects/R-4.4.1-RPythonStudy_Website/source/my_histgram_with_outliers.R")
-raw_data <- read_excel("C:/Projects/R-4.4.1-RPythonStudy_Website/raw_data/deidentified_han20230213.xlsx")
+source("C:/Projects/R443-RPythonStudy_Website/source/my_histgram_with_outliers.R")
+raw_data <- read_excel("C:/Projects/R443-RPythonStudy_Website/raw_data/deidentified_han20230213.xlsx")
 
 my_histgram_with_outliers(raw_data, "AGE")
 ```

@@ -409,9 +409,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#r-매뉴얼" id="toc-r-매뉴얼" class="nav-link" data-scroll-target="#r-매뉴얼">R 매뉴얼</a></li>
   <li><a href="#r-프로젝트-관리" id="toc-r-프로젝트-관리" class="nav-link" data-scroll-target="#r-프로젝트-관리">R 프로젝트 관리</a>
   <ul class="collapse">
-  <li><a href="#프로젝트-폴더-구조" id="toc-프로젝트-폴더-구조" class="nav-link" data-scroll-target="#프로젝트-폴더-구조">프로젝트 폴더 구조</a></li>
+  <li><a href="#renv-독립적-패키지관리" id="toc-renv-독립적-패키지관리" class="nav-link" data-scroll-target="#renv-독립적-패키지관리">renv 독립적 패키지관리</a></li>
   </ul></li>
-  <li><a href="#패키지-종속성-관리를-위한-renv" id="toc-패키지-종속성-관리를-위한-renv" class="nav-link" data-scroll-target="#패키지-종속성-관리를-위한-renv"><strong>패키지 종속성 관리를 위한</strong> <code>renv</code></a></li>
   </ul>
 </nav>
     </div>
@@ -430,19 +429,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="r-설치-파일" class="level3">
 <h3 class="anchored" data-anchor-id="r-설치-파일">R 설치 파일</h3>
-<p>CRAN (<a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a>)에서 자신의 운영체제에 맞는 최신 버전을 다운로드 받아 설치합니다. 2025년 03월 01일 기준으로 - 64 bit 원도우용 설치파일은 <code>R-4.4.3-win.exe</code> 이 최신입니다. - MacOS용 설치파일은 <code>R-4.4.3-arm64.pkg</code> 이 최신입니다. - 리눅스용 설치파일은 <code>?</code> 이 최신입니다.</p>
+<p>CRAN (<a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a>)에서 자신의 운영체제에 맞는 최신 버전을 다운로드 받아 설치합니다. 2025년 03월 01일 기준으로 - 64 bit 원도우용 설치파일은 <code>R-4.4.3-win.exe</code> 이 최신입니다. - MacOS용 설치파일은 <code>R-4.4.3-arm64.pkg</code> 이 최신입니다.</p>
 </section>
 <section id="r-설치경로" class="level3">
 <h3 class="anchored" data-anchor-id="r-설치경로">R 설치경로</h3>
-<section id="window" class="level4">
-<h4 class="anchored" data-anchor-id="window">Window</h4>
-<p>Window 운영체제의 경우 기본 설치폴더는 R 버전이 x.y.z이면 default로 <code>C:\\Program Files\\R\\R-x.y.z</code>로 되지만 연구회에서는 아래와 같이 추천합니다.</p>
+<section id="window-설치경로" class="level4">
+<h4 class="anchored" data-anchor-id="window-설치경로">Window 설치경로</h4>
+<p>R 버전이 x.y.z이면 Window 운영체제의 경우 기본 설치폴더는 <code>C:\Program Files\R\R-x.y.z</code>로 되지만 연구회에서는 아래와 같이 추천합니다.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>R Install Option Window</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>C<span class="sc">:</span>\R\R<span class="dv">-4</span>.<span class="fl">4.1</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>C<span class="sc">:</span>\R\R<span class="dv">-4</span>.<span class="fl">4.3</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="`C:\Program Files\`와 `C:\` 경로의 장단점">
@@ -466,8 +465,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="환경변수설정" class="level4">
-<h4 class="anchored" data-anchor-id="환경변수설정">환경변수설정</h4>
+<section id="window-환경변수설정" class="level4">
+<h4 class="anchored" data-anchor-id="window-환경변수설정">Window 환경변수설정</h4>
 <p>설치완료 후에는 시스템환경변수에 R 실행파일경로를 지정해 두어야 합니다.</p>
 <ul>
 <li><p>사용자나 RStdio와 같은 프로그램에서 R을 호출할 때나 package등을 설치할 때 시스템에서 R 실행파일의 설치경로를 알아야 원할히 진행됩니다.</p></li>
@@ -482,8 +481,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="설치-검증" class="level4">
-<h4 class="anchored" data-anchor-id="설치-검증">설치 검증</h4>
+<section id="window-설치-검증" class="level4">
+<h4 class="anchored" data-anchor-id="window-설치-검증">Window 설치 검증</h4>
 <ul>
 <li>정상적인 설치의 확인을 R을 실행시켜서 버전을 확인하시면 됩니다. 앞서에서 환경변수에 R의 실행파일의 경로를 등록해 두었기 때문에 R의 실행은 실행명령을 하는 폴더와는 무관하게 가능합니다. 구체적인 방법은, Win+R로 실행창을 열고 cmd 입력하여 커맨드창을 열고 “R” 을 입력하여 R을 실행시키고 커맨드창에 출력되는 R version이 일치하는지 확인하시면 됩니다.</li>
 </ul>
@@ -504,9 +503,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="macos" class="level4">
-<h4 class="anchored" data-anchor-id="macos">MacOS</h4>
-<p>MacOS의 일반적인 폴더구조는 아래의 <a href="#fig-DirectoryStructureMacOS" class="quarto-xref">그림&nbsp;1</a> 와 같습니다.</p>
+<section id="window-버전별-설치-폴더" class="level4">
+<h4 class="anchored" data-anchor-id="window-버전별-설치-폴더">Window 버전별 설치 폴더</h4>
+<p>R 새 버전으로 업데이트하면 드물겠지만 기존 코드나 사용 중인 패키지가 예상대로 작동하지 않을 수 있으며, 새 버전에서는 패키지의 지원이 변경될 수 있어 시스템의 안정성을 유지하기 위해 이전 버전의 실행파일을 유지하는 것도 필요합니다. 따라서 윈도우 운영체제의 경우 아래의 #fig-InstallDirectoryWindow 와 같은 폴더구조가 추천됩니다.</p>
+<div id="fig-InstallDirectoryWindow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-InstallDirectoryWindow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<pre id="fig-InstallDirectoryWindow"><code>C:\R\
+   ├── R-4.4.2       # 기존 설치 버전
+   └── R-4.4.3       # 새로 설치한 버전 </code></pre>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-InstallDirectoryWindow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1: 윈도우에서 버전별 설치파일 폴더 구조
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="macos-폴더구조" class="level4">
+<h4 class="anchored" data-anchor-id="macos-폴더구조">MacOS 폴더구조</h4>
+<p>MacOS의 일반적인 폴더구조는 아래의 <a href="#fig-DirectoryStructureMacOS" class="quarto-xref">그림&nbsp;2</a> 와 같습니다.</p>
 <div id="fig-DirectoryStructureMacOS" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-DirectoryStructureMacOS-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -526,11 +541,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 └── opt              # 서드파티 소프트웨어 패키지 (예: Homebrew 설치 파일)</code></pre>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-DirectoryStructureMacOS-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1: MacOS의 디렉토리 구조
+그림&nbsp;2: MacOS의 디렉토리 구조
 </figcaption>
 </figure>
 </div>
-<p>MacOS 운영체제의 경우 기본 설치폴더는 R 버전이 x.y.z이면 default로 <code>/Library/R.framework/Versions/x.y.z/Resource/bin/R</code>로 되며, 연구회에서는 기본값을 추천합니다.</p>
+</section>
+<section id="macos-설치경로" class="level4">
+<h4 class="anchored" data-anchor-id="macos-설치경로">MacOS 설치경로</h4>
+<p>R 버전이 x.y.z이면 MacOS 운영체제의 경우 기본 설치폴더는<br>
+<code>/Library/R.framework/Versions/x.y.z/Resource/bin/R</code><br>
+로 되며, 연구회에서는 기본값을 추천합니다.</p>
 </section>
 </section>
 </section>
@@ -540,33 +560,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="r-프로젝트-관리" class="level2">
 <h2 class="anchored" data-anchor-id="r-프로젝트-관리">R 프로젝트 관리</h2>
-<section id="프로젝트-폴더-구조" class="level3">
-<h3 class="anchored" data-anchor-id="프로젝트-폴더-구조">프로젝트 폴더 구조</h3>
-<section id="실행파일-설치-폴더" class="level4">
-<h4 class="anchored" data-anchor-id="실행파일-설치-폴더">실행파일 설치 폴더</h4>
-<p>R 새 버전으로 업데이트하면 드물겠지만 기존 코드나 사용 중인 패키지가 예상대로 작동하지 않을 수 있으며, 새 버전에서는 패키지의 지원이 변경될 수 있어 시스템의 안정성을 유지하기 위해 이전 버전의 실행파일을 유지하는 것도 필요합니다. 따라서 윈도우 운영체제의 경우 아래의 #fig-InstallDirectoryWindow 와 같은 폴더구조가 추천됩니다.</p>
-<div id="fig-InstallDirectoryWindow" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-InstallDirectoryWindow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<pre id="fig-InstallDirectoryWindow"><code>C:\R\
-   ├── R-4.4.2       # 기존 설치 버전
-   └── R-4.4.3       # 새로 설치한 버전 </code></pre>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-InstallDirectoryWindow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;2: 윈도우에서 버전별 설치파일 폴더 구조
-</figcaption>
-</figure>
-</div>
-</section>
-</section>
-</section>
-<section id="패키지-종속성-관리를-위한-renv" class="level2">
-<h2 class="anchored" data-anchor-id="패키지-종속성-관리를-위한-renv"><strong>패키지 종속성 관리를 위한</strong> <code>renv</code></h2>
+<section id="renv-독립적-패키지관리" class="level3">
+<h3 class="anchored" data-anchor-id="renv-독립적-패키지관리">renv 독립적 패키지관리</h3>
 <p>원래 R에서 패키지는 해당버전 R의 설치폴더 하부의 library 폴더에 설치됩니다. <code>renv</code>는 R 프로젝트에서 패키지 의존성을 관리하기 위해 설계된 도구로써, renv를 설치하고 활성화하면 해당 프로젝트 폴더 하부에 renv 폴더가 만들어지고, 그 하부에 패키지를 설치하게 됩니다. 또한 설치된 패키지들의 정보를 renv.lock 파일에 관리하게 됩니다. 이러한 방법으로 R에서는 프로젝트별로 패키지를 관리할 수 있으므로 필자를 이를 추천합니다.</p>
 <p>RStudio에서 새로운 프로젝트를 생성할 때 renv 사용여부를 check하면 자동으로 설정됩니다.</p>
 <p>사용법에 대해서는 <a href="https://rstudio.github.io/renv/articles/renv.html" class="uri">https://rstudio.github.io/renv/articles/renv.html</a> 참고하시길 바랍니다.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

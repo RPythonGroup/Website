@@ -112,6 +112,7 @@ website:
         - posts/tools/introduction_to_tools.qmd
         - section: "Git"
           contents:
+            - posts/tools/Git/Git_concept.qmd          
             - posts/tools/Git/Git_setup.qmd
             - posts/tools/Git/Github.qmd
             - posts/tools/Git/SSH.qmd            

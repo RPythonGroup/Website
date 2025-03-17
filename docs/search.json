@@ -1016,49 +1016,49 @@
   {
     "objectID": "posts/tools/Git/Git_setup.html",
     "href": "posts/tools/Git/Git_setup.html",
-    "title": "Git setup",
+    "title": "Git 설치",
     "section": "",
-    "text": "Git은 2005년 리누스 토르발스가 개발한 오픈 소스 분산 버전 관리 시스템(DVCS, Distributed Version Control System)으로, 소스코드의 스냅샷을 기록하여, 변경이력관리와 특정 시점으로 복귀하거나 다수의 개발자가 동시에 분산된 환경에서 브랜칭을 통해 코드를 개발하고, 병합 절차를 통해 충돌을 해결할 수 있는 기능이 있습니다. 이러한 분산형 구조와 성능 최적화 덕분에, Git은 전 세계적으로 대다수 개발팀에서 사용되는 표준 버전 관리 도구로 자리잡았습니다.",
+    "text": "Git은 2005년 리누스 토르발스가 개발한 분산 버전 관리 시스템(DVCS, Distributed Version Control System)으로, 소스코드의 스냅샷을 기록하여, 변경이력관리와 특정 시점으로 복귀하거나 다수의 개발자가 동시에 분산된 환경에서 브랜칭을 통해 코드를 개발하고, 병합 절차를 통해 충돌을 해결할 수 있는 기능이 있습니다. 이러한 분산형 구조와 성능 최적화 덕분에, Git은 전 세계적으로 대다수 개발팀에서 사용되는 표준 버전 관리 도구로 자리잡았습니다.",
     "crumbs": [
       "Tools",
       "Git",
-      "Git setup"
+      "Git 설치"
     ]
   },
   {
     "objectID": "posts/tools/Git/Git_setup.html#git란",
     "href": "posts/tools/Git/Git_setup.html#git란",
-    "title": "Git setup",
+    "title": "Git 설치",
     "section": "",
-    "text": "Git은 2005년 리누스 토르발스가 개발한 오픈 소스 분산 버전 관리 시스템(DVCS, Distributed Version Control System)으로, 소스코드의 스냅샷을 기록하여, 변경이력관리와 특정 시점으로 복귀하거나 다수의 개발자가 동시에 분산된 환경에서 브랜칭을 통해 코드를 개발하고, 병합 절차를 통해 충돌을 해결할 수 있는 기능이 있습니다. 이러한 분산형 구조와 성능 최적화 덕분에, Git은 전 세계적으로 대다수 개발팀에서 사용되는 표준 버전 관리 도구로 자리잡았습니다.",
+    "text": "Git은 2005년 리누스 토르발스가 개발한 분산 버전 관리 시스템(DVCS, Distributed Version Control System)으로, 소스코드의 스냅샷을 기록하여, 변경이력관리와 특정 시점으로 복귀하거나 다수의 개발자가 동시에 분산된 환경에서 브랜칭을 통해 코드를 개발하고, 병합 절차를 통해 충돌을 해결할 수 있는 기능이 있습니다. 이러한 분산형 구조와 성능 최적화 덕분에, Git은 전 세계적으로 대다수 개발팀에서 사용되는 표준 버전 관리 도구로 자리잡았습니다.",
     "crumbs": [
       "Tools",
       "Git",
-      "Git setup"
+      "Git 설치"
     ]
   },
   {
     "objectID": "posts/tools/Git/Git_setup.html#git-유용성",
     "href": "posts/tools/Git/Git_setup.html#git-유용성",
-    "title": "Git setup",
+    "title": "Git 설치",
     "section": "Git 유용성",
     "text": "Git 유용성\n코딩초보에게는 Git 사용법이 다소 어려울 수 있지만, 코드를 수정하다가 문제가 발생했을 때, 변경이력관리 기능을 이용해 특정시점으로 되돌릴 수 있으며 이 자체가 백업 기능도 되므로 유용하기에 연구회에서는 Git 사용을 추천합니다.",
     "crumbs": [
       "Tools",
       "Git",
-      "Git setup"
+      "Git 설치"
     ]
   },
   {
     "objectID": "posts/tools/Git/Git_setup.html#설치안내문서",
     "href": "posts/tools/Git/Git_setup.html#설치안내문서",
-    "title": "Git setup",
+    "title": "Git 설치",
     "section": "설치안내문서",
     "text": "설치안내문서\nGit 설치에 대한 공식문서(https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)를 참고하는 것이 이상적이지만 , 아래의 요약을 참고하여 설치 하셔도 됩니다.",
     "crumbs": [
       "Tools",
       "Git",
-      "Git setup"
+      "Git 설치"
     ]
   },
   {
@@ -1088,97 +1088,97 @@
   {
     "objectID": "posts/tools/Git/Git_setup.html#설치확인",
     "href": "posts/tools/Git/Git_setup.html#설치확인",
-    "title": "Git setup",
+    "title": "Git 설치",
     "section": "설치확인",
-    "text": "설치확인\n커맨드창에서 아래의 명령을 실행하여 버전을 확인하시면 됩니다. (Git 설치 시 실행파일의 경로가 환경변수에 자동으로 등록되기 때문에 커맨드창을 여는 폴더위치가 관계 없이 버전이 표시되어야 합니다.)\n\n\n\nCommand Prompt\n\ngit --version",
+    "text": "설치확인\n커맨드창에서 아래의 명령을 실행하여 버전을 확인하시면 됩니다. (Git 설치 시 실행파일의 경로가 환경변수에 자동으로 등록되기 때문에 커맨드창을 여는 폴더위치가 관계 없이 버전이 표시되어야 합니다.)\n\n\n\nCommand Prompt\n\ngit --version\n\n\n\n설치경로\n기본값은 C:\\Program Files\\Git이며 기본값을 추천합니다.\n\n\nSelect Start Menu Folder (시작메뉴 폴더 선택)\n아래의 그림 12 와 같으며 기본값을 추천합니다.\n\n\n\n\n\n\n그림 12: Options to select Start Menu Folder for programs’ shortcut",
     "crumbs": [
       "Tools",
       "Git",
-      "Git setup"
+      "Git 설치"
     ]
   },
   {
     "objectID": "posts/tools/Git/Git_setup.html#git개념과-용어",
     "href": "posts/tools/Git/Git_setup.html#git개념과-용어",
-    "title": "Git setup",
+    "title": "Git 설치",
     "section": "Git개념과 용어",
     "text": "Git개념과 용어\nGit 초기 설정에 앞서 Git에서 사용되는 개념과 용어를 이해하는 것이 좋습니다. Git 공식사이트의 한글매뉴얼(https://git-scm.com/book/ko/v2/%ec%8b%9c%ec%9e%91%ed%95%98%ea%b8%b0-Git-%ea%b8%b0%ec%b4%88)을 학습하시길 추천합니다. ### untracked/staged/committed Git에서는 프로젝트폴더 내의 모든 파일을 추적(=관리)대상파일과 추적대상이 아닌 파일로 구분합니다. 추적대상파일은 인 파일로 그림 13.\n\n\n\n\n\n\n그림 13: Concept of Git and terminology",
     "crumbs": [
       "Tools",
       "Git",
-      "Git setup"
+      "Git 설치"
     ]
   },
   {
     "objectID": "posts/tools/Git/Git_setup.html#git-설정",
     "href": "posts/tools/Git/Git_setup.html#git-설정",
-    "title": "Git setup",
+    "title": "Git 설치",
     "section": "Git 설정",
-    "text": "Git 설정\n\n사용자정보 설정\nGit에서는 커밋을 할 때마다 누가 했는지를 사용자명과 이메일을 기록해둡니다. 이를 위해 설치 시 아래의 예시와 같이 사용자이름과 이메일 설정합니다.\n\n\n\nCommand Prompt\n\ngit config --global user.name \"BenKorea\"\n\n\n\n\n\nCommand Prompt\n\ngit config --global user.email \"kimbi.kirams@gmail.com\"\n\n\n\n\n사용자정보 설정 확인\n각각 아래의 명령으로 사용자명과 이메일 주소를 확인할 수 있습니다.\n\n\n\nCommand Prompt\n\ngit config user.name\n\n\n\n\n\nCommand Prompt\n\ngit config user.email\n\n\n\n\n기본브렌치 설정하기\n기본 브렌치 이름을 master가 아닌 main으로 설정할려면 아래의 같이 init.defautBranch를 main을 설정해 주시면 됩니다.\n\n\n\nCommand Prompt\n\ngit config --global init.defaultBranch main",
+    "text": "Git 설정\n\n사용자정보 설정\nGit에서는 커밋을 할 때마다 누가 했는지를 사용자명과 이메일을 기록해둡니다. 이를 위해 설치 시 아래의 예시와 같이 사용자이름과 이메일 설정합니다.\n\n\n\nCommand Prompt\n\ngit config --global user.name \"BenKorea\"\n\n\n\n\n\nCommand Prompt\n\ngit config --global user.email \"kimbi.kirams@gmail.com\"\n\n\n\n\n사용자정보 설정 확인\n각각 아래의 명령으로 사용자명과 이메일 주소를 확인할 수 있습니다.\n\n\n\nCommand Prompt\n\ngit config user.name\n\n\n\n\n\nCommand Prompt\n\ngit config user.email",
     "crumbs": [
       "Tools",
       "Git",
-      "Git setup"
+      "Git 설치"
     ]
   },
   {
     "objectID": "posts/tools/Git/Git_setup.html#프로젝트에-git-적용하기",
     "href": "posts/tools/Git/Git_setup.html#프로젝트에-git-적용하기",
-    "title": "Git setup",
+    "title": "Git 설치",
     "section": "프로젝트에 Git 적용하기",
     "text": "프로젝트에 Git 적용하기\n버전관리를 시작할려면 원하는 폴더 (=프로젝트 폴더)에서 git init 명령어를 실행하면 됩니다. 다른 표현으로는 저장소를 만든다고도 합니다. 실행결과로써 .git 이라는 숨김폴더가 생성되며, 이 폴더에는 버전관리에 필요한 파일들이 저장됩니다.\n\n\n\nCommand Prompt\n\ngit init",
     "crumbs": [
       "Tools",
       "Git",
-      "Git setup"
+      "Git 설치"
     ]
   },
   {
     "objectID": "posts/tools/Git/Git_setup.html#github란",
     "href": "posts/tools/Git/Git_setup.html#github란",
-    "title": "Git setup",
+    "title": "Git 설치",
     "section": "Github란?",
     "text": "Github란?\nGitHub는 Git을 기반으로 한 웹 기반 호스팅 서비스로, 소스 코드 관리와 협업을 위한 플랫폼입니다. GitHub는 Git을 사용하여 프로젝트의 코드베이스를 중앙에서 관리하며, 개발자들이 효율적으로 코드 리뷰, 이슈 관리, 프로젝트 관리, 그리고 협업을 할 수 있도록 다양한 도구와 인터페이스를 제공합니다. Pull Request(PR)를 통해 코드 변경 사항을 리뷰하고 병합할 수 있으며, Continuous Integration/Continuous Deployment(CI/CD)와 같은 자동화 기능을 지원해 소프트웨어 개발의 생산성과 품질을 높입니다.",
     "crumbs": [
       "Tools",
       "Git",
-      "Git setup"
+      "Git 설치"
     ]
   },
   {
     "objectID": "posts/tools/Git/Github.html",
     "href": "posts/tools/Git/Github.html",
-    "title": "Github",
+    "title": "Github 사용법",
     "section": "",
-    "text": "설치 및 사용에 대해서는 아래의 공식자료를 활용하시길 추천합니다.\n\n공식문서(https://docs.github.com/ko)는 한글로도 번역되어 있습니다.\n공식 Training manual (https://githubtraining.github.io/training-manual/#/)도 있습니다.",
+    "text": "GitHub는 Git을 기반으로 한 웹 기반 호스팅 서비스로, 소스 코드 관리와 협업을 위한 플랫폼입니다. GitHub는 Git을 사용하여 프로젝트의 코드베이스를 중앙에서 관리하며, 개발자들이 효율적으로 코드 리뷰, 이슈 관리, 프로젝트 관리, 그리고 협업을 할 수 있도록 다양한 도구와 인터페이스를 제공합니다. Pull Request(PR)를 통해 코드 변경 사항을 리뷰하고 병합할 수 있으며, Continuous Integration/Continuous Deployment(CI/CD)와 같은 자동화 기능을 지원해 소프트웨어 개발의 생산성과 품질을 높입니다.",
     "crumbs": [
       "Tools",
       "Git",
-      "Github"
+      "Github 사용법"
     ]
   },
   {
     "objectID": "posts/tools/Git/Github.html#매뉴얼",
     "href": "posts/tools/Git/Github.html#매뉴얼",
-    "title": "Github",
-    "section": "",
-    "text": "설치 및 사용에 대해서는 아래의 공식자료를 활용하시길 추천합니다.\n\n공식문서(https://docs.github.com/ko)는 한글로도 번역되어 있습니다.\n공식 Training manual (https://githubtraining.github.io/training-manual/#/)도 있습니다.",
+    "title": "Github 사용법",
+    "section": "매뉴얼",
+    "text": "매뉴얼\n설치 및 사용에 대해서는 아래의 공식자료를 활용하시길 추천합니다.\n\n공식문서(https://docs.github.com/ko)는 한글로도 번역되어 있습니다.\n공식 Training manual (https://githubtraining.github.io/training-manual/#/)도 있습니다.",
     "crumbs": [
       "Tools",
       "Git",
-      "Github"
+      "Github 사용법"
     ]
   },
   {
     "objectID": "posts/tools/Git/Github.html#github-사용법",
     "href": "posts/tools/Git/Github.html#github-사용법",
-    "title": "Github",
+    "title": "Github 사용법",
     "section": "Github 사용법",
     "text": "Github 사용법\n\n가입하기\n\nSign up하면 email을 입력해야 하는데 이미 등록된 이메일은 진행되지 않으므로 주의를 요합니다. (Git local setting에서 사용했던 email 사용을 추천합니다.)\n비밀번호와 username을 입력을 진행합니다. (Git local setting에서 사용했던 username 사용을 추천합니다.)\n이 때 8자리의 launch code를 email로 보내주는데 이를 가입화면에 입력해야 합니다.\n\n\n\nRepository 생성하기\n\ngit_exercise와 같은 원하는 Repository name을 입력하고 Public을 선택하여 Create a new repositiry를 진행하시면 됩니다.\n\n\n\n원격저장소에 프로젝트 올리기\n\n&lt;&gt; code 메뉴에서 Quick setup 내에 있는 URL을 이용하여 새로 만들어진 원격저장소로 local 저장소의 commit된 결과들을 push 하면 됩니다.",
     "crumbs": [
       "Tools",
       "Git",
-      "Github"
+      "Github 사용법"
     ]
   },
   {
@@ -2055,6 +2055,78 @@
       "R",
       "설치",
       "Rtools 설치"
+    ]
+  },
+  {
+    "objectID": "posts/tools/Git/Git_setup.html#window에-설치하기",
+    "href": "posts/tools/Git/Git_setup.html#window에-설치하기",
+    "title": "Git 설치",
+    "section": "Window에 설치하기",
+    "text": "Window에 설치하기\n\n설치파일 다운로드\nGit 공식다운로드사이트(https://git-scm.com/downloads)에서 자신의 운영체제에 적합한 최신 설치파일을 다운로드하고 설치합니다. 여기서는 Window에 설치하는 것이므로, - 2025년 2월 13일 배포된 윈도우용 64비트 최신 설치파일은 Git-2.48.1-64-bit.exe 입니다.\n\n\n관리자권한으로 설치시작\n설치 중 경로를 결정하게 되는데, 기본값인 C:\\Program Files\\Git 경로는 시스템폴더라 에 설치하기 위해서는 관리자 권한이 필요합니다. (설치파일을 마우스 우클릭 하여 ’관리자 권한으로 실행’을 선택하면 됩니다.)\n\n\nSelect Components (구성요소 선택)\n그림 1 와 같이 기본값을 추천합니다.\n\n\n\n\n\n\n그림 1\n\n\n\n\n\n\n\n\n\n구성요소 세부설명\n\n\n\n\n\n\n[]Additional icons on the Desktop은 바탕화면에 바로가기를 만드는 것\n\n연구회에서는 RStudio에서 Git를 직접 사용하므로 선택하지 않는 것을 추천\n\n[x]Windows Explorer integration은 파일 탐색기에서 우클릭으로 다음의 Git 명령을 사용할 수 있도록 하는 것입니다.\n\n[x]Open Git bash here: 해당폴더에서 Git Bash Terminal을 열어주어 편리합니다.\n[x]Open Git GUI here: 해당폴더에서 Git의 Graphic User Interface를 열어주어 편리합니다.\n연구회에서는 주로 RStudio 내의 Terminal에서 Git 명령어를 사용하므로 반드시 필요한 것은 아니지만 기본값이므로 선택한 채로 진행하는 것을 추천합니다.\n\n[x]Git LFS (Large File Support)\n\n자신의 PC에서 관리하던 프로젝트 파일들을 클라우드개념의 무료 Github 원격저장소에 올릴 때 파일크기의 제한이 있습니다. GitHub의 기본 저장소에서는 단일 파일의 크기를 100MB 이상 올릴 수 없도록 제한되어 있습니다. 이는 Git의 내부 구조와 GitHub의 사용 정책 때문인데요, 100MB 이상의 파일은 리포지토리의 성능 저하 및 관리상의 문제가 발생할 수 있기 때문입니다. 반면에 Git LFS (Large File Support) 옵션을 선택하면, 이러한 파일들을 별도의 저장소에 관리하게 되어 최대 2GB 크기의 파일까지 업로드가 가능해집니다. 다만, GitHub의 무료 플랜에서는 Git LFS 사용 시 1GB의 저장소와 1GB의 월간 대역폭 제한이 있으므로, 이 범위 내에서 큰 파일들을 관리해야 합니다.\n\n[x] Associate .git* configuration files with the default text editor: Git의 설정파일인 .gitconfig 파일을 기본 텍스트 에디터로 연결하는 것\n[x] Associate .sh files to be run with Bash: .sh 파일은 Windows의 Command Prompt 문법이 아닌 Unix 계열의 쉘 문법이 적용된 스크립트 파일입니다. Git Bash와 연동하면 해당 스크립트를 작성하거나 실행하기가 편리합니다.\n[] Check daily for Git for Windows updates: Git for Windows의 업데이트를 자동으로 확인하는 것\n[] (New) Add a Git Bash Profile to Windows Terminal: Windows Terminal은 윈도우에서 CLI를 구현한 가장 최신의 기능입니다. 여기에 Git Bash가 열릴 수 있도록 옵션을 추가하는 것을 의미합니다. 그러나 연구회에서는 RStudio에서 사용하므로 선택 치 않는 것을 추천합니다.\n[x] (New) Scalar (Git add-on to manage large scale repository): 새로운 기능으로 도움이 될 수 있으므로 선택을 추천합니다.\n\n\n\n\n\n\nChoosing the default editor used by GIT (텍스트에디터 선택)\n연구회는 Python IDE로 VS Code를 추천하고 있고 상대적으로 Vim보다 사용이 쉬우므로 이를 추천합니다 그림 2.\n\n\n\n\n\n\n그림 2: Options to select Text Editor\n\n\n\n\n\nAdjusting the name of the initial branch in new repositories (기본 브렌치명)\n\nOveride the default branch name for new repositories: 새로운 저장소를 생성할 때 기본 브렌치명을 변경할 수 있는 옵션입니다. 기본값은 master이며, 2020년 10월 1일부터 GitHub에서는 기본 브렌치명을 master에서 main으로 변경하였습니다. 이에 따라 Git 설치 시 기본 브렌치명을 main으로 설정하는 것을 추천합니다 그림 3.\n\n\n\n\n\n\n\n그림 3: Options to select Default Branch Name\n\n\n\n\n\n환경변수 설정\n\n[x] Git from the command line and also from 3rd party software: 윈도우의 시스템 환경변수에 Git 실행 파일의 경로를 추가하는 것을 의미합니다. 이 옵션을 선택하면 Windows의 Command Prompt, PowerShell 등에서도 Git 명령어를 사용할 수 있고, RStudio 같은 타사 소프트웨어에서도 Git 경로를 자동으로 인식하므로 추천됩니다 그림 4.\n\n\n\n\n\n\n\n그림 4: Options to select Path Environment\n\n\n\n\n\nSSH 선택\nGit은 원격 저장소와의 안전한 통신을 위해 주로 SSH(Secured Shell)를 사용합니다. GitHub, GitLab, Bitbucket 등의 플랫폼은 SSH 키 기반 인증을 제공하여, 비밀번호 대신 SSH 키로 원격 저장소에 안전하게 접속할 수 있도록 지원합니다. OpenSSH는 오픈 소스 소프트웨어로, Git 설치 시 선택적으로 설치할 수 있으며, SSH 기반 인증 설정에 주로 사용됩니다. 설치 과정에서는 OpenSSH가 기본 선택 항목으로 제공되므로, 특별한 이유가 없다면 기본값을 그대로 사용하는 것이 권장됩\n\n\n\n\n\n\n그림 5: Options to select OpenSSH\n\n\n\n\n\nSSL/TLS 라이브러리 선택\nSSL/TLS는 Git이 HTTPS 연결을 통해 원격 저장소와 통신할 때 사용하는 암호화 라이브러리입니다. OpenSSL은 더 넓은 암호화 기능과 최신 표준 지원, 리눅스와의 호환성이 중요한 경우 추천되며, Windows 고유 SSL/TLS 라이브러리(Schannel)는 Windows 시스템과의 통합과 간편한 설정을 원할 때 추천합니다. 연구회에서는 기본값인 OpenSSL을 추천합니다 그림 6.\n\n\n\n\n\n\n그림 6: Options to select SSL/TLS library\n\n\n\n\n\n줄바꿈 변환 설정\n윈도우에서는 줄바꿈 기본 설정이 CRLF(Carriage Return Line Feed)입니다. 반면, Unix 계열(리눅스, macOS)은 LF(Line Feed)를 사용합니다. 운영체제를 오가며 개발할 경우, Git은 이러한 줄바꿈 차이를 해결하기 위해 줄바꿈 변환 기능(Line Ending Conversion)을 지원합니다. checkout과 commit 시에 자동으로 줄바꿈을 변환할지 설정할 수 있는데, 기본값은 Checkout Windows-style, commit Unix-style line endings이며, 이는 Windows에서 개발할 때 적합한 설정입니다. Linux 또는 macOS에서 개발할 경우, Checkout as-is, commit Unix-style line endings를 선택하는 것이 좋습니다 그림 7.\n\n\n\n\n\n\n그림 7: Options to select Line Ending Conversion\n\n\n\n\n\n터미널 에뮬레이터\nGit Bash에서 사용할 터미널 환경을 결정하는 옵션입니다. 각 옵션은 Git Bash가 실행될 때 사용할 터미널을 정의하며, 사용자 경험과 터미널 기능에서 차이가 있습니다. MinTTY는 더 발전된 터미널 경험을 제공하며, 유닉스 스타일에 가까운 작업 환경을 제공합니다. 특히, 리눅스/유닉스에 익숙한 사용자나 Git Bash를 주로 사용하는 경우 적합합니다. Windows 기본 콘솔 창은 Windows에서 기본 제공되는 터미널 인터페이스로, CMD와 같은 익숙한 환경을 선호하는 사용자에게 적합합니다. 특히, Windows 사용자나 CMD를 주로 사용하는 경우 적합합니다 그림 8.\n\n\n\n\n\n\n그림 8: Options to select Terminal Emulator\n\n\n\n\n\ngit pull 설정\n이 설정은 git pull 명령을 실행했을 때, 로컬 브랜치와 원격 브랜치 간의 변경 사항을 어떻게 병합할지를 결정합니다 그림 9.\n1. Fast-forward or merge (기본 설정) 이 옵션은 기본값으로 설정되어 있으며, Git이 상황에 따라 fast-forward 병합 또는 병합 커밋(merge commit)을 선택합니다.\nFast-forward: 만약 로컬 브랜치에서 추가적인 변경 사항이 없고, 단순히 원격 브랜치의 커밋을 가져와서 이어 붙일 수 있는 경우, Git은 fast-forward 병합을 수행합니다. 이 경우 병합 커밋이 생성되지 않고, 기존 커밋의 연속선 상에 새로운 커밋이 추가됩니다.\n장점: 이력이 깔끔하게 이어져서, 불필요한 병합 커밋 없이 간결한 로그를 유지할 수 있습니다.\n단점: 협업 중 복잡한 병합 기록을 관리하는 데는 한계가 있을 수 있습니다.\nMerge: 로컬 브랜치에 변경 사항이 있거나, 원격 브랜치의 변경 사항을 단순히 이어 붙일 수 없는 경우에는 병합 커밋(merge commit)이 생성됩니다. 이 커밋은 두 브랜치의 이력을 병합하면서, 병합 지점을 명확하게 표시합니다.\n장점: 병합이 발생한 지점을 명확하게 구분할 수 있어, 누가 어떤 작업을 했는지 추적하기 쉽습니다.\n단점: 병합 커밋이 많아지면 로그가 복잡해질 수 있습니다.\n2. Rebase Rebase 옵션은 원격 브랜치의 변경 사항을 로컬 브랜치에 병합 커밋 없이 적용하는 방식입니다. Rebase는 커밋을 재정렬하여 마치 원격 브랜치에서 작업한 것처럼 히스토리를 재작성합니다.\nRebase 동작 방식: 로컬 브랜치에서 발생한 커밋을 잠시 제거한 후, 원격 브랜치의 변경 사항을 먼저 적용하고, 그 뒤에 로컬 커밋을 재적용합니다. 이렇게 하면 이력이 직선으로 이어져, 커밋 로그가 매우 깔끔해집니다.\n장점: 히스토리가 간결하고, 직선으로 정렬되어 있어, 로그를 읽기가 쉽습니다. 병합 커밋이 생기지 않기 때문에, 협업 중에도 깔끔한 이력을 유지할 수 있습니다.\n단점: Rebase는 히스토리를 재작성하는 방식이므로, 이미 공유된 커밋을 rebase하게 되면 협업 중 충돌이 발생하거나 다른 개발자들의 커밋에 영향을 줄 수 있습니다. 협업 중에는 신중하게 사용해야 하며, 특히 다수의 개발자가 동시에 작업하는 브랜치에서는 rebase가 문제가 될 수 있습니다.\n3. Only ever fast-forward Only ever fast-forward 옵션은 강력한 제약 조건을 설정하여, 항상 fast-forward 병합만 허용하는 방식입니다. 이 옵션을 선택하면 Git은 병합 커밋을 생성하지 않고, fast-forward가 가능한 경우에만 병합을 수행합니다.\n동작 방식: 로컬 브랜치가 원격 브랜치보다 앞서거나 충돌이 발생할 경우, 병합을 허용하지 않고 에러를 발생시킵니다. 즉, 단순히 브랜치가 원격 브랜치보다 뒤에 있을 때만 fast-forward 병합이 가능합니다.\n장점: 이력을 절대적으로 깔끔하게 유지할 수 있습니다. 병합 커밋이 생기지 않기 때문에, 히스토리가 매우 간결하게 유지됩니다. 히스토리를 관리하기가 쉬우며, 직선형으로 깔끔하게 이어지는 커밋 로그를 선호하는 경우 적합합니다.\n단점: 협업 중에 다른 개발자의 변경 사항과 로컬 변경 사항이 병합되어야 하는 경우에도 fast-forward만 허용하므로, Git이 병합을 거부할 수 있습니다. 이런 경우, 병합이 실패하고 수동으로 병합을 수행해야 할 수도 있습니다. 복잡한 협업 상황에서는 제약이 될 수 있습니다. 협업 중에는 병합 커밋이 필요할 수 있기 때문에, 이 옵션은 다소 제한적입니다.\n\n\n\n\n\n\n그림 9: Options to select git pull\n\n\n\n\n\nGit Credential Manager\nGit Credential Manager는 Git에서 원격 저장소에 대한 인증 정보를 안전하게 저장하고 자동으로 관리해주는 도구입니다. 이를 통해 사용자는 자격 증명을 반복적으로 입력할 필요 없이 안전하게 Git을 사용할 수 있으며, Windows, macOS, Linux 등 다양한 운영체제에서 지원됩니다. OAuth, 토큰 기반 인증 등 최신 인증 방식도 지원하여 보안성과 편리성을 모두 제공합니다. Git Credential Manager는 Git 설치 시 선택적으로 설치할 수 있으며, 기본값을 사용하는 것이 권장됩니다 그림 10.\n\n\n\n\n\n\n그림 10: Options to select Git Credential Manager\n\n\n\n\n\n기타 옵션\n\n[x] File System Caching: 은 Git이 파일 시스템에 대한 메타데이터(파일 상태, 권한, 타임스탬프 등)를 더 빠르게 조회할 수 있도록 캐시를 사용하는 기능입니다. 기본적으로, Git은 파일 시스템에서 파일 변경 사항을 확인하기 위해 파일의 상태(예: 수정 시간, 크기)를 체크합니다. 이 과정이 많은 파일을 포함하는 대형 프로젝트에서는 성능 저하를 일으킬 수 있습니다.\n[] Symbolic Links(심볼릭 링크): 파일이나 디렉토리에 대한 참조를 가리키는 특별한 유형의 파일입니다. 심볼릭 링크는 원래 파일 또는 디렉토리의 경로를 저장하고, 이를 참조하는 방식으로 동작합니다. Git에서 Symbolic Links 옵션을 활성화하면, Git은 심볼릭 링크를 파일로 저장하는 대신, 심볼릭 링크 자체를 저장하고 관리할 수 있습니다. 리눅스 및 macOS에서 심볼릭 링크는 많이 사용되고 지원되므로, 이 옵션을 활성화하는 것이 일반적입니다. Windows에서는 심볼릭 링크가 기본적으로 제한되어 있으며, 활성화하려면 관리자 권한이나 특정 설정을 필요로 합니다. 따라서, Windows에서 이 옵션을 활성화하면 제대로 동작하지 않거나 예기치 않은 동작이 발생할 수 있습니다.\n기본값은 File System Caching 활성화입니다 그림 11.\n\n\n\n\n\n\n\n그림 11: Options to select Extra Options",
+    "crumbs": [
+      "Tools",
+      "Git",
+      "Git 설치"
+    ]
+  },
+  {
+    "objectID": "posts/tools/Git/Github.html#github란",
+    "href": "posts/tools/Git/Github.html#github란",
+    "title": "Github 사용법",
+    "section": "",
+    "text": "GitHub는 Git을 기반으로 한 웹 기반 호스팅 서비스로, 소스 코드 관리와 협업을 위한 플랫폼입니다. GitHub는 Git을 사용하여 프로젝트의 코드베이스를 중앙에서 관리하며, 개발자들이 효율적으로 코드 리뷰, 이슈 관리, 프로젝트 관리, 그리고 협업을 할 수 있도록 다양한 도구와 인터페이스를 제공합니다. Pull Request(PR)를 통해 코드 변경 사항을 리뷰하고 병합할 수 있으며, Continuous Integration/Continuous Deployment(CI/CD)와 같은 자동화 기능을 지원해 소프트웨어 개발의 생산성과 품질을 높입니다.",
+    "crumbs": [
+      "Tools",
+      "Git",
+      "Github 사용법"
+    ]
+  },
+  {
+    "objectID": "posts/tools/Git/Git_concept.html",
+    "href": "posts/tools/Git/Git_concept.html",
+    "title": "Git 개요",
+    "section": "",
+    "text": "Git은 2005년 리누스 토르발스가 개발한 분산 버전 관리 시스템(DVCS, Distributed Version Control System)으로, 소스코드의 스냅샷을 기록하여, 변경이력관리와 특정 시점으로 복귀하거나 다수의 개발자가 동시에 분산된 환경에서 브랜칭을 통해 코드를 개발하고, 병합 절차를 통해 충돌을 해결할 수 있는 기능이 있습니다. 이러한 분산형 구조와 성능 최적화 덕분에, Git은 전 세계적으로 대다수 개발팀에서 사용되는 표준 버전 관리 도구로 자리잡았습니다.",
+    "crumbs": [
+      "Tools",
+      "Git",
+      "Git 개요"
+    ]
+  },
+  {
+    "objectID": "posts/tools/Git/Git_concept.html#git란",
+    "href": "posts/tools/Git/Git_concept.html#git란",
+    "title": "Git 개요",
+    "section": "",
+    "text": "Git은 2005년 리누스 토르발스가 개발한 분산 버전 관리 시스템(DVCS, Distributed Version Control System)으로, 소스코드의 스냅샷을 기록하여, 변경이력관리와 특정 시점으로 복귀하거나 다수의 개발자가 동시에 분산된 환경에서 브랜칭을 통해 코드를 개발하고, 병합 절차를 통해 충돌을 해결할 수 있는 기능이 있습니다. 이러한 분산형 구조와 성능 최적화 덕분에, Git은 전 세계적으로 대다수 개발팀에서 사용되는 표준 버전 관리 도구로 자리잡았습니다.",
+    "crumbs": [
+      "Tools",
+      "Git",
+      "Git 개요"
+    ]
+  },
+  {
+    "objectID": "posts/tools/Git/Git_concept.html#git-유용성",
+    "href": "posts/tools/Git/Git_concept.html#git-유용성",
+    "title": "Git 개요",
+    "section": "Git 유용성",
+    "text": "Git 유용성\n코딩초보에게는 Git 사용법이 다소 어려울 수 있지만, 코드를 수정하다가 문제가 발생했을 때, 변경이력관리 기능을 이용해 특정시점으로 되돌릴 수 있으며 이 자체가 백업 기능도 되므로 유용하기에 연구회에서는 Git 사용을 추천합니다.",
+    "crumbs": [
+      "Tools",
+      "Git",
+      "Git 개요"
+    ]
+  },
+  {
+    "objectID": "posts/tools/Git/Git_concept.html#git개념과-용어",
+    "href": "posts/tools/Git/Git_concept.html#git개념과-용어",
+    "title": "Git 개요",
+    "section": "Git개념과 용어",
+    "text": "Git개념과 용어\nGit 초기 설정에 앞서 Git에서 사용되는 개념과 용어를 이해하는 것이 좋습니다. Git 공식사이트의 한글매뉴얼(https://git-scm.com/book/ko/v2/%ec%8b%9c%ec%9e%91%ed%95%98%ea%b8%b0-Git-%ea%b8%b0%ec%b4%88)을 학습하시길 추천합니다. ### untracked/staged/committed Git에서는 프로젝트폴더 내의 모든 파일을 추적(=관리)대상파일과 추적대상이 아닌 파일로 구분합니다. 추적대상파일은 인 파일로 그림 1.\n\n\n\n\n\n\n그림 1: Concept of Git and terminology",
+    "crumbs": [
+      "Tools",
+      "Git",
+      "Git 개요"
     ]
   }
 ]

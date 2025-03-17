@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="BenKorea">
-<meta name="description" content="SSH 키를 생성하고 Github에 연결하기">
+<meta name="author" content="BenKorea feat. ChatGPT">
+<meta name="description" content="반드시 알아야할 Git 주요 개념">
 
-<title>OpenSSH – RPythonStudy</title>
+<title>Git 개요 – RPythonStudy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -185,7 +151,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../posts/tools/Git/Git_concept.html">Git</a></li><li class="breadcrumb-item"><a href="../../../posts/tools/Git/SSH.html">OpenSSH</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../posts/tools/Git/Git_concept.html">Git</a></li><li class="breadcrumb-item"><a href="../../../posts/tools/Git/Git_concept.html">Git 개요</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -194,16 +160,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../posts/tools/Git/Git_concept.html">Git</a></li><li class="breadcrumb-item"><a href="../../../posts/tools/Git/SSH.html">OpenSSH</a></li></ol></nav>
-      <h1 class="title">OpenSSH</h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../posts/tools/Git/Git_concept.html">Git</a></li><li class="breadcrumb-item"><a href="../../../posts/tools/Git/Git_concept.html">Git 개요</a></li></ol></nav>
+      <h1 class="title">Git 개요</h1>
                   <div>
         <div class="description">
-          SSH 키를 생성하고 Github에 연결하기
+          반드시 알아야할 Git 주요 개념
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Tools</div>
-                <div class="quarto-category">SSH</div>
+                <div class="quarto-category">Git</div>
               </div>
                   </div>
   </div>
@@ -214,21 +179,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">저자</div>
       <div class="quarto-title-meta-contents">
-               <p>BenKorea </p>
+               <p>BenKorea feat. ChatGPT </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">공개</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">2024년 12월 11일</p>
+        <p class="date">2024년 5월 6일</p>
       </div>
     </div>
     
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">2024년 12월 11일</p>
+        <p class="date-modified">2025년 3월 18일</p>
       </div>
     </div>
       
@@ -257,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../posts/tools/Git/Git_concept.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../posts/tools/Git/Git_concept.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Git 개요</span></a>
   </div>
 </li>
@@ -275,7 +240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../posts/tools/Git/SSH.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../posts/tools/Git/SSH.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">OpenSSH</span></a>
   </div>
 </li>
@@ -297,14 +262,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#필요성" id="toc-필요성" class="nav-link active" data-scroll-target="#필요성">필요성</a></li>
-  <li><a href="#openssh의-설치" id="toc-openssh의-설치" class="nav-link" data-scroll-target="#openssh의-설치">OpenSSH의 설치</a></li>
-  <li><a href="#원도우에서-기존키의-제거" id="toc-원도우에서-기존키의-제거" class="nav-link" data-scroll-target="#원도우에서-기존키의-제거">원도우에서 기존키의 제거</a></li>
-  <li><a href="#새로운-키의-생성" id="toc-새로운-키의-생성" class="nav-link" data-scroll-target="#새로운-키의-생성">새로운 키의 생성</a></li>
-  <li><a href="#ssh-agent-확인하기" id="toc-ssh-agent-확인하기" class="nav-link" data-scroll-target="#ssh-agent-확인하기">SSH agent 확인하기</a></li>
-  <li><a href="#gitgub에-공개키-등록하기" id="toc-gitgub에-공개키-등록하기" class="nav-link" data-scroll-target="#gitgub에-공개키-등록하기">Gitgub에 공개키 등록하기</a></li>
-  <li><a href="#gitgub-최초연결-설정" id="toc-gitgub-최초연결-설정" class="nav-link" data-scroll-target="#gitgub-최초연결-설정">Gitgub 최초연결 설정</a></li>
-  <li><a href="#ssh-url로-변경" id="toc-ssh-url로-변경" class="nav-link" data-scroll-target="#ssh-url로-변경">SSH URL로 변경</a></li>
+  <li><a href="#git란" id="toc-git란" class="nav-link active" data-scroll-target="#git란">Git란?</a></li>
+  <li><a href="#git-유용성" id="toc-git-유용성" class="nav-link" data-scroll-target="#git-유용성">Git 유용성</a></li>
+  <li><a href="#git개념과-용어" id="toc-git개념과-용어" class="nav-link" data-scroll-target="#git개념과-용어">Git개념과 용어</a></li>
   </ul>
 </nav>
     </div>
@@ -315,82 +275,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="필요성" class="level2">
-<h2 class="anchored" data-anchor-id="필요성">필요성</h2>
-<ul>
-<li>SSH(Secure Shell) 키 기반 인증은 ID &amp; Password 인증에 비해 보안이 강화되고 자동인증으로 편리합니다.</li>
-<li>SSH에는 여러종류가 있지만 여기에서는 Git 설치 시에 bundle로 설치되는 OpenSSH를 사용합니다.</li>
-</ul>
+<section id="git란" class="level2">
+<h2 class="anchored" data-anchor-id="git란">Git란?</h2>
+<p>Git은 2005년 리누스 토르발스가 개발한 <strong>분산 버전 관리 시스템(DVCS, Distributed Version Control System)</strong>으로, 소스코드의 스냅샷을 기록하여, 변경이력관리와 특정 시점으로 복귀하거나 다수의 개발자가 동시에 분산된 환경에서 브랜칭을 통해 코드를 개발하고, 병합 절차를 통해 충돌을 해결할 수 있는 기능이 있습니다. 이러한 분산형 구조와 성능 최적화 덕분에, Git은 전 세계적으로 대다수 개발팀에서 사용되는 표준 버전 관리 도구로 자리잡았습니다.</p>
 </section>
-<section id="openssh의-설치" class="level2">
-<h2 class="anchored" data-anchor-id="openssh의-설치">OpenSSH의 설치</h2>
-<ul>
-<li>Git 설치 시 옵션으로 설치되어 있습니다.</li>
-</ul>
+<section id="git-유용성" class="level2">
+<h2 class="anchored" data-anchor-id="git-유용성">Git 유용성</h2>
+<p>코딩초보에게는 Git 사용법이 다소 어려울 수 있지만, 코드를 수정하다가 문제가 발생했을 때, 변경이력관리 기능을 이용해 특정시점으로 되돌릴 수 있으며 이 자체가 백업 기능도 되므로 유용하기에 연구회에서는 Git 사용을 추천합니다.</p>
 </section>
-<section id="원도우에서-기존키의-제거" class="level2">
-<h2 class="anchored" data-anchor-id="원도우에서-기존키의-제거">원도우에서 기존키의 제거</h2>
-<ul>
-<li>키를 새로 만드는 경우에는 상관없지만 기존키를 삭제해야 한다면 아래와 같이 진행합니다.</li>
-<li>C:&lt;YourUsername&gt;.ssh 디렉토리에 있는 개인키(예시 id_rsa) 및 공개키 (예시 id_rsa.pub) 파일들을 수동으로 삭제합니다.</li>
-</ul>
-</section>
-<section id="새로운-키의-생성" class="level2">
-<h2 class="anchored" data-anchor-id="새로운-키의-생성">새로운 키의 생성</h2>
-<ul>
-<li>Git 설치매뉴얼 중 다음을 참고하였습니다 <a href="https://git-scm.com/book/ko/v2/Git-%ec%84%9c%eb%b2%84-SSH-%ea%b3%b5%ea%b0%9c%ed%82%a4-%eb%a7%8c%eb%93%a4%ea%b8%b0" class="uri">https://git-scm.com/book/ko/v2/Git-%ec%84%9c%eb%b2%84-SSH-%ea%b3%b5%ea%b0%9c%ed%82%a4-%eb%a7%8c%eb%93%a4%ea%b8%b0</a></li>
-<li>C:\Program Files\Git\usr\bin\에 위치하는 ssh-keygen.exe를 구동시켜야 하므로 git-bash를 열어서 먼저 이동하여야 합니다.</li>
-<li>bash에서 ssh-keygen 프로그램을 실행하면
-<ul>
-<li>설치경로는 기본값으로 진행하고</li>
-<li>passphrase는 empty로 하면 원격접속시에 비밀번호를 묻지 않게 되므로 empty로 설정하여 진행합니다.</li>
-</ul></li>
-<li>C:\Users\&lt;YourUsername\&gt;.ssh가 생성되면서 id_ed25519와 id_ed25519.pub 파일이 생성됩니다.<br>
-</li>
-<li>이 중 *.pub가 공개키입니다.</li>
-</ul>
-</section>
-<section id="ssh-agent-확인하기" class="level2">
-<h2 class="anchored" data-anchor-id="ssh-agent-확인하기">SSH agent 확인하기</h2>
-<ul>
-<li>원도우의 경우 서비스창에서 OPenSSH Authentication Agent가 시행중인지 확인합니다.</li>
-<li>bash 창에서 아래의 명령을 입력해도 됩니다. ssh-agent가 실행중인지 확인합니다.
-<ul>
-<li>Agent 속성을 확인하여 시작유형을 <code>자동</code>으로 설정하셔야 하고</li>
-<li>복구탭에서 첫째, 둘째, 후속 실패시에 대한 조치를 <code>서비스 다시 시작</code>으로 설정해야 합니다.</li>
-</ul></li>
-</ul>
-</section>
-<section id="gitgub에-공개키-등록하기" class="level2">
-<h2 class="anchored" data-anchor-id="gitgub에-공개키-등록하기">Gitgub에 공개키 등록하기</h2>
-<ul>
-<li>GitHub에 로그인한 후 오른쪽 상단의 프로필 아이콘을 클릭하고 Settings를 선택합니다.</li>
-<li>왼쪽 메뉴에서 SSH and GPG keys를 선택합니다.</li>
-<li>New SSH key 버튼을 클릭합니다.</li>
-<li>Title에는 키의 제목을 입력합니다.</li>
-<li>Key에는 id_ed25519.pub 파일의 내용을 복사하여 붙여넣습니다.</li>
-<li>Add SSH key 버튼을 클릭합니다.</li>
-</ul>
-</section>
-<section id="gitgub-최초연결-설정" class="level2">
-<h2 class="anchored" data-anchor-id="gitgub-최초연결-설정">Gitgub 최초연결 설정</h2>
-<ul>
-<li>bash창에서 아래의 명령을 입력합니다.</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>처음 연결시에 “This key is not known by any other names”라는 메시지가 나오는데 yes를 입력합니다.</li>
-<li>“Hi <username>! You’ve successfully authenticated, but GitHub does not provide shell access.”라는 메시지가 나오면 성공입니다.</username></li>
-</ul>
-</section>
-<section id="ssh-url로-변경" class="level2">
-<h2 class="anchored" data-anchor-id="ssh-url로-변경">SSH URL로 변경</h2>
-<ul>
-<li>기존의 HTTPS URL을 SSH URL로 변경합니다.</li>
-<li>원격저장소의 HTTPS 옆에 있으므로 복사해서 git remote add origin 명령을 통하면됩니다.</li>
-<li>기존의 HTTOS URL을 변경하는 방법은 아래와 같습니다.</li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote set-url origin git@github.com:<span class="op">&lt;</span>username<span class="op">&gt;</span>/<span class="op">&lt;</span>repository<span class="op">&gt;</span>.git</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="git개념과-용어" class="level2">
+<h2 class="anchored" data-anchor-id="git개념과-용어">Git개념과 용어</h2>
+<p>Git 초기 설정에 앞서 Git에서 사용되는 개념과 용어를 이해하는 것이 좋습니다. Git 공식사이트의 한글매뉴얼(<a href="https://git-scm.com/book/ko/v2/%ec%8b%9c%ec%9e%91%ed%95%98%ea%b8%b0-Git-%ea%b8%b0%ec%b4%88" class="uri">https://git-scm.com/book/ko/v2/%ec%8b%9c%ec%9e%91%ed%95%98%ea%b8%b0-Git-%ea%b8%b0%ec%b4%88</a>)을 학습하시길 추천합니다. ### untracked/staged/committed Git에서는 프로젝트폴더 내의 모든 파일을 추적(=관리)대상파일과 추적대상이 아닌 파일로 구분합니다. 추적대상파일은 인 파일로 <a href="#fig-GitConcept" class="quarto-xref">그림&nbsp;1</a>.</p>
+<div id="fig-GitConcept" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-GitConcept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Git-Reference_Sheet.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-GitConcept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1: Concept of Git and terminology
+</figcaption>
+</figure>
+</div>
 
 
 </section>

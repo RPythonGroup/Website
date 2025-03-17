@@ -1,13 +1,17 @@
 ---
-title: "Github"
-description: "Exercise how to use Github"
-author: "RPythonStudyGroup feat. ChatGPT"
+title: "Github 사용법"
+description: "Github 가입/사용법"
+author: "BenKorea feat. ChatGPT"
 date: "2024-10-25"
-date-modified: "2024-10-25"
-categories:
-  - Github
-  - manual
+date-modified: last-modified
+categories: [Github, manual]
 ---
+
+## Github란?
+
+GitHub는 Git을 기반으로 한 웹 기반 호스팅 서비스로, 소스 코드 관리와 협업을 위한 플랫폼입니다.
+GitHub는 Git을 사용하여 프로젝트의 코드베이스를 중앙에서 관리하며, 개발자들이 효율적으로 코드 리뷰, 이슈 관리, 프로젝트 관리, 그리고 협업을 할 수 있도록 다양한 도구와 인터페이스를 제공합니다.
+**Pull Request(PR)**를 통해 코드 변경 사항을 리뷰하고 병합할 수 있으며, **Continuous Integration/Continuous Deployment(CI/CD)**와 같은 자동화 기능을 지원해 소프트웨어 개발의 생산성과 품질을 높입니다.
 
 ## 매뉴얼
 

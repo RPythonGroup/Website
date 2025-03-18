@@ -1,5 +1,5 @@
 ---
-title: "Git 개요"
+title: "Git 핵심개념"
 description: "반드시 알아야할 Git 주요 개념"
 author: "BenKorea feat. ChatGPT"
 date: "2024-05-06"

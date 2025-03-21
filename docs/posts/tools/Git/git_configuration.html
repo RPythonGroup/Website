@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="BenKorea">
-<meta name="description" content="SSH 키를 생성하고 Github에 연결하기">
+<meta name="author" content="BenKorea feat. ChatGPT">
+<meta name="description" content="Git 설정에 대한 안내">
 
-<title>OpenSSH – RPythonStudy</title>
+<title>Git 설정 – RPythonStudy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,7 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -156,7 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../posts/tools/introduction_to_tools.html"> 
+    <a class="nav-link active" href="../../../posts/tools/introduction_to_tools.html" aria-current="page"> 
 <span class="menu-text">Tools</span></a>
   </li>  
   <li class="nav-item">
@@ -180,20 +180,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../posts/tools/git/git_concept.html">Git</a></li><li class="breadcrumb-item"><a href="../../../posts/tools/git/git_configuration.html">Git 설정</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">OpenSSH</h1>
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../posts/tools/git/git_concept.html">Git</a></li><li class="breadcrumb-item"><a href="../../../posts/tools/git/git_configuration.html">Git 설정</a></li></ol></nav>
+      <h1 class="title">Git 설정</h1>
                   <div>
         <div class="description">
-          SSH 키를 생성하고 Github에 연결하기
+          Git 설정에 대한 안내
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Tools</div>
-                <div class="quarto-category">SSH</div>
+                <div class="quarto-category">Git</div>
+                <div class="quarto-category">configuration</div>
               </div>
                   </div>
   </div>
@@ -204,21 +214,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">저자</div>
       <div class="quarto-title-meta-contents">
-               <p>BenKorea </p>
+               <p>BenKorea feat. ChatGPT </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">공개</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">2024년 12월 11일</p>
+        <p class="date">2024년 5월 6일</p>
       </div>
     </div>
     
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">2025년 3월 21일</p>
+        <p class="date-modified">2025년 3월 20일</p>
       </div>
     </div>
       
@@ -227,21 +237,75 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../posts/tools/introduction_to_tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Tools</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Git</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../posts/tools/git/git_concept.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Git 핵심개념</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../posts/tools/git/git_install.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Git 설치</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../posts/tools/git/git_configuration.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Git 설정</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../posts/tools/git/Github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Github 사용법</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../posts/tools/git/SSH.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OpenSSH</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../posts/tools/git/Hands_on_Git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hands on Git/Github</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#필요성" id="toc-필요성" class="nav-link active" data-scroll-target="#필요성">필요성</a></li>
-  <li><a href="#핵심개념" id="toc-핵심개념" class="nav-link" data-scroll-target="#핵심개념">핵심개념</a></li>
-  <li><a href="#openssh-설치" id="toc-openssh-설치" class="nav-link" data-scroll-target="#openssh-설치">OpenSSH 설치</a></li>
-  <li><a href="#원도우에서-기존키의-제거" id="toc-원도우에서-기존키의-제거" class="nav-link" data-scroll-target="#원도우에서-기존키의-제거">원도우에서 기존키의 제거</a></li>
-  <li><a href="#새로운-키의-생성" id="toc-새로운-키의-생성" class="nav-link" data-scroll-target="#새로운-키의-생성">새로운 키의 생성</a></li>
-  <li><a href="#ssh-agent-확인하기" id="toc-ssh-agent-확인하기" class="nav-link" data-scroll-target="#ssh-agent-확인하기">SSH agent 확인하기</a></li>
-  <li><a href="#gitgub에-공개키-등록하기" id="toc-gitgub에-공개키-등록하기" class="nav-link" data-scroll-target="#gitgub에-공개키-등록하기">Gitgub에 공개키 등록하기</a></li>
-  <li><a href="#gitgub-최초연결-설정" id="toc-gitgub-최초연결-설정" class="nav-link" data-scroll-target="#gitgub-최초연결-설정">Gitgub 최초연결 설정</a></li>
-  <li><a href="#ssh-url로-변경" id="toc-ssh-url로-변경" class="nav-link" data-scroll-target="#ssh-url로-변경">SSH URL로 변경</a></li>
+  <li><a href="#사용자정보-설정" id="toc-사용자정보-설정" class="nav-link active" data-scroll-target="#사용자정보-설정"><span class="header-section-number">0.1</span> 사용자정보 설정</a></li>
+  <li><a href="#사용자정보-설정-확인" id="toc-사용자정보-설정-확인" class="nav-link" data-scroll-target="#사용자정보-설정-확인"><span class="header-section-number">0.2</span> 사용자정보 설정 확인</a></li>
+  <li><a href="#프로젝트에-git-적용하기" id="toc-프로젝트에-git-적용하기" class="nav-link" data-scroll-target="#프로젝트에-git-적용하기"><span class="header-section-number">0.3</span> 프로젝트에 Git 적용하기</a></li>
   </ul>
 </nav>
     </div>
@@ -252,114 +316,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="필요성" class="level3">
-<h3 class="anchored" data-anchor-id="필요성">필요성</h3>
-<p>GitHub는 한때 아이디와 패스워드만으로 로그인하고 Git 명령어(예: push, pull 등)를 수행할 수 있었지만, 보안 강화를 위해 최근에는 패스워드 대신 personal access token(PAT)이나 OAuth, 2단계 인증(2FA) 등의 인증 방식을 도입했습니다. 이로 인해 단순한 아이디/패스워드 방식이 사라지고, 추가적인 인증 절차가 필수가 되었습니다.</p>
-<p>SSH 키 인증 방식은 공개키 암호화 기술을 사용하여 GitHub와의 통신을 자동으로 인증해줍니다. 이 방식의 주요 장점은 다음과 같습니다:</p>
-<ul>
-<li>자동 로그인: 한 번 SSH 키를 등록해두면, 이후 Git 명령어를 실행할 때마다 패스워드나 토큰을 일일이 입력할 필요 없이 자동으로 인증이 이루어집니다.</li>
-<li>보안 강화: SSH 키는 일반 패스워드보다 훨씬 복잡하고 안전하여, 계정 탈취 위험을 줄여줍니다.</li>
-<li>개발 효율성 증대: 자동 로그인 덕분에 반복적인 인증 과정 없이 바로 Git 작업을 할 수 있어, 개발 환경에서의 생산성이 향상됩니다.</li>
-</ul>
-<p>이처럼 SSH 키를 활용하면 번거로운 인증 절차를 줄이고, 보다 편리하고 안전하게 GitHub와 상호작용할 수 있습니다.</p>
-</section>
-<section id="핵심개념" class="level3">
-<h3 class="anchored" data-anchor-id="핵심개념">핵심개념</h3>
-<p>두개의 키를 생성하여 하나는 개인키(private key)로, 다른 하나는 공개키(public key)로 구성됩니다. 개인키는 사용자가 소유하고, 공개키는 GitHub에 등록됩니다. GitHub는 공개키를 통해 사용자를 인증하고, 사용자는 개인키를 통해 GitHub에 접속합니다 <a href="#fig-github-ssh" class="quarto-xref">그림&nbsp;1</a>.</p>
-<div id="fig-github-ssh" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-github-ssh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://andy6804tw.github.io/2018/03/22/github-ssh/"><img src="images/SSH Connection explained.png" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-github-ssh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-그림&nbsp;1
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="openssh-설치" class="level3">
-<h3 class="anchored" data-anchor-id="openssh-설치">OpenSSH 설치</h3>
-<p>SSH에는 여러종류가 있지만 여기에서는 Git 설치 시에 bundle로 설치되는 OpenSSH를 사용합니다. 따라서 별도의 설치과정이 필요하지 않습니다.</p>
-</section>
-<section id="원도우에서-기존키의-제거" class="level3">
-<h3 class="anchored" data-anchor-id="원도우에서-기존키의-제거">원도우에서 기존키의 제거</h3>
-<ul>
-<li>키를 새로 만드는 경우에는 상관없지만 기존키를 삭제해야 한다면 아래와 같이 진행합니다.</li>
-<li>C:&lt;YourUsername&gt;.ssh 디렉토리에 있는 개인키(예시 id_rsa) 및 공개키 (예시 id_rsa.pub) 파일들을 수동으로 삭제합니다.</li>
-</ul>
-</section>
-<section id="새로운-키의-생성" class="level3">
-<h3 class="anchored" data-anchor-id="새로운-키의-생성">새로운 키의 생성</h3>
-<ul>
-<li>Git 설치매뉴얼 중 다음을 참고하였습니다 <a href="https://git-scm.com/book/ko/v2/Git-%ec%84%9c%eb%b2%84-SSH-%ea%b3%b5%ea%b0%9c%ed%82%a4-%eb%a7%8c%eb%93%a4%ea%b8%b0" class="uri">https://git-scm.com/book/ko/v2/Git-%ec%84%9c%eb%b2%84-SSH-%ea%b3%b5%ea%b0%9c%ed%82%a4-%eb%a7%8c%eb%93%a4%ea%b8%b0</a></li>
-<li>C:\Program Files\Git\usr\bin\에 위치하는 ssh-keygen.exe를 구동시켜야 하므로 git-bash를 열어서 먼저 이동하여야 합니다.</li>
-<li>bash에서 ssh-keygen 프로그램을 실행하면
-<ul>
-<li>설치경로는 기본값으로 진행하고</li>
-<li>passphrase는 empty로 하면 원격접속시에 비밀번호를 묻지 않게 되므로 empty로 설정하여 진행합니다.</li>
-</ul></li>
-<li>C:\Users\&lt;YourUsername\&gt;.ssh가 생성되면서 id_ed25519와 id_ed25519.pub 파일이 생성됩니다.<br>
-</li>
-<li>이 중 *.pub가 공개키입니다.</li>
-</ul>
-</section>
-<section id="ssh-agent-확인하기" class="level3">
-<h3 class="anchored" data-anchor-id="ssh-agent-확인하기">SSH agent 확인하기</h3>
-<ul>
-<li>원도우의 경우 서비스창에서 OPenSSH Authentication Agent가 시행중인지 확인합니다.</li>
-<li>bash 창에서 아래의 명령을 입력해도 됩니다. ssh-agent가 실행중인지 확인합니다.
-<ul>
-<li>Agent 속성을 확인하여 시작유형을 <code>자동</code>으로 설정하셔야 하고</li>
-<li>복구탭에서 첫째, 둘째, 후속 실패시에 대한 조치를 <code>서비스 다시 시작</code>으로 설정해야 합니다.</li>
-</ul></li>
-</ul>
-</section>
-<section id="gitgub에-공개키-등록하기" class="level3">
-<h3 class="anchored" data-anchor-id="gitgub에-공개키-등록하기">Gitgub에 공개키 등록하기</h3>
-<ul>
-<li>GitHub에 로그인한 후 오른쪽 상단의 프로필 아이콘을 클릭하고 Settings를 선택합니다.</li>
-<li>왼쪽 메뉴에서 SSH and GPG keys를 선택합니다.</li>
-<li>New SSH key 버튼을 클릭합니다.</li>
-<li>Title에는 키의 제목을 입력합니다.</li>
-<li>Key에는 id_ed25519.pub 파일의 내용을 복사하여 붙여넣습니다.</li>
-<li>Add SSH key 버튼을 클릭합니다.</li>
-</ul>
-</section>
-<section id="gitgub-최초연결-설정" class="level3">
-<h3 class="anchored" data-anchor-id="gitgub-최초연결-설정">Gitgub 최초연결 설정</h3>
-<ul>
-<li>bash창에서 아래의 명령을 입력합니다.</li>
-</ul>
+<section id="사용자정보-설정" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="사용자정보-설정"><span class="header-section-number">0.1</span> 사용자정보 설정</h3>
+<p>Git에서는 커밋을 할 때마다 누가 했는지를 사용자명과 이메일을 기록해둡니다. 이를 위해 설치 시 아래의 예시와 같이 사용자이름과 이메일 설정합니다.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>Git Bash</strong></pre>
+<pre><strong>Command Prompt</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ssh <span class="sc">-</span>T git<span class="sc">@</span>github.com</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global user.name <span class="st">"BenKorea"</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<ul>
-<li>처음 연결시에 “This key is not known by any other names”라는 메시지가 나오는데 yes를 입력합니다.</li>
-<li>“Hi <username>! You’ve successfully authenticated, but GitHub does not provide shell access.”라는 메시지가 나오면 성공입니다.</username></li>
-</ul>
-</section>
-<section id="ssh-url로-변경" class="level3">
-<h3 class="anchored" data-anchor-id="ssh-url로-변경">SSH URL로 변경</h3>
-<ul>
-<li>기존의 HTTPS URL을 SSH URL로 변경합니다.</li>
-<li>원격저장소의 HTTPS 옆에 있으므로 복사해서 git remote add origin 명령을 통하면됩니다.</li>
-<li>기존의 HTTOS URL을 변경하는 방법은 아래와 같습니다.</li>
-</ul>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>Git Bash</strong></pre>
+<pre><strong>Command Prompt</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>git remote set<span class="sc">-</span>url origin git<span class="sc">@</span>github.com<span class="sc">:</span><span class="er">&lt;</span>username<span class="sc">&gt;</span><span class="er">/&lt;</span>repository<span class="sc">&gt;</span>.git</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global user.email <span class="st">"benkorea.ai@gmail.com"</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+</section>
+<section id="사용자정보-설정-확인" class="level3" data-number="0.2">
+<h3 data-number="0.2" class="anchored" data-anchor-id="사용자정보-설정-확인"><span class="header-section-number">0.2</span> 사용자정보 설정 확인</h3>
+<p>각각 아래의 명령으로 사용자명과 이메일 주소를 확인할 수 있습니다.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Command Prompt</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>git config user.name</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Command Prompt</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>git config user.email</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="프로젝트에-git-적용하기" class="level3" data-number="0.3">
+<h3 data-number="0.3" class="anchored" data-anchor-id="프로젝트에-git-적용하기"><span class="header-section-number">0.3</span> 프로젝트에 Git 적용하기</h3>
+<section id="rstudio에서-git-적용하기" class="level4" data-number="0.3.1">
+<h4 data-number="0.3.1" class="anchored" data-anchor-id="rstudio에서-git-적용하기"><span class="header-section-number">0.3.1</span> RStudio에서 Git 적용하기</h4>
+<p>RStudio의 global options에서 Git/SVN을 선택하고, Git executable 경로를 지정해주면 RStudio에서 Git을 사용할 수 있습니다. 이렇게 설정해두면 새로운 프로젝트를 생성할 때마다 Git을 적용할지 물어오거나 자동으로 Git를 적용하여 프로젝트를 생성합니다.</p>
+</section>
+<section id="git-bash에서-git-적용하기" class="level4" data-number="0.3.2">
+<h4 data-number="0.3.2" class="anchored" data-anchor-id="git-bash에서-git-적용하기"><span class="header-section-number">0.3.2</span> Git Bash에서 Git 적용하기</h4>
+<p>버전관리를 시작할려면 원하는 폴더 (=프로젝트 폴더)에서 git init 명령어를 실행하면 됩니다.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Command Prompt</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>git init</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>다른 표현으로는 저장소를 만든다고도 합니다. 실행결과로써 <code>.git</code> 이라는 숨김폴더가 생성되며, 이 폴더에는 버전관리에 필요한 파일들이 저장됩니다. 그러나 이 방식은 특수한 경우에만 사용하며, 보통은 RStudio나 다른 GUI 프로그램을 사용합니다.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
